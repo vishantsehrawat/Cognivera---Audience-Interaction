@@ -28,5 +28,8 @@
     "nodemon": "^2.0.22",
     "redis": "^4.6.6"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "eslint": "^8.39.0"
+  }
 }

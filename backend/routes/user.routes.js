@@ -36,7 +36,7 @@ userRouter.post("/login", async (req, res) => {
         // console.log("🚀 ~ file: user.routes.js:34 ~ userRouter.post ~ myUser:", myUser)
         try {
             if (myUser) {
-                bcrypt.compare(user.password, myUser.password, function (err, result) {
+                bcrypt.compare(user.password, myUser.password, function (err, result) { // eslint-disable-line no-unused-vars
                     // temporarily using expire time *60 for usability. Ignore it if I forgot to remove the extra 60
                     var token = jwt.sign({ userId: myUser._id }, process.env.TOKEN_SECRET, { expiresIn: "7d" });
                     var refreshToken = jwt.sign({ userId: myUser._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: "24d" });
