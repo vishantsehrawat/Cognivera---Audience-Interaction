@@ -26,7 +26,8 @@
     "mongoose": "^7.1.0",
     "mongoose-type-email": "^1.1.2",
     "nodemon": "^2.0.22",
-    "redis": "^4.6.6"
+    "redis": "^4.6.6",
+    "socket.io": "^4.6.1"
   },
   "description": "",
   "devDependencies": {
