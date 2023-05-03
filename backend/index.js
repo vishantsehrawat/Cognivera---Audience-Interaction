@@ -46,12 +46,23 @@ serverHttp.listen(process.env.PORT, async () => {
 //socket.io connection  
 const io = new Server(serverHttp); // with wss we are attaching http server
 
+let count = 0
+
 io.on("connection", (socket) => {
     console.log("socket.io connected")
 
     socket.emit("conn");
+    
+    count++
+    io.emit("newuser", count)
+
+    socket.on("message",(msg) => {
+        socket.broadcast.emit("usermsg",msg)
+    })
+
     socket.on("disconnect", () => {
-        
+        count--
+        io.emit("newuser", count)
     })
 });
 
