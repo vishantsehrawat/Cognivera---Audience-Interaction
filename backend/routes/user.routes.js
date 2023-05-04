@@ -4,6 +4,9 @@ const bcrypt = require("bcrypt");
 const { UserModel } = require("../models/user.model");
 const { redisClient } = require("../configs/redis");
 const { BlacklistModel } = require("../models/blacklist.model");
+const store = require('store')
+
+
 require("dotenv").config();
 
 userRouter = express();
@@ -42,8 +45,10 @@ userRouter.post("/login", async (req, res) => {
                     var refreshToken = jwt.sign({ userId: myUser._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: "24d" });
                     //using redis for storing the tokens //working 
                     redisClient.set("jwttoken", token)
+                    //using local storage npm package // ! not working
+                    // store.set('username', { name:myUser?.name })
                     redisClient.set("refreshtoken", refreshToken)
-                    res.status(200).send({ msg: "User logged in", token, refreshToken })
+                    res.status(200).send({ msg: "User logged in", token, refreshToken,usernameforchat:myUser.name })
                 });
             }
         } catch (error) {

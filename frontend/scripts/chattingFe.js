@@ -1,10 +1,21 @@
+
 const socket = io("http://localhost:8080/", { transports: ["websocket"] });
 
-let username = "abhimanyu" //Getting it from somewhere //Cache //LS etc. 
+
+var newchatterName = prompt("Enter your name:", "John");
+// console.log("🚀 ~ file: chattingFe.js:6 ~ newchatterName:", newchatterName)
+
+let username = newchatterName !== "" ? newchatterName : "tempChatUsername"
 
 // For checking connection on frontend
 socket.on("start", (message) => {
     console.log("connected to socket server");
+})
+
+// getting chat history 
+socket.on("chatHistory", (chatHistoryGlobal) => {
+    displayChatHistory(chatHistoryGlobal) // to display history messages 
+
 })
 
 //Count tag update
@@ -16,7 +27,6 @@ socket.on("newuser", (msg) => {
 
 // ^ Handling Receiving Messages
 socket.on("usermsg", (message) => {
-
     const messages = document.querySelector('#messages')
 
     let otherdiv = document.createElement("div")
@@ -37,6 +47,35 @@ socket.on("usermsg", (message) => {
 
 })
 
+const displayChatHistory = async (chatHistoryGlobal) => {
+    try {
+        const messages = document.querySelector('#messages')
+        messages.innerHTML = "";
+        chatHistoryGlobal.forEach(message => {
+            // let mydiv = document.createElement("div")
+            // mydiv.setAttribute("class", "mydiv")
+            let otherdiv = document.createElement("div")
+            otherdiv.setAttribute("class", "otherdiv")
+
+            let innerdiv = document.createElement("div")
+            innerdiv.setAttribute("class", "innerdiv")
+
+            let name = document.createElement("h4")
+            name.innerText = message.name
+            let msg = document.createElement("p")
+            msg.innerText = message.message;
+
+            innerdiv.append(name, msg)
+            otherdiv.append(innerdiv)
+            messages.append(otherdiv)
+
+
+        });
+    } catch (error) {
+        console.error(error);
+    }
+};
+
 
 
 //On Click function on send button to display own msg and emmit to others
@@ -45,6 +84,8 @@ const sendMessage = (event) => {
     const text = document.getElementById("input").value
     const message = { name: username, message: text }
     socket.emit("message", message)// emitting message on enter
+
+
 
     // ^ below code is to append message on sender side 
     const messages = document.querySelector('#messages')
