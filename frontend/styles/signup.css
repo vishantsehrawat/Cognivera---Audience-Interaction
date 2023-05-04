@@ -82,6 +82,7 @@
 }
 #left-fixed p {
     text-align: left;
+    font-weight: 100;
 }
 .fa-solid{
     font-size: x-large;
@@ -91,17 +92,21 @@
     font-size: xx-large;
     margin-left: 20px;
 }
+.invert_effect {
+    filter: invert(100%);
+}
 
 #logo-img {
     width: 25%;
     height: 15%;
-    margin-left: 40%;
+    margin-left: 37%;
 
 
 }
 
 #signup-cont {
     margin-left: 50%;
+    margin-top: 5%;
 
 }
 
@@ -110,13 +115,17 @@ p {
     text-align: center;
     font-weight: bold;
     margin-bottom: 30px;
+  
+}
+#signup-cont p {
+    font-weight: 100;
 }
 
 #google {
     background-color: white;
     border-radius: 5px;
     border: 1p solid gray;
-    padding: 10px;
+    padding: 5px;
 }
 
 #google img {
@@ -156,6 +165,7 @@ form #sub-btn:hover {
     cursor: pointer;
     background-color: black;
     color: white;
+    font-weight: bold;
 
 }
 
@@ -213,4 +223,4 @@ form #sub-btn:hover {
         
     }
 }
- /* .image {filter:in vert(1)} */
+ 
