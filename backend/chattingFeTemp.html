@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+</head>
+
+<body>
+    <h2>Total users: <b id="usercount"></b></h2>
+    <h2>Chat:</h2>
+    <pre id="messages" style="height: 400px; overflow: scroll;"></pre>
+    <input type="text" placeholder="message..." id="input">
+    <button onclick="sendMessage()">Send</button>
+
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+        integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+        crossorigin="anonymous"></script>
+    <script>
+
+        const socket = io("http://localhost:8080/", { transports: ["websocket"] });
+        // for checking connection on frontend
+        socket.on("conn", (message) => {
+            console.log("connected to socket server");
+        })
+
+        socket.on("newuser", (msg) => {
+            const count_tag = document.getElementById("usercount")
+            count_tag.innerText = msg
+
+        })
+
+        socket.on("usermsg", (msg) => {
+    
+            const messages = document.querySelector('#messages')
+            messages.textContent += `\n\n${msg}`;
+            messages.scrollTop = messages.scrollHeight;
+
+        })
+
+        const sendMessage = () => {
+
+            const message = document.getElementById("input").value
+            socket.emit("message", message)
+
+            const messages = document.querySelector('#messages')
+            messages.textContent += `\n\n${message}`;
+            messages.scrollTop = messages.scrollHeight;
+
+        }
+
+    </script>
+    
+</body>
+
+</html>
