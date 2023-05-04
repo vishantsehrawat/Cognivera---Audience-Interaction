@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+}
+#container1 {
+  background-color: #2a56a7;
+}
+
+#navbar {
+  width: 75%;
+  background-color: #2a56a7;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0px;
+  color: white;
+  line-height: 24px;
+}
+
+#navbar > div:nth-child(2) {
+  display: flex;
+  width: 350px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navbar > div:nth-child(2) a {
+  text-decoration: none;
+  color: white;
+}
+
+#navbar > div:nth-child(1) > p:nth-child(1),
+#navbar > div:nth-child(2) a {
+  font-weight: bold;
+  font-size: small;
+}
+
+#navbar > div:nth-child(1) > p:nth-child(2) {
+  font-size: small;
+}
+
+#navbar > div:nth-child(1) button {
+  background-color: #4c71b5;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: small;
+}
+
+#navbar .fa-search {
+  background: #2a56a7;
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#navbar #search {
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+#navbar #logo {
+  background-color: white;
+  color: #2a56a7;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+/* Container 2 */
+#container2 {
+  margin-top: 30px;
+}
+
+#container2 #box {
+  width: 75%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 20px;
+  padding: 0px 50px;
+  background-color: white;
+}
+
+#container2 #box #b1 h1 {
+  color: #4d4b4b;
+  margin-bottom: 15px;
+}
+
+#container2 #box #b1 p {
+  color: rgb(94, 92, 92);
+  font-size: large;
+  width: 80%;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#container2 #box #b1 #buttons > button:nth-child(1) {
+  background-color: #39ae37;
+  border: none;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#container2 #box #b1 #buttons > button:nth-child(2) {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: #fafafa;
+  border: none;
+  color: rgb(39, 39, 39);
+  font-weight: bold;
+  padding: 9px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#container2 #box #b2 {
+  margin: 0px 50px;
+}
+
+#container2 #box #b2 div img {
+  width: 100%;
+}
+
+/* Container 3 */
+
+#container3 {
+  border: 1px solid red;
+  width: 75%;
+  margin: auto;
+  margin-top: 30px;
+}
