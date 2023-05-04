@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
     <link rel="icon" type="image/png" href="./images/Cognivera.png">
-    <title>Signup page</title>
-    <link rel="stylesheet" href="./styles/signup.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-
+    <link rel="stylesheet" href="./styles/signup.css">
 </head>
-
 <body>
     <div id="loding_container">
         <div id="loding_div">
@@ -24,7 +21,6 @@
             <h2>Loading...</h2>
         </div>
     </div>
-
     <div id="container">
         <div id="left-fixed">
             <div id="left-fixed-content">
@@ -41,30 +37,24 @@
         <div id="signup-cont">
             <div id="signup-cont-content">
                 <img  id="logo-img"  src="./images//Cognivera.png" />
-                <h1>Sign Up as a meeting host</h1>
+                <h1>Login as a meeting host</h1>
 
 
                 <form id="form">
-
-                    <p id="errorDisplay"></p>
+                <p id="errorDisplay"></p>
                     <a href="https://fun-chat-ht6d.onrender.com/oauth/google">
                         <button id="google"><img src="./images/googel.png" alt="google">continue with google</button>
                     </a>
                     <p style="font-size: large;">or</p>
-
-
-                    <input class="box" id="name" type="text" placeholder="Full Name"><br>
                     <input class="box" id="email" type="email" placeholder="Email Address"><br>
                     <input class="box" id="pw" type="password" placeholder="Password"><br>
-                    <input class="box" id="cpw" type="password" placeholder="Confirm Password"><br>
-                    <button class="submit" type="submit" id="sub-btn">Sign up</button>
+                    <button class="submit" type="submit" id="sub-btn">Login</button>
                 </form>
-                <p>Already have an account | <a href="./login.html">Login</a></p>
+                <p>Dont't have an account | <a href="./signup.html" style="text-decoration: none;">Signup-></a></p>
             </div>
         </div>
     </div>
-
+    
 </body>
-
 </html>
-<script src="signup.js"></script>
+<script src="./scripts/login.js"></script>

@@ -46,8 +46,8 @@
 }
 
 #left-fixed-btn {
-    height: 50px;
-    width: 75%;
+    height: 60px;
+    width: 80%;
     /* margin: auto; */
     background-color: white;
     color: black;
@@ -62,9 +62,12 @@
 }
 
 #left-fixed-btn input {
-    width: 60%;
+    width: 50%;
     border: none;
 
+}
+#left-fixed-btn input:focus{
+    outline: none;
 }
 
 #left-fixed-btn button {
@@ -72,9 +75,21 @@
     background-color: rgb(57, 174, 55);
     color: white;
     border: none;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 #left-fixed p {
     text-align: left;
+}
+.fa-solid{
+    font-size: x-large;
+   
+}
+.fa-hashtag{
+    font-size: xx-large;
+    margin-left: 20px;
 }
 
 #logo-img {
@@ -101,6 +116,7 @@ p {
     background-color: white;
     border-radius: 5px;
     border: 1p solid gray;
+    padding: 10px;
 }
 
 #google img {
@@ -197,3 +213,4 @@ form #sub-btn:hover {
         
     }
 }
+ /* .image {filter:in vert(1)} */
