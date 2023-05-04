@@ -1,18 +1,17 @@
 let count = 0 // to store user count
 
 
-
 function chatting(io) {
     io.on("connection", (socket) => {
-        console.log("socket.io connected")
 
-        socket.emit("conn");
+        console.log("socket.io connected")
+        socket.emit("start");
 
         count++
         io.emit("newuser", count)
 
-        socket.on("message", (msg) => {
-            socket.broadcast.emit("usermsg", msg)
+        socket.on("message", (message) => {
+            socket.broadcast.emit("usermsg", message)
         })
 
         socket.on("disconnect", () => {
