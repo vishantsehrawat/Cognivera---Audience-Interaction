@@ -1,11 +1,12 @@
 const express = require('express');
 const app = express();
 const http = require("http");
-const { Server } = require('socket.io');
+const socketio = require('socket.io');
 const { connection } = require('./configs/dbConnection');
 const { userRouter } = require('./routes/user.routes');
 const { authMiddleware } = require('./middlewares/authMiddleware.middleware');
-const socket = require("./configs/socket")
+const { chatting } = require('./configs/chatting');
+
 
 
 
@@ -27,10 +28,11 @@ app.get("/", async (req, res) => {
         //  res.render("index.ejs")
     } catch (err) { console.log(err) }
 })
+
 // using http server because express server doesnt support socket.io
 const serverHttp = http.createServer(app)
-const io = new Server(serverHttp); // with wss we are attaching http server
-socket(serverHttp) // calling the function present inside the socket.js file
+const io = socketio(serverHttp); // with wss we are attaching http server
+chatting(io); // using the imported chatting function and passing io instance/ object 
 
 serverHttp.listen(process.env.PORT, async () => {
     try {
@@ -45,26 +47,15 @@ serverHttp.listen(process.env.PORT, async () => {
 })
 
 
-//socket.io connection  
-const io = new Server(serverHttp); // with wss we are attaching http server
 
-let count = 0
 
-io.on("connection", (socket) => {
-    console.log("socket.io connected")
 
-    socket.emit("conn");
-    
-    count++
-    io.emit("newuser", count)
 
-    socket.on("message",(msg) => {
-        socket.broadcast.emit("usermsg",msg)
-    })
 
-    socket.on("disconnect", () => {
-        count--
-        io.emit("newuser", count)
-    })
-});
+
+
+
+
+
+
 
