@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const  chattingSchema = mongoose.Schema({
     name: { type: String },
     message: {type:String}
-}, { versionKey: false, timestamps: true, expires: '120s' });
+}, { versionKey: false, timestamps: true, expires: '120s' });// expires is working but ttl cycle is of 60 seconds so , it takes more time to expire
 
 
 
@@ -14,3 +14,5 @@ const  chattingSchema = mongoose.Schema({
 const ChattingModel = mongoose.model("chat", chattingSchema);
 
 module.exports = { ChattingModel };
+
+// createdAt: { type: Date, expires: '2m', default: Date.now }
