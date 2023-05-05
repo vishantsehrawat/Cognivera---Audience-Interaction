@@ -269,7 +269,7 @@ body {
 #analyticsBox01 > div {
   padding: 20px;
   /* border: 1px solid blue; */
-  width: 400px;
+  width: 40%;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   background-color: white;
@@ -297,3 +297,32 @@ hr {
   margin: 15px 0px;
   color: rgb(173, 173, 173);
 }
+
+@media all and (max-width: 1200px) {
+  #analyticsBox01 > div {
+    width: 60%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  #analyticsBox01 > div {
+    width: 100%;
+  }
+}
+
+
+@media all and (max-width: 500px) {
+  #overview1 {
+    width: 75%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 30px;
+    display: block;
+    align-items: center;
+  }
+  #overview1>div:nth-child(2){
+    /* border: 1px solid blue; */
+    margin-top: 20px;
+  }
+}
+
