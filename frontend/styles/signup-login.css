@@ -66,8 +66,7 @@
     border: none;
 
 }
-
-#left-fixed-btn input:focus {
+#left-fixed-btn input:focus{
     outline: none;
 }
 
@@ -81,38 +80,26 @@
     display: flex;
     align-items: center;
 }
-
 #left-fixed p {
     text-align: left;
     font-weight: 100;
 }
-
-.fa-solid {
+.fa-solid{
     font-size: x-large;
-
+   
 }
-
-.fa-hashtag {
+.fa-hashtag{
     font-size: xx-large;
     margin-left: 20px;
 }
-
 .invert_effect {
     filter: invert(100%);
 }
 
-#signup-cont-content {
-
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
 #logo-img {
-    width: 200px;
-    filter: invert(1);
-
+    width: 25%;
+    height: 15%;
+    margin-left: 37%;
 
 
 }
@@ -128,9 +115,8 @@ p {
     text-align: center;
     font-weight: bold;
     margin-bottom: 30px;
-
+  
 }
-
 #signup-cont p {
     font-weight: 100;
 }
@@ -139,7 +125,7 @@ p {
     background-color: white;
     border-radius: 5px;
     border: 1p solid gray;
-    padding: 8px;
+    padding: 5px;
 }
 
 #google img {
@@ -183,64 +169,67 @@ form #sub-btn:hover {
 
 }
 
+@media all and (max-width:1200px) {
+    /* tablet */
+    #signup-cont{
+        margin: auto;
+        width: 100%;
+    }
+    
+    #container {
+        flex-direction: column-reverse;
+    }
+    #container{
+        width: 100%;
+        margin: 0px;
+       }
+    #google {
+        width: 80%;
+        margin: auto;
+    }
+    
+    #left-fixed {
+        width: 100%;
+        position: relative;
+        height: auto;
+        
+    }
+}
+ 
+
+
 @media all and (max-width:599px) {
 
     /* mobile */
-
-    #signup-cont {
+   
+    #signup-cont{
         width: 100%;
         margin: auto;
         padding: 5%;
     }
-
     #google {
         width: 80%;
         margin: auto;
     }
-
-    #container {
+    #container{
         padding-top: 0px;
         flex-direction: column-reverse;
     }
-
-    #container {
-        width: 90%;
-        margin: 0px;
-    }
-
+    #container{
+         width: 100%;
+         margin: 0px;
+        }
     #container {
         flex-direction: column-reverse;
     }
-
     #left-fixed {
         width: 100%;
         position: relative;
         height: auto;
-
+        
     }
 }
 
-@media all and (max-width:1200px) {
 
-    /* tablet */
-    #signup-cont {
-        margin: auto;
-        width: 100%;
-    }
 
-    #container {
-        flex-direction: column-reverse;
-    }
 
-    #google {
-        width: 80%;
-        margin: auto;
-    }
-
-    #left-fixed {
-        width: 100%;
-        position: relative;
-        height: auto;
-
-    }
-}
