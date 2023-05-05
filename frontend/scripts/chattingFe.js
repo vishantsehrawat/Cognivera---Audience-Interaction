@@ -13,6 +13,7 @@ socket.on("start", (message) => {
     console.log("connected to socket server");
 })
 
+// ^ this will catch the history whenever new user is added 
 // getting chat history 
 socket.on("chatHistory", (chatHistoryGlobal) => {
     displayChatHistory(chatHistoryGlobal) // to display history messages 
@@ -112,13 +113,18 @@ const sendMessage = (event) => {
 
     let innerdiv = document.createElement("div")
     innerdiv.setAttribute("class", "innerdiv")
+    
+    let delBtn = document.createElement("button")
+    delBtn.setAttribute("class","chatDelBtn")
+    // delBtn.addEventListener("click",(event)=>{
 
+    // })
     let name = document.createElement("h4")
     name.innerText = username
     let msg = document.createElement("p")
     msg.innerText = text
 
-    innerdiv.append(name, msg)
+    innerdiv.append(name, msg,delBtn)
     mydiv.append(innerdiv)
     messages.append(mydiv)
     newMessage.innerText = "New message Sent"
