@@ -169,6 +169,35 @@ form #sub-btn:hover {
 
 }
 
+@media all and (max-width:1200px) {
+    /* tablet */
+    #signup-cont{
+        margin: auto;
+        width: 100%;
+    }
+    
+    #container {
+        flex-direction: column-reverse;
+    }
+    #container{
+        width: 100%;
+        margin: 0px;
+       }
+    #google {
+        width: 80%;
+        margin: auto;
+    }
+    
+    #left-fixed {
+        width: 100%;
+        position: relative;
+        height: auto;
+        
+    }
+}
+ 
+
+
 @media all and (max-width:599px) {
 
     /* mobile */
@@ -187,7 +216,7 @@ form #sub-btn:hover {
         flex-direction: column-reverse;
     }
     #container{
-        width: 90%;
+         width: 100%;
          margin: 0px;
         }
     #container {
@@ -201,26 +230,6 @@ form #sub-btn:hover {
     }
 }
 
-@media all and (max-width:1200px) {
-    /* tablet */
-    #signup-cont{
-        margin: auto;
-        width: 100%;
-    }
-    
-    #container {
-        flex-direction: column-reverse;
-    }
-    #google {
-        width: 80%;
-        margin: auto;
-    }
-    
-    #left-fixed {
-        width: 100%;
-        position: relative;
-        height: auto;
-        
-    }
-}
- 
+
+
+

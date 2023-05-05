@@ -11,7 +11,7 @@ userRouter = express();
 userRouter.use(express.json());
 
 //register route
-userRouter.post("/register", async (req, res) => {
+userRouter.post("/register", async (req,res) => {
     const userData = req.body;
     // console.log(userData)
     try {
