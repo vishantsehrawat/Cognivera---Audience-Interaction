@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 // timestamps for creation and updatin date 
 const  chattingSchema = mongoose.Schema({
-    name: { type: String, required: true },
+    name: { type: String },
     message: {type:String}
 }, { versionKey: false, timestamps: true, expires: '120s' });
 

@@ -1,6 +1,7 @@
 
 const socket = io("http://localhost:8080/", { transports: ["websocket"] });
 
+const newMessage = document.getElementById("newMessageRecieved")
 
 var newchatterName = prompt("Enter your name:", "John");
 // console.log("🚀 ~ file: chattingFe.js:6 ~ newchatterName:", newchatterName)
@@ -29,6 +30,7 @@ socket.on("newuser", (msg) => {
 socket.on("usermsg", (message) => {
     const messages = document.querySelector('#messages')
 
+
     let otherdiv = document.createElement("div")
     otherdiv.setAttribute("class", "otherdiv")
 
@@ -45,11 +47,20 @@ socket.on("usermsg", (message) => {
     otherdiv.append(innerdiv)
     messages.append(otherdiv)
 
+    newMessage.innerText = "New message recieved"
+    setTimeout(() => {
+
+        newMessage.innerText = ""
+    }, 10000);
+    // Scroll to the bottom of the messages element
+    messages.scrollTop = messages.scrollHeight + 500;
+
 })
 
 const displayChatHistory = async (chatHistoryGlobal) => {
     try {
         const messages = document.querySelector('#messages')
+
         messages.innerHTML = "";
         chatHistoryGlobal.forEach(message => {
             // let mydiv = document.createElement("div")
@@ -69,6 +80,14 @@ const displayChatHistory = async (chatHistoryGlobal) => {
             otherdiv.append(innerdiv)
             messages.append(otherdiv)
 
+            newMessage.innerText = "Old messages retrieved"
+            setTimeout(() => {
+
+                newMessage.innerText = ""
+            }, 10000);
+            // Scroll to the bottom of the messages element
+            messages.scrollTop = messages.scrollHeight + 500;
+
 
         });
     } catch (error) {
@@ -84,8 +103,6 @@ const sendMessage = (event) => {
     const text = document.getElementById("input").value
     const message = { name: username, message: text }
     socket.emit("message", message)// emitting message on enter
-
-
 
     // ^ below code is to append message on sender side 
     const messages = document.querySelector('#messages')
@@ -104,6 +121,13 @@ const sendMessage = (event) => {
     innerdiv.append(name, msg)
     mydiv.append(innerdiv)
     messages.append(mydiv)
+    newMessage.innerText = "New message Sent"
+    setTimeout(() => {
+        newMessage.innerText = ""
+    }, 10000);
+    // Scroll to the bottom of the messages element
+    messages.scrollTop = messages.scrollHeight + 500;
+
 
     // to clear input box 
     textBox.value = "";

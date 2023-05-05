@@ -134,3 +134,11 @@
     margin: 0 4%;
     margin-top: 20px;
 }
+#newMessageRecieved{
+    text-align: left;
+    margin-left: 5%;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: darkgreen;
+}
