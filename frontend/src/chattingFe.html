@@ -1,0 +1,39 @@
+<!-- left right for user -->
+<!-- static username -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="../styles/chatting.css">
+    
+</head>
+
+<body>
+    
+    <h1 class="chattingHeading">Group Chat</h1>
+    <h2 id="usercountWrapper">Total users: <b id="usercount"></b></h2>
+    <pre id="messages"></pre>
+    <div class="formWrapper">
+
+        <form onsubmit="return false">
+            <input type="text" placeholder="Enter your message" id="input">
+            <input type="submit" value="Send" onclick="sendMessage()" id="submitBtn">
+        </form>
+
+        <p id="newMessageRecieved"></p>
+    </div>
+    <!--  <button onclick="sendMessage()">Send</button> -->
+
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+        integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+        crossorigin="anonymous"></script>
+    
+<script src="../scripts/chattingFe.js"></script>
+</body>
+
+</html>
