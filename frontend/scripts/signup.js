@@ -127,7 +127,8 @@
 
 // //   })
 // // }
-
+let loding_container = document.getElementById("loding_container");
+let main_div = document.getElementById("container")
 
 let form = document.querySelector('form')
 form.addEventListener('submit', myfun)
@@ -139,43 +140,54 @@ function myfun(event) {
     let email = document.getElementById("email").value
     let password = document.getElementById("password").value
     let cpassword = document.getElementById("cpassword").value
-    let payload = { name, email, password }
 
-    console.log(payload)
-
-    if (password === cpassword) {
-
-        fetch("http://localhost:8080/user/register", {
-            method: "POST",
-            headers: {
-                "Content-type": "application/json"
-            },
-            body: JSON.stringify(payload)
-
-        }).then((res) => { return res.json() })
-            .then((data) => {
-
-                console.log(data)
-
-                setTimeout(() => {
-                    location.href = "login.html"
-
-                }, 4000);
-
-              
-            })
-            .catch((err) => {
-                console.log(err.message)
-            })
-
-
+    if (!name || !email || !password || !cpassword) {
+        alert("Please fill all fields")
     } else {
-        alert("Password doesn't match")
+
+        let payload = { name, email, password }
+        // console.log(payload)
+
+        loding_container.style.display = "none";
+        main_div.style.display = "none"
+
+        if (password === cpassword) {
+
+            fetch("http://localhost:8080/user/register", {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(payload)
+
+            }).then((res) => { return res.json() })
+                .then((data) => {
+
+                    console.log(data)
+                    loding_container.style.display = "block";
+                    form.reset()
+
+                    setTimeout(() => {
+                        window.location.href = "./login.html";
+                    }, 2000);
+
+
+                })
+                .catch((err) => {
+                    console.log(err.message)
+                })
+
+
+        } else {
+            alert("Password doesn't match")
+        }
+
     }
-
- 
-
+   
 
 }
+
+
+
 
 
