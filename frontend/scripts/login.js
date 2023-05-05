@@ -1,21 +1,19 @@
+let localurl = "http://localhost:8080/user/login"
+let deployedurl = ""
 let form = document.querySelector('form')
 form.addEventListener('submit', myfun)
 function myfun(event) {
     event.preventDefault()
-
-
     let email = document.getElementById("email").value
     let password = document.getElementById("password").value
-
 
     if (!email || !password) {
         alert("Please enter your email and password")
     } else {
 
-        const payload = {email,password}
+        const payload = { email, password }
 
-
-        fetch("http://localhost:8080/user/login", {
+        fetch(localurl, {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
@@ -26,24 +24,11 @@ function myfun(event) {
             return res.json()
         })
             .then((res) => {
-
                 console.log(res)
-
-               
+                localStorage.setItem("username",JSON.stringify(res.usernameforchat))
                 setTimeout(() => {
-                    window.location = "../index.html";
-                    // window.location.assign('../index.html')
+                    // window.location = "./eventPage.html";
                 }, 1000);
-
-                // form.reset()
-                // window.location.assign('index.html')
-
-
-
-
-
-
-
             })
             .catch((err) => {
                 console.log(err.message)
