@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Page</title>
+    <script src="https://kit.fontawesome.com/8609a682e1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/eventPage-analytics.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <div id="container1">
+        <div id="navbar">
+            <!-- a -->
+            <div>
+                <p><span>Username</span>'s organization</p>
+
+
+                <p>Owner <button>UPGRADE</button></p>
+            </div>
+            <!-- b -->
+            <div>
+                <form action="/search" method="GET">
+
+                    <input type="text" id="search" placeholder="Search...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                <a href="#"> What's new</a>
+                <div id="logo"><span>K</span><span>B</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- overview 01 -->
+    <div id="overview1">
+        <div>
+            <p>Overview</p>
+        </div>
+        <div>
+            <div>
+                <i class="fa-regular fa-calendar-days"></i>
+                <select id="range">
+                    <option value="30days">Last 30 days</option>
+                    <option value="90days">Last 90 days</option>
+                    <option value="1year">1 year</option>
+                    <option value="custom">Custom Range</option>
+                </select>
+            </div>
+
+            <button><i class="fa-solid fa-download"></i>&nbsp; Export</button>
+        </div>
+    </div>
+
+    <!-- Analytics Box -->
+    <div id="analyticsBox01">
+        <!-- 1 -->
+        <div>
+            <!-- a -->
+            <div id="a1">
+                <div>
+                    <div style="display: inline;"><i class="fa-solid fa-calendar-check"></i></div>
+                    <p style="display: inline;">Active Events</p>
+                </div>
+                <div>0</div>
+            </div>
+            <!-- b -->
+            <div id="b1">
+                <div>
+                    <p>Engagement score</p>
+                </div>
+                <div>0</div>
+            </div>
+            <hr>
+            <!-- c -->
+            <div id="c1">
+                <div>
+                    <p>Created events</p>
+                </div>
+                <div>0</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
