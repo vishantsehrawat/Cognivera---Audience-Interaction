@@ -6,6 +6,7 @@ const { connection } = require('./configs/dbConnection');
 const { userRouter } = require('./routes/user.routes');
 const { authMiddleware } = require('./middlewares/authMiddleware.middleware');
 const { chatting } = require('./configs/chatting');
+const cors = require('cors')
 
 
 
@@ -14,8 +15,10 @@ require("dotenv").config();
 
 
 // ^ middlewares 
+app.use(cors())
 app.use(express.json())
 app.use("/user", userRouter)
+
 // after user have logged in , we will use the auth middleware 
 //above userRouter only contains login register and logout
 // app.use(authMiddleware);

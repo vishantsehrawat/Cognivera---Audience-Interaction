@@ -19,6 +19,7 @@
   "homepage": "https://github.com/vishantsehrawat/nonchalant-skate-7263#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "http": "^0.0.1-security",
