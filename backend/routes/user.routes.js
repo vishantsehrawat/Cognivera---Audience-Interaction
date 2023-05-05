@@ -5,6 +5,7 @@ const { UserModel } = require("../models/user.model");
 const { redisClient } = require("../configs/redis");
 const { BlacklistModel } = require("../models/blacklist.model");
 const store = require('store')
+// const cors =  require("cors")
 
 
 require("dotenv").config();
@@ -14,7 +15,7 @@ userRouter = express();
 userRouter.use(express.json());
 
 //register route
-userRouter.post("/register", async (req,res) => {
+userRouter.post("/register", async(req,res) => {
     const userData = req.body;
     // console.log(userData)
     try {
