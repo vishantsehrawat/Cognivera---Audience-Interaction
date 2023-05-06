@@ -5,7 +5,9 @@ let chatHistoryGlobal = []
 
 function chatting(io) {
     io.on("connection", (socket) => {
-        getChatHistory();//calling chat history method on new connection 
+        setTimeout(() => {
+            getChatHistory();//calling chat history method on new connection 
+        }, 2000);
         io.emit("chatHistory", chatHistoryGlobal)
 
         console.log("socket.io connected")
