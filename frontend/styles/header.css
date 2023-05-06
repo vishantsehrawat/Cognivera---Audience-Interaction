@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  nav{
+    width: 100%;
+    /* border: 1px solid brown; */
+    margin-left: -90px;
+    padding: 0 2%;
+    display: flex;
+    
+    align-items:center;
+    position: fixed;
+    transform: translate3d(0px, 0px, 0px);
+    top: 0px;
+    background-color: #fff;
+    box-shadow: 0 0.125rem 0.125rem rgba(0,0,0,.1);
+  }
+  
+  .nav-options{
+    margin-left: 50px;
+    display: flex;
+    /* flex-wrap: wrap; */
+  }
+  
+  .nav-options a{
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: larger;
+    cursor: pointer;
+  }
+  .nav-options a:hover{
+    color: #39ac37;
+    text-decoration: underline;
+  }
+  
+  .nav-log{
+    display: flex;
+    
+    width: fit-content;
+    align-items: center;
+    font-size: larger;
+  }
+  
+  .nav-log > button{
+   padding: 15px 25px;
+   margin: 0 10px;
+  }
+  .nav-log > button a:hover{
+    color: #39ac37;
+    text-decoration: underline;
+  }
+  
+  #Login, #contact{
+    border: none;
+    background-color: #FFFF;
+  }
+  nav a{
+    text-decoration: none;
+    font-size: larger;
+    color: black;
+  }
+  #Signup{
+    border: 0.0625rem solid #39ac37;
+    border-radius: 0.25rem;
+    background: #39ac37;
+  }
+  
+  #Signup > a{
+    font-weight:300;
+    color: white;
+  }
+  #Signup > a{
+   text-decoration: none;
+  }
+  #Signup:hover{
+    background-color: black;
+    text-decoration: none;
+    border:black;
+  }
+  /*_______nav-end_______*/
