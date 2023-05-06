@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/getQuestion.css">
+</head>
+
+<body>
+
+    <form id="search-question-form" method="get">
+        <label for="question_id">Question ID:</label>
+        <input type="text" id="question-id" name="id">
+        <button type="submit">Search</button>
+    </form>
+
+    <div id="question-container">
+        <h2 id="question-text"></h2>
+        <ul id="options-list"></ul>
+    </div>
+
+    <button id="get-questions-btn">Get Questions</button>
+
+    <script src="../scripts/getQuestion.js"></script>
+</body>
+
+</html>

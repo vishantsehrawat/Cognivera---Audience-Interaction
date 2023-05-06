@@ -1,0 +1,31 @@
+
+
+
+// for posting a question
+// http://localhost:8080/question/submit-question
+{
+    "options": [
+        {
+            "option1": "a",
+            "is_correct": false
+        },
+        {
+            "option2": "b",
+            "is_correct": false
+        },
+        {
+            "option3": "c",
+            "is_correct": false
+        },
+        {
+            "option4": "d",
+            "is_correct": false
+        }
+    ],
+    "question": "DSJD"
+}
+
+//for getting questin by id
+// http://localhost:8080/question/get-question/6456c41706a30995ec5284dc
+
+
