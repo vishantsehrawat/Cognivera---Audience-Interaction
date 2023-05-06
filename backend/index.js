@@ -6,6 +6,7 @@ const { connection } = require('./configs/dbConnection');
 const { userRouter } = require('./routes/user.routes');
 const { authMiddleware } = require('./middlewares/authMiddleware.middleware');
 const { chatting } = require('./configs/chatting');
+const {authRoute} = require("./routes/auth.routes")
 const cors = require('cors')
 
 
@@ -18,6 +19,7 @@ require("dotenv").config();
 app.use(cors())
 app.use(express.json())
 app.use("/user", userRouter)
+app.use("/auth", authRoute)
 
 // after user have logged in , we will use the auth middleware 
 //above userRouter only contains login register and logout
@@ -36,6 +38,9 @@ app.get("/", async (req, res) => {
 const serverHttp = http.createServer(app)
 const io = socketio(serverHttp); // with wss we are attaching http server
 chatting(io); // using the imported chatting function and passing io instance/ object 
+
+
+
 
 serverHttp.listen(process.env.PORT, async () => {
     try {

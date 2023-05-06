@@ -126,9 +126,24 @@ p {
     border-radius: 5px;
     border: 1p solid gray;
     padding: 5px;
+    margin-left: 9%;
 }
 
 #google img {
+    width: 10%;
+    margin: auto;
+}
+#github {
+
+    background-color: white;
+    border-radius: 5px;
+    border: 1p solid gray;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 9%;
+}
+
+#github img {
     width: 10%;
     margin: auto;
 }
@@ -187,6 +202,10 @@ form #sub-btn:hover {
         width: 80%;
         margin: auto;
     }
+    #github{
+        width: 80%;
+        margin: auto;
+    }
     
     #left-fixed {
         width: 100%;
@@ -209,6 +228,10 @@ form #sub-btn:hover {
     }
     #google {
         width: 80%;
+        margin: auto;
+    }
+    #github {
+        width: 60%;
         margin: auto;
     }
     #container{
