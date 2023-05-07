@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slido Pricing</title>
-    <link rel="stylesheet" href="../styles/planPage.css">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../styles/checkout.css">
 </head>
-
 <body>
     <header id="main">
         <nav class="navbar section_sizing">
@@ -30,91 +29,96 @@
         </nav>
     </header>
     <main>
-        <section class="pricing-section section_sizing">
-            <h1 id="title">Choose your plan</h1>
+        <!-- Code Here -->
+
+        <section class="payment-section section_sizing">
+
+            <h1 id="title">Upgrade your account to <span></span>  </h1>
+
             <div class="container">
-                <div class="box">
-                    <div class="box-1">
-                        <h1 class="plan_title" id="title-1">Basic</h1>
-                        <p>$<span class="price">0</span></p>
-                        <p class="annual-bill">Free forever</p>
-                        <button class="buy-button" id="button-1">Get started with free</button>
-                        <p class="extra">No credit card required</p>
-                    </div>
-                    <hr>
-                    <div class="box-2">
-                        <h4 class="features-title">includes:</h4>
-                        <ul class="features">
-                            <li>Up to 100 participants</li>
+
+                <div class="box box-1">
+
+                    <p class="validity"><span>Validity:</span><span id="validity-date">6 May 2023 - 6 May 2024</span> </p>
+                    <h3>Billing information</h3>
+                    <form class="form">
+                        <input type="text" placeholder="Card No." id="cardIn">
+                        <input type="text" placeholder="Name" id="nameIn">
+                        <input type="text" placeholder="Expiry" id="expiryIn">
+                        <input type="text" placeholder="Cvv" id="cvvIn">
+                    </form>
+
+                </div>
+                
+                <div class="box box-2">
+
+                    <!-- Div will apear according to the data stored in the local storage -->
+
+                    <!-- Engage plan -->
+                    <div class="plan-box" id="engage">
+                        <h1>What you'll get</h1>
+                        <ul>
+                            <li>Up to 200 participants</li>
                             <li>Unlimited Audience Q&A</li>
-                            <li>3 polls per event</li>
+                            <li>Unlimited polls and quizzes</li>
+                            <li>Basic privacy options</li>
+                            <li>Data exports and more</li>
                         </ul>
+                        <hr>
+                        <h2>Total: US$ 180.00</h2>
+                        <p>1 license (1 user included) x US$ 15.00 x 12 months</p>
+                        <hr>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+
+
+                    <!-- Pro plan -->
+                    <div class="plan-box" id="pro">
+                        <h1>What you'll get</h1>
+                        <ul>
+                            <li>Up to 200 participants</li>
+                            <li>Unlimited Audience Q&A</li>
+                            <li>Unlimited polls and quizzes</li>
+                            <li>Basic privacy options</li>
+                            <li>Data exports and more</li>
+                        </ul>
+                        <hr>
+                        <h2>Total: US$ 180.00</h2>
+                        <p>1 license (1 user included) x US$ 15.00 x 12 months</p>
+                        <hr>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+
+
+                    <!-- Enterprise plan -->
+                    <div class="plan-box" id="enterprise">
+                        <h1>What you'll get</h1>
+                        <ul>
+                            <li>Up to 200 participants</li>
+                            <li>Unlimited Audience Q&A</li>
+                            <li>Unlimited polls and quizzes</li>
+                            <li>Basic privacy options</li>
+                            <li>Data exports and more</li>
+                        </ul>
+                        <hr>
+                        <h2>Total: US$ 180.00</h2>
+                        <p>1 license (1 user included) x US$ 15.00 x 12 months</p>
+                        <hr>
+                        <button class="buy-button">Buy Now</button>
                     </div>
 
                 </div>
-                <div class="box">
-                    <div class="box-1">
-                        <h1 class="plan_title" id="title-2">Engage</h1>
-                        <p>$<span class="price">15</span></p>
-                        <p class="annual-bill">Billed US$ 180 annually</p>
-                        <button class="buy-button" id="button-2">Get started with free</button>
-                        <p class="extra">30-day money-back guarantee</p>
-
-                    </div>
-                    <hr>
-                    <div class="box-2">
-                        <h4 class="features-title">Everything in Basic plus:</h4>
-                        <ul class="features">
-                            <li>Up to 100 participants</li>
-                            <li>Unlimited Audience Q&A</li>
-                            <li>3 polls per event</li>
-                        </ul>
-                    </div>
 
 
-                </div>
-                <div class="box">
-                    <div class="box-1">
-                        <h1 class="plan_title" id="title-3">Professional</h1>
-                        <p>$<span class="price">60</span></p>
-                        <p class="annual-bill">Billed US$ 720 annually</p>
-                        <button class="buy-button" id="button-3">Get started with free</button>
-                        <p class="extra">30-day money-back guarantee</p>
-                    </div>
-                    <hr>
-                    <div class="box-2">
-                        <h4 class="features-title">Everything in Engage plus:</h4>
-                        <ul class="features">
-                            <li>Up to 100 participants</li>
-                            <li>Unlimited Audience Q&A</li>
-                            <li>3 polls per event</li>
-                        </ul>
-                    </div>
-
-
-                </div>
-                <div class="box">
-                    <div class="box-1">
-                        <h1 class="plan_title" id="title-4">Enterprise</h1>
-                        <p>$<span class="price">150</span></p>
-                        <p class="annual-bill">Billed US$ 1800 annually</p>
-                        <button class="buy-button" id="button-4">Get started with free</button>
-                        <p class="extra">30-day money-back guarantee</p>
-                    </div>
-                    <hr>
-                    <div class="box-2">
-                        <h4 class="features-title">Everything in Professional plus:</h4>
-                        <ul class="features">
-                            <li>Up to 100 participants</li>
-                            <li>Unlimited Audience Q&A</li>
-                            <li>3 polls per event</li>
-                        </ul>
-                    </div>
-                    
-                    
-                </div>
             </div>
+
         </section>
+
+        
+
+
+
+
     </main>
     <footer>
         <div class="fdiv section_sizing">
@@ -185,7 +189,6 @@
 
         </div>
     </footer>
-    <script src="../scripts/planPage.js"></script>
 </body>
-
+<script src="../scripts/checkout.js"></script>
 </html>

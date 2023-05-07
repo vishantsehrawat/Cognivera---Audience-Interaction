@@ -129,6 +129,21 @@ nav a {
 
 }
 
+
+#engage {
+    display: none;
+}
+
+#pro {
+    display: none;
+}
+
+#enterprise {
+    display: none;
+}
+
+
+
 .plan-box > ul > li {
     margin: 10px;
 }
@@ -140,6 +155,10 @@ nav a {
     border-radius: 10px;
     color: white;
     background-color: #39ac37;
+}
+
+.buy-button:hover {
+    background-color: black;
 }
 
 .validity {
