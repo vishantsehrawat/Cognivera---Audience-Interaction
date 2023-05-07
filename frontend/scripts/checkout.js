@@ -1,29 +1,21 @@
-
+//Server URL
 const baseServerURL = "http://localhost:8080"
 
-// const baseServerURL = ""
 
 //Local storage
-let userAuthToken = localStorage.getItem("localAccessToken") || null;
-let lsData = localStorage.getItem("email")
+let userLS = JSON.parse(localStorage.getItem("userObject")) || null
 
+
+
+//Catching Elements:
 let homeLogo = document.querySelector(".logo")
-
-
-// Uncomment This after linking with other pages:
-// let UsernameLS = localStorage.getItem("username")
-
-// Comment This after linking with other pages:
-let UsernameLS = "abhimanyu"
-
-
 
 let cardIn = document.getElementById("cardIn");
 let cardNameIn = document.getElementById("nameIn");
 let cardDateIn = document.getElementById("expiryIn");
 let cvvIn = document.getElementById("cvvIn");
 
-let OrderBtn = document.querySelector(".buy-button")
+let OrderBtn = document.getElementById("buy-button")
 
 let engageEl = document.getElementById("engage");
 let proEl = document.getElementById("pro");
@@ -63,14 +55,16 @@ homeLogo.addEventListener("click", () => {
 
 if (plan_checkout == "Engage") {
     engageEl.style.display = "block"
+    plan_display.style.color = "darkgoldenrod"
 } else if (plan_checkout == "Professional") {
     proEl.style.display = "block"
+    plan_display.style.color = "green"
 } else if (plan_checkout == "Enterprise") {
     enterpriseEl.style.display = "block"
+    plan_display.style.color = "purple"
 }
 
 plan_display.innerText = plan_checkout
-
 
 
 
@@ -115,7 +109,6 @@ function validate() {
 
 
 
-
 //Backend POST function
 function backend() {
 
@@ -125,7 +118,7 @@ function backend() {
         plan: currPlan,
     }
 
-    fetch(`${baseServerURL}/users/update/${lsData}`, {
+    fetch(`${baseServerURL}/user/update/${userLS.userId}`, {
         method: "PATCH",
         body: JSON.stringify(userObj),
         headers: {
@@ -141,3 +134,4 @@ function backend() {
         })
 
 }
+
