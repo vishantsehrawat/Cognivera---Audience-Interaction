@@ -7,7 +7,7 @@ const logout = document.getElementById("logoutBtn")
 let logoutUrlLocal = "http://localhost:8080/user/logout"
 // get username from local storage
 let username = JSON.parse(localStorage.getItem("userObject"))?.usernameforchat || "temp";
-console.log("🚀 ~ file: eventPage.js:5 ~ username:", username)
+// console.log("🚀 ~ file: eventPage.js:5 ~ username:", username)
 
 logoName.innerHTML = username;
 logoName1.innerHTML = username;
