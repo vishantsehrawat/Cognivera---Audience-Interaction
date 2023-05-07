@@ -19,6 +19,9 @@ require("dotenv").config();
 // ^ middlewares 
 app.use(cors())
 app.use(express.json())
+app.use(express.static('public')) 
+
+app.use(express.urlencoded({ extended: true }));
 app.use("/user", userRouter)
 app.use("/auth", authRoute)
 app.use("/question",createQuestionRouter); // for the quiz questions
