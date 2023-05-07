@@ -17,6 +17,7 @@ let EnterpriseBtn = document.getElementById("button-4");
 
 
 
+
 // <-------------Event Listerners--------------->
 
 
@@ -29,9 +30,9 @@ homeLogo.addEventListener("click", () => {
 BasicBtn.addEventListener("click", () => {
 
     if (UsernameLS) {
-        alert("Cannot Buy Free Plan")
+        notyf.error('Cannot buy this plan');
     } else {
-        alert("Please Login First")
+        notyf.error('Please Login First');
     }
 
 })
@@ -42,7 +43,7 @@ EngageBtn.addEventListener("click", () => {
         localStorage.setItem("plan", "Engage")
         window.location.href = "../src/checkout.html"
     } else {
-        alert("Please Login First")
+        notyf.error('Please Login First');
     }
 
 })
@@ -52,7 +53,7 @@ ProBtn.addEventListener("click", () => {
         localStorage.setItem("plan", "Professional")
         window.location.href = "../src/checkout.html"
     } else {
-        alert("Please Login First")
+        notyf.error('Please Login First');
     }
 
 })
@@ -62,7 +63,7 @@ EnterpriseBtn.addEventListener("click", () => {
         localStorage.setItem("plan", "Enterprise")
         window.location.href = "../src/checkout.html"
     } else {
-        alert("Please Login First")
+        notyf.error('Please Login First');
     }
 
 })

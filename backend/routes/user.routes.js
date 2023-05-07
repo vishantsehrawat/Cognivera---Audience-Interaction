@@ -15,15 +15,21 @@ userRouter = express();
 userRouter.use(express.json());
 
 //register route
-userRouter.post("/register", async(req,res) => {
+userRouter.post("/register", async (req, res) => {
     const userData = req.body;
     // console.log(userData)
     try {
-        const hash = bcrypt.hashSync(userData.password, 4);
-        userData.password = hash;
-        const user = new UserModel(userData);
-        await user.save();
-        res.status(200).send({ msg: "new user addded" })
+        let alreadyPresent = await UserModel.findOne({ name: userData.name });
+        if (alreadyPresent) {
+            res.status(400).send({ msg: "user is already present please use a different name" })
+        }
+        else {
+            const hash = bcrypt.hashSync(userData.password, 4);
+            userData.password = hash;
+            const user = new UserModel(userData);
+            await user.save();
+            res.status(200).send({ msg: "new user addded" })
+        }
     } catch (error) {
         console.log(error)
         res.status(400).send({ msg: "cannot add new user " })
@@ -49,8 +55,8 @@ userRouter.post("/login", async (req, res) => {
                     //using local storage npm package // ! not working
                     // store.set('username', { name:myUser?.name })
                     redisClient.set("refreshtoken", refreshToken)
-                    
-                    res.status(200).send({ msg: "User logged in", token, refreshToken,usernameforchat:myUser.name })
+
+                    res.status(200).send({ msg: "User logged in", token, refreshToken, usernameforchat: myUser.name ,userId:myUser._id})
                 });
             }
         } catch (error) {
@@ -101,6 +107,27 @@ userRouter.get("/newtoken", (req, res) => {
         res.send(error.message)
     }
 })
+
+// patch route 
+userRouter.patch("/update/:id", async (req, res) => {
+    let {id} = req.params;
+    console.log("🚀 ~ file: user.routes.js:114 ~ userRouter.patch ~ id:", id)
+    let {plan} = req.body;
+    console.log("🚀 ~ file: user.routes.js:115 ~ userRouter.patch ~ plan:", plan)
+    try {
+        const user = await UserModel.findByIdAndUpdate(id,{ plan:plan });
+
+        if (!user) {
+            return res.status(404).send({ msg: "User not found" });
+        }
+
+        res.status(200).send({ msg: "user details updated successfully" });
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({ msg: "Internal server error" });
+    }
+});
+
 module.exports = {
     userRouter
 }
