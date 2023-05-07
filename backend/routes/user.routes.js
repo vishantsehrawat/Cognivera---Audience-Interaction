@@ -40,10 +40,10 @@ userRouter.post("/register", async (req, res) => {
 
 userRouter.post("/login", async (req, res) => {
     const user = req.body;
-    console.log(user);
+    // console.log(user);
     try {
         const myUser = await UserModel.findOne({ email: user.email })
-        // console.log("🚀 ~ file: user.routes.js:34 ~ userRouter.post ~ myUser:", myUser)
+        console.log("🚀 ~ file: user.routes.js:34 ~ userRouter.post ~ myUser:", myUser)
         try {
             if (myUser) {
                 bcrypt.compare(user.password, myUser.password, function (err, result) { // eslint-disable-line no-unused-vars
@@ -55,9 +55,11 @@ userRouter.post("/login", async (req, res) => {
                     //using local storage npm package // ! not working
                     // store.set('username', { name:myUser?.name })
                     redisClient.set("refreshtoken", refreshToken)
-
                     res.status(200).send({ msg: "User logged in", token, refreshToken, usernameforchat: myUser.name ,userId:myUser._id})
                 });
+            }
+            else{
+                res.status(400).send({msg:"user not found "})
             }
         } catch (error) {
             console.log(error)

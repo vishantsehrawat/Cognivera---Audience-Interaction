@@ -12,6 +12,7 @@ function myfun(event) {
     } else {
 
         const payload = { email, password }
+        // console.log("🚀 ~ file: login.js:15 ~ myfun ~ payload:", payload)
 
         fetch(localurl, {
             method: "POST",
@@ -25,13 +26,23 @@ function myfun(event) {
         })
             .then((res) => {
                 console.log(res)
-                localStorage.setItem("userObject",JSON.stringify(res)) 
-                setTimeout(() => {
-                    // window.location = "./eventPage.html";
-                }, 1000);
+                if (res.token) {
+                    localStorage.setItem("userObject", JSON.stringify(res))
+                    setTimeout(() => {
+                        swal("Yeah!", "User has been logged in!", "success");
+                    }, 200);
+                    setTimeout(() => {
+                        window.location.href = "./eventPage.html";
+                    }, 1000);
+                }
+                else {
+                    setTimeout(() => {
+                        swal("oops!", "Incorrect username or password!", "error");
+                    }, 200);
+                }
             })
             .catch((err) => {
-                console.log(err.message)
+                console.log(err.message);
             })
 
 

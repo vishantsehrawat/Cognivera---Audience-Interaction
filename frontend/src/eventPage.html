@@ -16,18 +16,21 @@
         <div id="navbar">
             <!-- a -->
             <div>
-                <p><span>Username</span>'s organization</p>
+                <p><span id="username2">Username</span>'s organization</p>
                 <p>Owner <button>UPGRADE</button></p>
             </div>
             <!-- b -->
             <div>
-                <form action="/search" method="GET">
+                <form action="/search" method="GET" id="searchForm">
 
                     <input type="text" id="search" placeholder="Search...">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
                 <a href="#"> What's new</a>
-                <div id="logo"><span id="fn">K</span><span id="ln">B</span></div>
+                <div id="logo">user name will be here</div>
+                <div class="logoutContainer">
+                    <button class="logoutBtn">Logout</button>
+                </div>
             </div>
         </div>
     </div>
@@ -37,7 +40,7 @@
         <div id="box">
             <div>
                 <div id="b1">
-                    <h1>Welcome, <span>Username</span></h1>
+                    <h1>Welcome, <span id="username1">Username</span></h1>
                     <p>To run live polls, quizzes or Q&A sessions, create your first event. Unlimited and for free!</p>
                     <div id="buttons">
                         <button>+ Create Slido</button>
@@ -75,21 +78,12 @@
 
     <!-- Buttons -->
     <div id="container4">
-        <button><i class="fa-solid fa-square-poll-horizontal fa-xl"></i> Create a Poll</button>
-        <button><i class="fa-brands fa-think-peaks fa-xl"></i> Create a Quiz</button>
-        <button><i class="fa-solid fa-users-line fa-xl"></i> Group Chat</button>
+        <button id="createPoll"><i class="fa-solid fa-square-poll-horizontal fa-xl"></i> Create a Poll</button>
+        <button id="createQuiz"><i class="fa-brands fa-think-peaks fa-xl"></i> Create a Quiz</button>
+        <button id="groupChat"><i class="fa-solid fa-users-line fa-xl"></i> Group Chat</button>
     </div>
 </body>
 
-<script>
-    let username = JSON.parse(localStorage.getItem("username"));
-    let fn = document.getElementById("fn")
-    let ln = document.getElementById("ln")
 
-    let initial = username[0];
-
-    fn.innerText = initial;
-    ln.innerText = initial;
-</script>
-
+<script src="../scripts/eventPage.js"></script>
 </html>
