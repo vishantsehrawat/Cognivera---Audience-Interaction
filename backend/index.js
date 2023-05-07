@@ -7,6 +7,7 @@ const { userRouter } = require('./routes/user.routes');
 const { authMiddleware } = require('./middlewares/authMiddleware.middleware');
 const { chatting } = require('./configs/chatting');
 const {authRoute} = require("./routes/auth.routes")
+const {RatingRouter} =  require("./routes/rating.routes")
 const cors = require('cors');
 const { createQuestionRouter } = require('./routes/createQuestion.routes');
 
@@ -22,6 +23,7 @@ app.use(express.json())
 app.use("/user", userRouter)
 app.use("/auth", authRoute)
 app.use("/question",createQuestionRouter); // for the quiz questions
+app.use("/rating",RatingRouter)
 
 // after user have logged in , we will use the auth middleware 
 //above userRouter only contains login register and logout
