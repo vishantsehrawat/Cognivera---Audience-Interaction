@@ -1,7 +1,18 @@
 *{
     box-sizing: border-box;
   }
-  
+  .nvabar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nvabar a{
+    text-decoration: none;
+    color: black;
+  }
+  .nvabar .logo{
+    color: #217720;
+  }
   nav{
     width: 100%;
     /* border: 1px solid brown; */
@@ -19,6 +30,7 @@
   
   .nav-options{
     margin-left: 50px;
+    margin-right: 80px;
     display: flex;
     /* flex-wrap: wrap; */
   }
@@ -36,10 +48,12 @@
   
   .nav-log{
     display: flex;
-    
     width: fit-content;
     align-items: center;
     font-size: larger;
+  }
+  .nav-log a{
+    font-size: 15px;
   }
   
   .nav-log > button{
