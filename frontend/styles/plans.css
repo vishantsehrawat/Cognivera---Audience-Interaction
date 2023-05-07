@@ -169,20 +169,38 @@ hr {
     border-radius: 5px;
 }
 
+
+
 #button-1 {
     background-color: darkcyan;
+}
+
+#button-1:hover {
+    background-color: black;
 }
 
 #button-2 {
     background-color: darkgoldenrod;
 }
 
+#button-2:hover {
+    background-color: black;
+}
+
 #button-3 {
     background-color: green;
 }
 
+#button-3:hover {
+    background-color: black;
+}
+
 #button-4 {
     background-color: purple;
+}
+
+#button-4:hover {
+    background-color: black;
 }
 
 #title-1 {
