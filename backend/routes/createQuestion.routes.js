@@ -6,7 +6,7 @@ createQuestionRouter.use(express.json())
 
 
 // submit question to mongodb
-createQuestionRouter.post('/submit-question', async (req, res) => {
+createQuestionRouter.post('/submit-question',authMiddleware, async (req, res) => {
     try {
         const { question, options } = req.body;
         // // console.log("🚀 ~ file: createQuestion.routes.js:38 ~ createQuestionRouter.post ~ req.body:", req.body)
@@ -38,7 +38,7 @@ createQuestionRouter.post('/submit-question', async (req, res) => {
 });
 
 // get question by id 
-createQuestionRouter.get('/get-question/:id', async (req, res) => {
+createQuestionRouter.get('/get-question/:id',authMiddleware, async (req, res) => {
   // console.log(req.params)
     try {
       const question = await QuestionModel.findById(req.params.id);
@@ -54,7 +54,7 @@ createQuestionRouter.get('/get-question/:id', async (req, res) => {
   });
 
 // get all questions
-createQuestionRouter.get('/get-all-questions', async (req, res) => {
+createQuestionRouter.get('/get-all-questions',authMiddleware, async (req, res) => {
   try {
     const questions = await QuestionModel.find({});
     if (!questions) {

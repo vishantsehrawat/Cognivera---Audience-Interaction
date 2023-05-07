@@ -1,11 +1,13 @@
 var jwt = require('jsonwebtoken');
 const { UserModel } = require('../models/user.model');
 const { BlacklistModel } = require('../models/blacklist.model');
+const { redisClient } = require('../configs/redis');
 
 require('dotenv').config();
 
 const authMiddleware = async(req, res, next) => {
-    const token = req.headers.authorization;
+    const token = redisClient.get("jwttoken") // we have saved token on redis
+    // const token = req.headers.authorization;
     // console.log("🚀 ~ file: au   thentication.js:8 ~ authMiddleware ~ token:", token)
     try {
         // checking if the token is present in blacklist or not
