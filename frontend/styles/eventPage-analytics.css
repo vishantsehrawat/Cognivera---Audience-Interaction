@@ -200,6 +200,7 @@ body {
   background-color: #39ae37;
   color: white;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 #searchForm {
