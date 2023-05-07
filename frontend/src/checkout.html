@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
     <link rel="stylesheet" href="../styles/checkout.css">
+    <link href="../styles/notyf.min.css" rel="stylesheet">
 </head>
+
 <body>
     <header id="main">
         <nav class="navbar section_sizing">
@@ -33,13 +36,14 @@
 
         <section class="payment-section section_sizing">
 
-            <h1 id="title">Upgrade your account to <span></span>  </h1>
+            <h1 id="title">Upgrade your account to <span></span> </h1>
 
             <div class="container">
 
                 <div class="box box-1">
 
-                    <p class="validity"><span>Validity:</span><span id="validity-date">6 May 2023 - 6 May 2024</span> </p>
+                    <p class="validity"><span>Validity:</span><span id="validity-date">6 May 2023 - 6 May 2024</span>
+                    </p>
                     <h3>Billing information</h3>
                     <form class="form">
                         <input type="text" placeholder="Card No." id="cardIn">
@@ -49,7 +53,7 @@
                     </form>
 
                 </div>
-                
+
                 <div class="box box-2">
 
                     <!-- Div will apear according to the data stored in the local storage -->
@@ -97,15 +101,21 @@
                     <div class="plan-box" id="enterprise">
                         <h1>What you'll get</h1>
                         <ul>
-                            <li>Up to 200 participants</li>
+                            <li>Up to 5000 participants</li>
                             <li>Unlimited Audience Q&A</li>
                             <li>Unlimited polls and quizzes</li>
-                            <li>Basic privacy options</li>
-                            <li>Data exports and more</li>
+                            <li>Advanced privacy options</li>
+                            <li>Data exports</li>
+                            <li>Moderation of questions</li>
+                            <li>Branding</li>
+                            <li>Team collaboration</li>
+                            <li>Professional onboarding</li>
+                            <li>SSO for users & participants</li>
+                            <li>User provisioning and more</li>
                         </ul>
                         <hr>
-                        <h2>Total: US$ 180.00</h2>
-                        <p>1 license (1 user included) x US$ 15.00 x 12 months</p>
+                        <h2>Total: US$ 1,800.00</h2>
+                        <p>1 license (3 users included) x US$ 150.00 x 12 months</p>
                         <hr>
                         <button class="buy-button">Buy Now</button>
                     </div>
@@ -117,7 +127,7 @@
 
         </section>
 
-        
+
 
 
 
@@ -188,10 +198,15 @@
                 </ul>
             </div>
         </div>
-        <div>
-
-        </div>
     </footer>
+
 </body>
-<script src="../scripts/checkout.js"></script>
+<script src="../scripts/notyf.min.js" type="application/javascript"></script>
+<script type="application/javascript">
+    var notyf = new Notyf({
+        duration: 5000 // Set your global Notyf configuration here
+    });
+</script>
+<script src="../scripts/checkout.js" type="application/javascript"></script>
+
 </html>
