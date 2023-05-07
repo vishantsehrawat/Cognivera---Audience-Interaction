@@ -31,7 +31,7 @@ authRoute.get("/github", async (req, res) => {
             console.log("testted");
             console.log(accessToken)
             console.log(user)
-            res.send("Authentication successfull");
+            // res.send("Authentication successfull");
            
         });
     // console.log('check');

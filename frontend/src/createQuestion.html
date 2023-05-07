@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/createQuestion.css">
+</head>
+
+<body>
+    <form action="/submit-question" method="post">
+        <label for="question">Question:</label><br>
+        <input type="text" id="question" name="question" required><br>
+
+        <label for="option1">Option 1:</label><br>
+        <input type="text" id="option1" name="option1" required>
+        <input type="radio" id="option1_correct" name="correctOption" value="option1" required><label
+            for="option1_correct">Correct</label><br>
+
+        <label for="option2">Option 2:</label><br>
+        <input type="text" id="option2" name="option2" required>
+        <input type="radio" id="option2_correct" name="correctOption" value="option2" required><label
+            for="option2_correct">Correct</label><br>
+
+        <label for="option3">Option 3:</label><br>
+        <input type="text" id="option3" name="option3" required>
+        <input type="radio" id="option3_correct" name="correctOption" value="option3" required><label
+            for="option3_correct">Correct</label><br>
+
+        <label for="option4">Option 4:</label><br>
+        <input type="text" id="option4" name="option4" required>
+        <input type="radio" id="option4_correct" name="correctOption" value="option4" required><label
+            for="option4_correct">Correct</label><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script src="../scripts/createQuestion.js"></script>
+</body>
+
+</html>
