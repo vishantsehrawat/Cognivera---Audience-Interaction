@@ -33,7 +33,7 @@ createQuestionRouter.post('/submit-question', async (req, res) => {
 
     } catch (error) {
         console.error(error.message);
-        res.status(500).json({ message: 'An error occurred while saving the question' });
+        res.status(500).send({error,message: 'An error occurred while saving the question' });
     }
 });
 

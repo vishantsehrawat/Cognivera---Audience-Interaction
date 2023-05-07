@@ -36,9 +36,19 @@ let plan_display = document.querySelector("#title > span")
 let validity_display = document.getElementById("validity-date")
 
 
-//Do it later:
-// validity_display.innerText  = new Date()
 
+// Date object
+const date = new Date();
+
+let currentDay= String(date.getDate()).padStart(2, '0');
+let currentMonth = String(date.getMonth()+1).padStart(2,"0");
+let currentYear = date.getFullYear();
+
+// we will display the date as DD-MM-YYYY 
+let currentDate = `${currentDay}-${currentMonth}-${currentYear}`;
+let yearlaterDate = `${currentDay}-${currentMonth}-${currentYear+1}`;
+
+  validity_display.innerText = `${currentDate} - ${yearlaterDate}`
 
 
 // <-------------Event Listerners--------------->
@@ -74,14 +84,14 @@ OrderBtn.addEventListener("click", (e) => {
     if (validate()) {
 
         setTimeout(() => {
-            // backend()
+            backend()
         },1000)
 
-        alert(`Order placed Successfully`)
+        notyf.success('Your changes have been successfully saved!');
 
     }
     else {
-        alert("Please fill the all cards fields")
+        notyf.error('Please fill the form first');
     }
 })
 
@@ -119,8 +129,7 @@ function backend() {
         method: "PATCH",
         body: JSON.stringify(userObj),
         headers: {
-            'Content-type': 'application/json',
-            "Authorization": `Bearer ${userAuthToken}`
+            'Content-type': 'application/json'
         }
     })
         .then(res => res.json())
