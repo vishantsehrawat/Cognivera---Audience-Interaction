@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Page</title>
     <link rel="import" href="cdn.html">
-    <script src="../scripts/ifUserLoggedIn.js"defer ></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"defer ></script>   <!-- sweet alert cdn  -->
-    <script src="https://kit.fontawesome.com/8609a682e1.js" crossorigin="anonymous"defer ></script>
+    <script src="../scripts/ifUserLoggedIn.js" defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script> <!-- sweet alert cdn  -->
+    <script src="https://kit.fontawesome.com/8609a682e1.js" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="../styles/eventPage-analytics.css">
 </head>
 
@@ -18,7 +18,7 @@
     <div id="container1">
         <div id="navbar">
             <!-- a -->
-            <div>
+            <div class="leftDivNav">
                 <p><span id="username2">Username</span>'s organization</p>
                 <p>Owner <button>UPGRADE</button></p>
             </div>
@@ -82,11 +82,16 @@
     <!-- Buttons -->
     <div id="container4">
         <button id="createPoll"><i class="fa-solid fa-square-poll-horizontal fa-xl"></i> Create a Poll</button>
-        <button id="createQuiz"><i class="fa-brands fa-think-peaks fa-xl"></i> Create a Quiz</button>
-        <button id="groupChat"><i class="fa-solid fa-users-line fa-xl"></i> Group Chat</button>
+        <a href="createQuestion.html" class="eventPageLinks">
+            <button id="createQuiz"><i class="fa-brands fa-think-peaks fa-xl"></i> Create a Quiz</button>
+        </a>
+        <a href="chattingFe.html" class="eventPageLinks">
+            <button id="groupChat"><i class="fa-solid fa-users-line fa-xl"></i> Group Chat</button>
+        </a>
     </div>
 </body>
 
 
-<script src="../scripts/eventPage.js"defer ></script>
+<script src="../scripts/eventPage.js" defer></script>
+
 </html>

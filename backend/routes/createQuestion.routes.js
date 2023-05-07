@@ -1,8 +1,10 @@
 const express = require("express");
 const { QuestionModel } = require("../models/question.model");
+const { authMiddleware } = require("../middlewares/authMiddleware.middleware");
 
 const createQuestionRouter = express();
 createQuestionRouter.use(express.json())
+
 
 
 // submit question to mongodb

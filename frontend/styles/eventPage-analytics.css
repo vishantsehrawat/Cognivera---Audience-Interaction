@@ -13,8 +13,8 @@ body {
   background-color: #2a56a7;
 }
 
-#navbar {
-  width: 75%;
+#navbar { 
+  width: 100%;
   background-color: #2a56a7;
   margin: auto;
   display: flex;
@@ -27,7 +27,6 @@ body {
 
 #navbar>div:nth-child(2) {
   display: flex;
-  width: 350px;
   align-items: center;
   justify-content: space-between;
 }
@@ -173,11 +172,12 @@ body {
 /* Container 04 */
 
 #container4 {
-  /* border: 1px solid red; */
-  width: 75%;
-  margin: auto;
-  margin-top: 30px;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
 }
 
 #container4 button {
@@ -212,10 +212,17 @@ body {
   gap: 10px;
 }
 
+.eventPageLinks * {
+  cursor: pointer;
+}
+.leftDivNav{
+  padding: 0 2%;
+}
+
 /* Media Screens */
 @media all and (max-width: 1000px) {
   #navbar {
-    width: 90%;
+    /* width: 90%; */
   }
 
   #container2 #box {
@@ -263,9 +270,7 @@ body {
     display: none;
   }
 
-  #container4 {
-    width: 100%;
-  }
+  #container4 {}
 
   #container4 button {
     padding: 10px;
@@ -386,10 +391,43 @@ hr {
     width: 60%;
   }
 }
+@media screen and (max-width: 1200px) {
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #navbar div:nth-child(1) {
+    margin-right: 20px;
+  }
+
+  #navbar div:nth-child(2) {
+    display: flex;
+    align-items: center;
+  }
+
+  #navbar form {
+    margin-right: 20px;
+  }
+
+  #navbar #logo {
+    display: block;
+  }
+
+  .logoutContainer {
+    margin-left: 20px;
+  }
+}
+
 
 @media all and (max-width: 800px) {
   #analyticsBox01>div {
     width: 100%;
+  }
+  #navbar{
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -409,3 +447,32 @@ hr {
     margin-top: 20px;
   }
 }
+/* For screens smaller than 600px */
+@media screen and (max-width: 600px) {
+  #navbar {
+    flex-direction: column;
+  }
+  
+  #navbar div:nth-child(1) {
+    margin-bottom: 20px;
+  }
+
+  #navbar div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navbar form {
+    margin-bottom: 20px;
+  }
+
+  #navbar #logo {
+    display: none;
+  }
+
+  .logoutContainer {
+    margin-top: 20px;
+  }
+}
+
