@@ -4,9 +4,13 @@
     padding: 0;
 }
 
+ul {
+    list-style: none;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #020008;
+    /* background-color: #020008; */
 }
 
 form {
@@ -60,13 +64,23 @@ input[type="submit"]:hover {
 /* ............ */
 /* Form styles */
 form {
-    max-width: 500px;
+    max-width: 800px;
     margin: 0 auto;
+    margin-top: 20px;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
+    border-radius: 10px;
+    background-color: White;
+    color: black;
+    box-shadow: 20px -20px 60px #bebebe,
+        -20px 20px 60px #ffffff;
+}
+
+.createQestionHeading {
+    font-size: 35px;
+    color: black;
+    text-align: center;
+    padding: 20px;
 }
 
 label {
@@ -80,7 +94,7 @@ input[type="radio"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: none;
+    /* border: none; */
     border-radius: 3px;
     font-size: 16px;
     color: #333;
@@ -156,3 +170,43 @@ label[for^="option"] {
     margin-bottom: 5px;
     vertical-align: middle;
 }
+
+/* +++++++++++ feauture div +++++++++++++++++++++++++++++++++++++++++++++ */
+.features ul {
+    display: none;
+    opacity: 0;
+    background-color: white;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.featureHeading{
+    color: green;
+}
+.features>ul>li {
+    padding: 5px;
+    color: black;
+    text-align: left;
+    font-size: 20px;
+}
+
+.features {
+    width: fit-content;
+    float: right;
+    padding: 20px;
+    margin-right: 60px;
+    text-align: center;
+    position: relative;
+}
+
+.features:hover ul {
+    position: absolute;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    transition-duration: 2s;
+}
+
+
+/* ---------- feature div -------------------------------------------- */

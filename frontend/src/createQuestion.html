@@ -7,9 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/createQuestion.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 
 <body>
+    <h1 class="createQestionHeading">Create your question</h1>
+    <div class="features">
+        <h1 class="featureHeading">Features</h1>
+        <ul>
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+        </ul>
+    </div>
     <form action="/submit-question" method="post">
         <label for="question">Question:</label><br>
         <input type="text" id="question" name="question" required><br>

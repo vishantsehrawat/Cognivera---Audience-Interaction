@@ -1,21 +1,24 @@
-
-
 /* .....................  2nd css */
 body {
     background-color: #171c28;
     color: #fff;
-    
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-li{
+ul{
     list-style: none;
-    list-style:decimal-leading-zero ;
+}
+
+li {
+    list-style: none;
 
 }
-#options-list{
-    text-align:start;
+
+#options-list {
+    text-align: start;
 }
-.optionsLi{
+
+.optionsLi {
     text-transform: capitalize;
     font-size: 20px;
     color: wheat;
@@ -91,8 +94,58 @@ li:hover {
     color: #fff;
 }
 
+.getQuestionHeading {
+    font-size: 34px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
 @media only screen and (max-width: 600px) {
     form {
         width: 100%;
     }
 }
+
+
+/* +++++++++++ feauture div +++++++++++++++++++++++++++++++++++++++++++++ */
+.features ul {
+    display: none;
+    opacity: 0;
+    background-color: white;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.featureHeading {
+    color: green;
+}
+
+.features>ul>li {
+    padding: 5px;
+    color: black;
+    text-align: left;
+    font-size: 20px;
+}
+
+.features {
+    width: fit-content;
+    float: right;
+    padding: 20px;
+    margin-right: 150px;
+    text-align: center;
+    position: relative;
+}
+
+.features:hover ul {
+    position: absolute;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    transition-duration: 2s;
+}
+
+
+/* ---------- feature div -------------------------------------------- */
