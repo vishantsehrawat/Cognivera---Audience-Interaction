@@ -107,6 +107,8 @@
 #signup-cont {
     margin-left: 50%;
     margin-top: 5%;
+  
+    
 
 }
 
@@ -126,11 +128,14 @@ p {
     border-radius: 5px;
     border: 1p solid gray;
     padding: 5px;
-    margin-left: 9%;
+    width: 65%;
+   margin-bottom: 10px;
+    margin-left: 18%;
+    
 }
 
 #google img {
-    width: 10%;
+    width: 7%;
     margin: auto;
 }
 #github {
@@ -140,23 +145,25 @@ p {
     border: 1p solid gray;
     padding: 5px;
     margin-top: 10px;
-    margin-left: 9%;
+   
+    width: 65%;
+    margin: auto;
+    margin-left: 18%;
 }
 
 #github img {
-    width: 10%;
-    margin: auto;
+    width: 7%;
+    /* margin: auto; */
 }
 
 #signup-cont form {
-    width: 100%;
+
+    width: 80%;
     margin: auto;
     border-radius: 5px;
-
     text-align: center;
-
+  
 }
-
 form input {
     width: 80%;
     height: 40px;
@@ -231,7 +238,7 @@ form #sub-btn:hover {
         margin: auto;
     }
     #github {
-        width: 60%;
+        width: 80%;
         margin: auto;
     }
     #container{
