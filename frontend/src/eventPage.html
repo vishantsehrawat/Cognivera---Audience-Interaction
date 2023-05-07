@@ -29,7 +29,7 @@
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
                 <a href="#"> What's new</a>
-                <div id="logo"><span>K</span><span>B</span></div>
+                <div id="logo"><span id="fn">K</span><span id="ln">B</span></div>
             </div>
         </div>
     </div>
@@ -75,7 +75,23 @@
         </div>
     </div>
 
-
+    <!-- Buttons -->
+    <div id="container4">
+        <button><i class="fa-solid fa-square-poll-horizontal fa-xl"></i> Create a Poll</button>
+        <button><i class="fa-brands fa-think-peaks fa-xl"></i> Create a Quiz</button>
+        <button>Checkout a Poll</button>
+    </div>
 </body>
+
+<script>
+    let username = JSON.parse(localStorage.getItem("username"));
+    let fn = document.getElementById("fn")
+    let ln = document.getElementById("ln")
+
+    let initial = username[0];
+
+    fn.innerText = initial;
+    ln.innerText = initial;
+</script>
 
 </html>

@@ -25,7 +25,7 @@ function myfun(event) {
         })
             .then((res) => {
                 console.log(res)
-                localStorage.setItem("username",JSON.stringify(res.usernameforchat))
+                localStorage.setItem("username",JSON.stringify(res.usernameforchat)) 
                 setTimeout(() => {
                     // window.location = "./eventPage.html";
                 }, 1000);

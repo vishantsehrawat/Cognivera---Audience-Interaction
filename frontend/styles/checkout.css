@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+
+.section_sizing {
+    width: 85%;
+    /* border: 2px solid red; */
+    margin: auto;
+}
+
+
+
+
+/*_______nav-starts_______*/
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+nav {
+    padding: 0 2%;
+    display: flex;
+    align-items: center;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.nav-options {
+    margin-left: 50px;
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.nav-options a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.nav-options a:hover {
+    color: #39ac37;
+    text-decoration: underline;
+}
+
+.nav-log {
+    display: flex;
+
+    width: fit-content;
+    align-items: center;
+    font-size: larger;
+}
+
+.nav-log>button {
+    padding: 15px 25px;
+    margin: 0 10px;
+}
+
+.nav-log>button a:hover {
+    color: #39ac37;
+    text-decoration: underline;
+}
+
+#Login,
+#contact {
+    border: none;
+    background-color: #FFFF;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: larger;
+    color: black;
+}
+
+#Signup {
+    border: 0.0625rem solid #39ac37;
+    border-radius: 0.25rem;
+    background: #39ac37;
+}
+
+#Signup>a {
+    font-weight: 300;
+    color: white;
+}
+
+#Signup>a {
+    text-decoration: none;
+}
+
+#Signup:hover {
+    background-color: black;
+    text-decoration: none;
+    border: black;
+}
+
+/*_______nav-ends_______*/
+
+
+
+
+
+/* __________main-start_________ */
+
+#title {
+    font-size: 30px;
+    font-weight: 100;
+    margin-bottom: -20px;
+}
+
+#title>span {
+    color: darkorange;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 60px 0px;
+}
+
+.box-2 {
+    padding: 30px;
+    border-radius: 15px;
+    background-color: whitesmoke;
+
+}
+
+
+#engage {
+    display: none;
+}
+
+#pro {
+    display: none;
+}
+
+#enterprise {
+    display: none;
+}
+
+
+
+.plan-box > ul > li {
+    margin: 10px;
+}
+
+.buy-button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #39ac37;
+}
+
+.buy-button:hover {
+    background-color: black;
+}
+
+.validity {
+    margin-bottom: 50px;
+}
+
+.validity>span {
+    font-weight: bolder;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+
+}
+
+.form > input {
+
+    border: none;
+    border-bottom: 2px solid grey;
+    margin: 15px;
+
+}
+
+
+
+@media screen and (max-width: 968px) {
+    .container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    /* .box {
+        width: calc(50% - 20px);
+    } */
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    /* .box {
+        width: calc(50% - 20px);
+    } */
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+
+        grid-template-columns: repeat(1, 1fr);
+        /* margin: auto; */
+
+    }
+
+    /* .box {
+        width: calc(100% - 20px);
+        height: 150px;
+    } */
+}
+
+
+/* __________main-ends_________ */
+
+
+
+
+
+
+/* _______footer starts______ */
+
+footer {
+    margin: auto;
+}
+
+.fdiv {
+    font-size: larger;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 50px;
+    /* padding:50px 300px; */
+    /* border: 2px solid red; */
+}
+
+.fdiv ul {
+    margin-top: 40px;
+    list-style: none;
+    font-weight: 600;
+}
+
+.fdiv ul>li {
+    font-family: SlidoSansFont, SlidoSansFont-fallback, verdana, arial, sans-serif;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    margin-top: 13px;
+}
+
+.fdiv ul>li:hover {
+    color: #39ac37;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.fdiv ul>li:first-child {
+    font-size: large;
+    font-family: SlidoSansFont, SlidoSansFont-fallback, verdana, arial, sans-serif;
+}
+
+.fdiv ul>li:first-child:hover {
+    cursor: auto;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* _____________footer ends__________ */

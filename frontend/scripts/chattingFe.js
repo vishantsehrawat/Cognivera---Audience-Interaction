@@ -50,7 +50,6 @@ socket.on("usermsg", (message) => {
 
     newMessage.innerText = "New message recieved"
     setTimeout(() => {
-
         newMessage.innerText = ""
     }, 10000);
     // Scroll to the bottom of the messages element
@@ -83,7 +82,6 @@ const displayChatHistory = async (chatHistoryGlobal) => {
 
             newMessage.innerText = "Old messages retrieved"
             setTimeout(() => {
-
                 newMessage.innerText = ""
             }, 10000);
             // Scroll to the bottom of the messages element

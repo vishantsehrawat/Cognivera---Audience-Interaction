@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #020008;
+}
+
+form {
+    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* ............ */
+/* Form styles */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"],
+input[type="radio"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+}
+
+input[type="submit"] {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #6c63ff;
+    cursor: pointer;
+}
+
+/* Radio button styles */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: #fff;
+    border: 2px solid #6c63ff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #6c63ff;
+}
+
+input[type="radio"]+label {
+    font-size: 16px;
+}
+
+/* Hover and focus states */
+input[type="text"]:hover,
+input[type="radio"]:hover,
+input[type="text"]:focus,
+input[type="radio"]:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #6c63ff;
+}
+
+input[type="submit"]:hover {
+    background-color: #4c45b2;
+}
+
+input[type="radio"] {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+label[for^="option"] {
+    display: inline-block;
+    margin-bottom: 5px;
+    vertical-align: middle;
+}

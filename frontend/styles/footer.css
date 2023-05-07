@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+/* _______footer starts______ */
+
+.fdiv {
+    font-size: larger;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 50px;
+    padding: 50px 300px;
+}
+
+.fdiv ul {
+    margin-top: 40px;
+    list-style: none;
+    font-weight: 600;
+}
+
+.fdiv ul>li {
+    font-family: SlidoSansFont, SlidoSansFont-fallback, verdana, arial, sans-serif;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    margin-top: 13px;
+}
+
+.fdiv ul>li:hover {
+    color: #39ac37;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.fdiv ul>li:first-child {
+    font-size: large;
+    font-family: SlidoSansFont, SlidoSansFont-fallback, verdana, arial, sans-serif;
+}
+
+.fdiv ul>li:first-child:hover {
+    cursor: auto;
+    text-decoration: none;
+    color: black;
+}
+
+
+@media (max-width:1500px) {
+    .nav-options {
+        margin-left: 35px;
+
+    }
+
+    .options>button {
+        width: 25%
+    }
+
+    .top-header>h1 {
+        font-size: 3rem;
+    }
+
+    nav {
+        margin: auto;
+    }
+
+    .nav-log {
+        margin-left: 8%;
+    }
+
+    .nav-log>button {
+        margin: 0 5px;
+    }
+
+    .fdiv {
+        padding: 50px;
+    }
+
+    .cards {
+        width: 90%;
+    }
+
+    #Login,
+    #contact {
+        padding: 0;
+    }
+
+    .cards>article>h3 {
+        font-size: 1.3rem;
+    }
+
+}
+
+@media (max-width:1200px) {
+    .top-header>h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* _____________footer ends__________ */
