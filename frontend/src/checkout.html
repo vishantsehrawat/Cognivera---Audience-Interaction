@@ -10,7 +10,7 @@
     <link href="../styles/notyf.min.css" rel="stylesheet">
     <script src="../scripts/ifUserLoggedIn.js"defer ></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"defer ></script>   <!-- sweet alert cdn  -->
-    <link rel="stylesheet" href="../styles/footer.css"><!-- importing these here because we are importing html using jquery -->
+    <!-- <link rel="stylesheet" href="../styles/footer.css"> importing these here because we are importing html using jquery -->
     <link rel="stylesheet" href="../styles/header.css"><!-- importing these here because we are importing html using jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -44,7 +44,7 @@
                             <li>Data exports and more</li>
                         </ul>
                         <hr>
-                        <h2>Total: US$ 180.00</h2>
+                        <h2>Total: US$ <span class="price">180.00</span></h2>
                         <p>1 license (1 user included) x US$ 15.00 x 12 months</p>
                         <hr>
                     </div>
@@ -64,7 +64,7 @@
                             <li>Team collaboration and more</li>
                         </ul>
                         <hr>
-                        <h2>Total: US$ 720.00</h2>
+                        <h2>Total: US$ <span class="price">720.00</span></h2>
                         <p>1 license (2 users included) x US$ 60.00 x 12 months</p>
                         <hr>
                     </div>
@@ -87,7 +87,7 @@
                             <li>User provisioning and more</li>
                         </ul>
                         <hr>
-                        <h2>Total: US$ 1,800.00</h2>
+                        <h2>Total: US$ <span class="price">1,800.00</span></h2>
                         <p>1 license (3 users included) x US$ 150.00 x 12 months</p>
                         <hr>
                     </div>
@@ -306,9 +306,9 @@
     $(function () {
         $("footer").load("../src/footer.html");
     });
-    $(function () {
-        $("header").load("../src/header.html");
-    });
+    // $(function () {
+    //     $("header").load("../src/header.html");
+    // });
 </script>
 <!-- Header / Footer Script -->
 
