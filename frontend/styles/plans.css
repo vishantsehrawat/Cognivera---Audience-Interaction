@@ -10,6 +10,83 @@
 }
 
 
+/* navbar */
+
+#container1 {
+    background-color: #2a56a7;
+  }
+  
+  #navbar { 
+    width: 100%;
+    background-color: #2a56a7;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0px;
+    color: white;
+    line-height: 24px;
+  }
+  
+  #navbar>div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #navbar>div:nth-child(2) a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  #navbar>div:nth-child(1)>p:nth-child(1),
+  #navbar>div:nth-child(2) a {
+    font-weight: bold;
+    font-size: small;
+  }
+  
+  #navbar>div:nth-child(1)>p:nth-child(2) {
+    font-size: small;
+  }
+  
+  #navbar>div:nth-child(1) button {
+    background-color: #4c71b5;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-size: small;
+  }
+  
+  #navbar .fa-search {
+    background: #2a56a7;
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  #navbar #search {
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 2px;
+  }
+  
+  #navbar #logo {
+    background-color: white;
+    color: #2a56a7;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 50%;
+    padding: 10px;
+    text-transform: capitalize;
+    margin: 0 30px;
+  }
+
+/* navbar */
+
 
 
 /* _______Main Section Starts______ */

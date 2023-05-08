@@ -7,20 +7,41 @@
     <title>Slido Pricing</title>
     <link rel="stylesheet" href="../styles/plans.css">
     <link href="../styles/notyf.min.css" rel="stylesheet">
-<<<<<<< Updated upstream
     <script src="../scripts/ifUserLoggedIn.js"defer ></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"defer ></script>   <!-- sweet alert cdn  -->
-=======
     <link rel="stylesheet" href="../styles/footer.css">
     <!-- importing these here because we are importing html using jquery -->
-    <link rel="stylesheet" href="../styles/header.css">
+    <!-- <link rel="stylesheet" href="../styles/header.css"> -->
     <!-- importing these here because we are importing html using jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
->>>>>>> Stashed changes
 </head>
 
 <body>
     <header></header><!-- importing from header.html file  -->
+    <!-- navbar -->
+    <div id="container1">
+        <div id="navbar">
+            <!-- a -->
+            <div class="leftDivNav">
+                <p><span id="username2">Username</span>'s organization</p>
+                <p>Owner <button>UPGRADE</button></p>
+            </div>
+            <!-- b -->
+            <div>
+                <form action="/search" method="GET" id="searchForm">
+
+                    <input type="text" id="search" placeholder="Search...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                <a href="#"> What's new</a>
+                <div id="logo">user name will be here</div>
+                <div class="logoutContainer">
+                    <button class="logoutBtn" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <main>
         <section class="pricing-section section_sizing">
             <h1 id="title">Choose your plan</h1>
@@ -114,20 +135,8 @@
         </section>
     </main>
 
-<<<<<<< Updated upstream
-        </div>
-    </footer>
-    <script src="../scripts/notyf.min.js" type="application/javascript"defer ></script>
-        <script type="application/javascript">
-          var notyf = new Notyf({
-            duration: 5000 // Set your global Notyf configuration here
-          });
-        </script>
-        <script src="../scripts/plans.js" type="application/javascript"defer ></script>
-=======
     <footer></footer><!-- importing from footer.html file  -->
 
->>>>>>> Stashed changes
 </body>
 
 <!-- Notyf Script -->
@@ -146,9 +155,9 @@
     $(function () {
         $("footer").load("../src/footer.html");
     });
-    $(function () {
-        $("header").load("../src/header.html");
-    });
+    // $(function () {
+    //     $("header").load("../src/header.html");
+    // });
 </script>
 <!-- Header / Footer Script -->
 
