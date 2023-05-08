@@ -21,11 +21,6 @@ let EnterpriseBtn = document.getElementById("button-4");
 // <-------------Event Listerners--------------->
 
 
-homeLogo.addEventListener("click", () => {
-    window.location.href = "../index.html"
-})
-
-
 
 BasicBtn.addEventListener("click", () => {
 
