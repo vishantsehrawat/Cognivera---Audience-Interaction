@@ -46,6 +46,7 @@
   background-color: #fff;
   padding: 3px;
   border-radius: 2rem;
+
 }
 
 .search > input {
@@ -53,6 +54,7 @@
   background-color: #fff;
   padding: 3px;
   font-size:1rem ;
+  width: 20%;
 }
 
 .search>input:focus{
@@ -445,6 +447,11 @@
 .cards a:hover{
   text-decoration: none
 }
+#content-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
 /* ___________bottom ends_________ */
 
@@ -548,6 +555,10 @@
 
 }
 
-@media (max-width){
+@media all and (max-width:599px) {
+
+  .code-center>h2{
+    display: none;
+  }
 
 }

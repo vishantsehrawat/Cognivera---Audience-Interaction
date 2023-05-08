@@ -95,4 +95,39 @@
     border:black;
   }
   /*_______nav-end_______*/
+
+  #hamburger {
+    color: black;
+    font-weight: bold;
+    display: none;
+  }
+  #menu-options {
+    display: flex;
+    justify-content: space-between;
+    /* width: fit-content; */
+    align-items: center;
+    font-size: larger;
+    font-weight: bold;
+  
+  }
+
+  @media all and (max-width:599px) {
+    #hamburger {
+      display: block;
+      margin-left: 50%;
+      margin-right: 5%;
+
+    }
+    #menu-options {
+      display: none;
+    }
+    /* #menu-options {
+      margin-left: 10%;
+      display: flex;
+      flex-direction: row;
+      
+    } */
+  }
+
+
   
