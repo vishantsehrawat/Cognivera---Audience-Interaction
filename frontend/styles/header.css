@@ -57,7 +57,7 @@
   }
   
   .nav-log > button{
-   padding: 15px 25px;
+   /* padding: 15px 25px; */
    margin: 0 10px;
   }
   .nav-log > button a:hover{
@@ -77,12 +77,14 @@
   #Signup{
     border: 0.0625rem solid #39ac37;
     border-radius: 0.25rem;
+    height: 45px;
     background: #39ac37;
   }
   
   #Signup > a{
     font-weight:300;
     color: white;
+    padding: 20px 30px;
   }
   #Signup > a{
    text-decoration: none;
