@@ -21,6 +21,7 @@ require("dotenv").config();
 app.use(cors())
 app.use(express.json())
 app.use(express.static('public')) 
+// app.use(authMiddleware)
 
 app.use(express.urlencoded({ extended: true }));
 app.use("/user", userRouter)
