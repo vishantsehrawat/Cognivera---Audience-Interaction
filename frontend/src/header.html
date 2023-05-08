@@ -6,25 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="nvabar">
         <div class="logo">
             <h1>Cognivera</h1>
         </div>
-        <div class="nav-options">
-            <a href="#">Product</a>
-            <a href="#">Solutions</a>
-            <a href="#">Pricing</a>
-            <a href="#">Resources</a>
-            <a href="#">Enterprise</a>
+        <div id="menu-options">
+            <div class="nav-options" >
+                <a href="#">Product</a>
+                <a href="#">Solutions</a>
+                <a href="#">Pricing</a>
+                <a href="#">Resources</a>
+                <a href="#">Enterprise</a>
+            </div>
+            <div class="nav-log">
+                <button id="contact"><a href="#">Contact sales</a></button>
+                <button id="Login"><a href="#">Log In</a></button>
+                <button id="Signup"><a href="#">Sign Up</a></button>
+        
+            </div>
+
         </div>
-        <div class="nav-log">
-            <button id="contact"><a href="#">Contact sales</a></button>
-            <button id="Login"><a href="#">Log In</a></button>
-            <button id="Signup"><a href="#">Sign Up</a></button>
-    
-        </div>
+       
+        <a id="hamburger" href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
 </body>
 </html>
+<!-- <script src="../scripts/heder.js"></script> -->
+<script>
+   function myFunction() {
+  var x = document.getElementById("menu-options");
+  if (x.style.display == "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
