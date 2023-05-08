@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
-    font-family: sans-serif
+    font-family: sans-serif;
+
 }
 
 .section_sizing {
@@ -14,67 +15,68 @@
 
 #container1 {
     background-color: #2a56a7;
-  }
-  
-  #navbar { 
+
+}
+
+#navbar {
     width: 100%;
     background-color: #2a56a7;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 0px;
+    padding: 0px 20px;
     color: white;
     line-height: 24px;
-  }
-  
-  #navbar>div:nth-child(2) {
+}
+
+#navbar>div:nth-child(2) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  #navbar>div:nth-child(2) a {
+}
+
+#navbar>div:nth-child(2) a {
     text-decoration: none;
     color: white;
-  }
-  
-  #navbar>div:nth-child(1)>p:nth-child(1),
-  #navbar>div:nth-child(2) a {
+}
+
+#navbar>div:nth-child(1)>p:nth-child(1),
+#navbar>div:nth-child(2) a {
     font-weight: bold;
     font-size: small;
-  }
-  
-  #navbar>div:nth-child(1)>p:nth-child(2) {
+}
+
+#navbar>div:nth-child(1)>p:nth-child(2) {
     font-size: small;
-  }
-  
-  #navbar>div:nth-child(1) button {
+}
+
+#navbar>div:nth-child(1) button {
     background-color: #4c71b5;
     border: none;
     padding: 5px;
     border-radius: 5px;
     color: white;
     font-size: small;
-  }
-  
-  #navbar .fa-search {
+}
+
+#navbar .fa-search {
     background: #2a56a7;
     border: none;
     color: white;
     padding: 5px;
     border-radius: 50%;
     cursor: pointer;
-  }
-  
-  #navbar #search {
+}
+
+#navbar #search {
     border: none;
     outline: none;
     padding: 5px;
     border-radius: 2px;
-  }
-  
-  #navbar #logo {
+}
+
+#navbar #logo {
     background-color: white;
     color: #2a56a7;
     font-weight: bold;
@@ -83,6 +85,150 @@
     padding: 10px;
     text-transform: capitalize;
     margin: 0 30px;
+}
+
+
+#username2 {
+    text-transform: uppercase;
+}
+
+.logoutBtn {
+    padding: 10px;
+    margin: 0px 10px;
+    border: none;
+    background-color: #39ae37;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#searchForm {
+    width: fit-content;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    #navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    #navbar div:nth-child(1) {
+      margin-right: 20px;
+    }
+  
+    #navbar div:nth-child(2) {
+      display: flex;
+      align-items: center;
+    }
+  
+    #navbar form {
+      margin-right: 20px;
+    }
+  
+    #navbar #logo {
+      display: block;
+    }
+  
+    .logoutContainer {
+      margin-left: 20px;
+    }
+  }
+  
+  
+  @media all and (max-width: 800px) {
+    #analyticsBox01>div {
+      width: 100%;
+    }
+    #navbar{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  
+  
+  @media all and (max-width: 500px) {
+    #overview1 {
+      width: 75%;
+      /* border: 1px solid red; */
+      margin: auto;
+      margin-top: 30px;
+      display: block;
+      align-items: center;
+    }
+  
+    #overview1>div:nth-child(2) {
+      /* border: 1px solid blue; */
+      margin-top: 20px;
+    }
+  }
+  /* For screens smaller than 600px */
+  @media screen and (max-width: 600px) {
+    #navbar {
+      flex-direction: column;
+    }
+    
+    #navbar div:nth-child(1) {
+      margin-bottom: 20px;
+    }
+  
+    #navbar div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #navbar form {
+      margin-bottom: 20px;
+    }
+  
+    #navbar #logo {
+      display: none;
+    }
+  
+    .logoutContainer {
+      margin-top: 20px;
+    }
+  }
+
+
+  @media all and (max-width: 600px) {
+    #navbar #search {
+      display: none;
+    }
+  
+    #navbar>div:nth-child(2) {
+      display: flex;
+      width: 150px;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    #container2 #box {
+      padding: 40px 60px;
+      text-align: center;
+    }
+  
+    #container2 #box #b1 #buttons>button:nth-child(1) {
+      margin-bottom: 20px;
+    }
+  
+    #container3 {
+      display: none;
+    }
+  
+    #container4 {}
+  
+    #container4 button {
+      padding: 10px;
+      margin: 0px 5px;
+    }
   }
 
 /* navbar */
@@ -258,4 +404,3 @@ hr {
 }
 
 /* _______Main Section Ends______ */
-
