@@ -46,11 +46,11 @@ createQuestionRouter.get('/get-question/:id',authMiddleware, async (req, res) =>
       const question = await QuestionModel.findById(req.params.id);
       // console.log("🚀 ~ file: createQuestion.routes.js:69 ~ createQuestionRouter.get ~ question:", question)
       if (!question) {
-        return res.status(404).json({ message: 'Question not found' });
+        return res.status(404).send({ message: 'Question not found' });
       }
       res.json({msg:"question Found",question});
     } catch (err) {
-      console.error(err.message);
+      console.log(err.message);
       res.status(500).send('Server Error');
     }
   });
@@ -62,7 +62,7 @@ createQuestionRouter.get('/get-all-questions',authMiddleware, async (req, res) =
     if (!questions) {
       return res.status(404).json({ message: 'No questions found' });
     }
-    res.json({msg:"Questions Found",questions});
+    res.send({msg:"Questions Found",questions});
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');

@@ -1,5 +1,9 @@
-let localurl = "http://localhost:8080/user/login"
-let deployedurl = ""
+    const renderDeploymentURl  ="https://slidoapp.onrender.com";
+    const loginDeployedUrl = `${renderDeploymentURl}/user/login`
+    // let localurl = "http://localhost:8080/user/login"
+    
+
+
 let form = document.querySelector('form')
 form.addEventListener('submit', myfun)
 function myfun(event) {
@@ -14,7 +18,7 @@ function myfun(event) {
         const payload = { email, password }
         // console.log("🚀 ~ file: login.js:15 ~ myfun ~ payload:", payload)
 
-        fetch(localurl, {
+        fetch(loginDeployedUrl, {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
