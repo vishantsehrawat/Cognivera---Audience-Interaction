@@ -6,7 +6,8 @@ Interactive Fulll Stack clone of slido.com with Group Chatting, Quizzes and Word
 [https://cognivera.netlify.app/](https://cognivera.netlify.app/)  **(Netlify)** \
 [https://cognivera.up.railway.app/](https://cognivera.up.railway.app/) **(Railway)** 
 
-
+## Routes/ Endpoints 
++ 
 ## Tech Stack
 
 **Client:** 
