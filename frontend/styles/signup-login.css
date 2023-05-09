@@ -16,7 +16,8 @@
 }
 
 #loding_div>img {
-    width: 120px;
+    width: 100px;
+    margin-right:40%;
 }
 
 #loding_div>h2 {
