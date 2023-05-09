@@ -33,7 +33,11 @@ authRoute.get("/github", async (req, res) => {
             console.log(user)
             console.log(user.name)
            
-            res.send("Authentication successfull");
+           // res.send("Authentication successfull");
+            res.redirect("https://cognivera.netlify.app/")
+            // if(accessToken) {
+            //     window.location.href = "./eventPage.html"
+            // }
 
             // if (res.token) {
             //     localStorage.setItem("userObject", JSON.stringify(res))
