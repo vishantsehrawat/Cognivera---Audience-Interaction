@@ -62,7 +62,7 @@ createQuestionRouter.get('/get-all-questions',authMiddleware, async (req, res) =
     if (!questions) {
       return res.status(404).json({ message: 'No questions found' });
     }
-    res.json({msg:"Questions Found",questions});
+    res.send({msg:"Questions Found",questions});
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');

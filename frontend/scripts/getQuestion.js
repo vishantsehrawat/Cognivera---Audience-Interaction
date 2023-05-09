@@ -23,7 +23,7 @@ searchQuestionForm.addEventListener('submit', (event) => {
       displayQuestion(question)
     })
     .catch(error => {
-      console.log('Error:', error);
+      console.log('Error:', error.message);
       // Handle error here
     });
 });
