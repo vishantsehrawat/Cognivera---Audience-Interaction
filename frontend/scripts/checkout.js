@@ -179,7 +179,7 @@ submitButton.addEventListener("click", (e) => {
         },1000)
 
         setTimeout(() => {
-            window.location.href = "../index.html"
+            window.location.href = "./eventPage.html"
         },3000)
 
         notyf.success('Your changes have been successfully saved!');
