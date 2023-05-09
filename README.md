@@ -8,6 +8,17 @@ Interactive Fulll Stack clone of slido.com with Group Chatting, Quizzes and Word
 
 ## Routes/ Endpoints 
 + https://slidoapp.onrender.com/user/register  For user Registration
++ https://slidoapp.onrender.com/user/login  For user Login
++ https://slidoapp.onrender.com/user/logout  For user Logout
++ https://slidoapp.onrender.com/user/newtoken  For new token
++ https://slidoapp.onrender.com/user/update/:id  For plan update
++ https://slidoapp.onrender.com/question/submit-question  For submitting question
++ https://slidoapp.onrender.com/question/get-question/:id  For getting a question
++ https://slidoapp.onrender.com/question/get-all-questions  For getting all questions
++ https://slidoapp.onrender.com/rating/add-rating  For adding rating
++ https://slidoapp.onrender.com/rating/get-rating  For get rating
+
+
 ## Tech Stack
 
 **Client:** 
