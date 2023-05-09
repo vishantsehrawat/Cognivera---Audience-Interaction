@@ -5,6 +5,8 @@ const logout = document.getElementById("logoutBtn")
 
 
 let logoutUrlLocal = "http://localhost:8080/user/logout"
+const renderDeploymentURl  ="https://slidoapp.onrender.com";
+const logoutUrlDeployed = `${renderDeploymentURl}/user/logout`
 // get username from local storage
 let username = JSON.parse(localStorage.getItem("userObject"))?.usernameforchat || "temp";
 // console.log("🚀 ~ file: eventPage.js:5 ~ username:", username)
@@ -17,7 +19,7 @@ logoName2.innerHTML = username;
 // logut button clicked 
 logout.addEventListener("click", () => {
 
-  fetch(logoutUrlLocal, {
+  fetch(logoutUrlDeployed, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -26,21 +28,24 @@ logout.addEventListener("click", () => {
   })
     .then(response => response.json())
     .then((data) => {
-      swal("Great!", "Your have been successfully logged out!", "success");
+      console.log("🚀 ~ file: eventPage.js:29 ~ .then ~ data:", data)
+      setTimeout(() => {
+        swal("Great!", "Your have been successfully logged out!", "success");
+      }, 100);
 
       console.log(data);
     })
 
     .catch((error) => {
 
-      console.error(error)
+      console.log(error)
     })
 
   localStorage.removeItem("userObject")
 
   setTimeout(() => {
     window.location.reload();
-  }, 1000);
+  }, 3000);
 
 })
 

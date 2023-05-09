@@ -6,7 +6,7 @@ window.onload = () => {
     if (!userLoggedIn) {
         setTimeout(() => {
             swal("Oops!", "Login First!", "error");
-        }, 100);
+        }, 1000);
         setTimeout(() => {
             window.location.href = "login.html"
         }, 2000);
