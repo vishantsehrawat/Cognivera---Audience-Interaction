@@ -31,8 +31,24 @@ authRoute.get("/github", async (req, res) => {
             console.log("testted");
             console.log(accessToken)
             console.log(user)
+            console.log(user.name)
            
-            // res.send("Authentication successfull");
+            res.send("Authentication successfull");
+
+            // if (res.token) {
+            //     localStorage.setItem("userObject", JSON.stringify(res))
+            //     setTimeout(() => {
+            //         swal("Yeah!", "User has been logged in!", "success");
+            //     }, 200);
+            //     setTimeout(() => {
+            //         window.location.href = "./eventPage.html";
+            //     }, 1000);
+            // }
+            // else {
+            //     setTimeout(() => {
+            //         swal("oops!", "Incorrect username or password!", "error");
+            //     }, 200);
+            // }
            
         });
     // console.log('check');
