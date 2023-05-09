@@ -18,7 +18,7 @@ form.addEventListener('submit', (event) => {
         ]
     };
     console.log(question)
-    fetch(createQuestionDeployedUrl, {
+    fetch(questionPostUrl, {
         method: 'POST',
         body: JSON.stringify(question),
         headers: {
