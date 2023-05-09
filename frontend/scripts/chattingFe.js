@@ -1,5 +1,7 @@
+const localUrl = "http://localhost:8080/"
+const renderDeploymentURl  ="https://slidoapp.onrender.com";
 
-const socket = io("http://localhost:8080/", { transports: ["websocket"] });
+const socket = io(renderDeploymentURl, { transports: ["websocket"] });
 
 const newMessage = document.getElementById("newMessageRecieved")
 
