@@ -15,24 +15,32 @@ logoName2.innerHTML = username;
 
 
 // logut button clicked 
-logout.addEventListener("click",()=>{
+logout.addEventListener("click", () => {
 
-    fetch(logoutUrlLocal, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({})
-      })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error(error))
+  fetch(logoutUrlLocal, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({})
+  })
+    .then(response => response.json())
+    .then((data) => {
+      swal("Great!", "Your have been successfully logged out!", "success");
 
-        localStorage.removeItem("userObject")
+      console.log(data);
+    })
 
-        setTimeout(() => {
-            window.location.reload();
-        }, 1000);
+    .catch((error) => {
+
+      console.error(error)
+    })
+
+  localStorage.removeItem("userObject")
+
+  setTimeout(() => {
+    window.location.reload();
+  }, 1000);
 
 })
 
