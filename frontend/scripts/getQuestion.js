@@ -15,7 +15,7 @@ searchQuestionForm.addEventListener('submit', (event) => {
   // console.log("🚀 ~ file: getQuestion.js:11 ~ searchQuestionForm.addEventListener ~ questionId:", questionId)
 
   // Make fetch request to get the question by ID
-  fetch(`${getQuestionUrl}/${questionId}`)
+  fetch(`${getQuestionDeployedUrl}/${questionId}`)
     .then(response => response.json())
     .then(question => {
       console.log(question);
