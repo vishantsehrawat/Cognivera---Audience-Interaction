@@ -6,9 +6,10 @@ const { redisClient } = require('../configs/redis');
 require('dotenv').config();
 
 const authMiddleware = async(req, res, next) => {
-    const token = redisClient.get("jwttoken") // we have saved token on redis
+    console.log("🚀 ~ file: authMiddleware.middleware.js:9 ~ authMiddleware ~ req:", req.body)
+    const token = await redisClient.get("jwttoken") // we have saved token on redis
     // const token = req.headers.authorization;
-    // console.log("🚀 ~ file: au   thentication.js:8 ~ authMiddleware ~ token:", token)
+    console.log("🚀 ~ file: au   thentication.js:8 ~ authMiddleware ~ token:", token)
     try {
         // checking if the token is present in blacklist or not
         const blackToken = await BlacklistModel.find({token:token});
@@ -33,7 +34,7 @@ const authMiddleware = async(req, res, next) => {
         }
 
     } catch (error) {
-        // console.log("🚀 ~ file: authMiddleware.middleware.js:34 ~ authMiddleware ~ error:", error)
+        console.log("🚀 ~ file: authMiddleware.middleware.js:34 ~ authMiddleware ~ error:", error)
         res.send(error.message);
     }
 }
