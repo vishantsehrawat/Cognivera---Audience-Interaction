@@ -1,5 +1,7 @@
 //Server URL
 const baseServerURL = "http://localhost:8080"
+const renderDeploymentURl  ="https://slidoapp.onrender.com";
+const checkoutDeployedUrl = `${renderDeploymentURl}/user/update`
 
 
 //Local storage
@@ -201,7 +203,7 @@ function backend() {
         plan: currPlan,
     }
 
-    fetch(`${baseServerURL}/user/update/${userLS.userId}`, {
+    fetch(`${checkoutDeployedUrl}/${userLS.userId}`, {
         method: "PATCH",
         body: JSON.stringify(userObj),
         headers: {

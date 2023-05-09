@@ -1,5 +1,7 @@
 
 
+const renderDeploymentURl  ="https://slidoapp.onrender.com";
+const createQuestionDeployedUrl = `${renderDeploymentURl}/question/submit-question`
 
 const questionPostUrl = "http://localhost:8080/question/submit-question"
 const form = document.querySelector('form');
@@ -16,7 +18,7 @@ form.addEventListener('submit', (event) => {
         ]
     };
     console.log(question)
-    fetch(questionPostUrl, {
+    fetch(createQuestionDeployedUrl, {
         method: 'POST',
         body: JSON.stringify(question),
         headers: {
@@ -44,7 +46,7 @@ form.addEventListener('submit', (event) => {
 
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.log('Error:', error);
             // Handle error here
         });
 
