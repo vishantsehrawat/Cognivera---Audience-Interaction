@@ -7,7 +7,7 @@ Interactive Fulll Stack clone of slido.com with Group Chatting, Quizzes and Word
 [https://cognivera.up.railway.app/](https://cognivera.up.railway.app/) **(Railway)** 
 
 ## Routes/ Endpoints 
-+ 
++ https://slidoapp.onrender.com/user/register  For user Registration
 ## Tech Stack
 
 **Client:** 
