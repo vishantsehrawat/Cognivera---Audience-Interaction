@@ -3,7 +3,7 @@ const { QuestionModel } = require("../models/question.model");
 const { authMiddleware } = require("../middlewares/authMiddleware.middleware");
 
 const createQuestionRouter = express();
-createQuestionRouter.use(express.json())
+// createQuestionRouter.use(express.json())
 
 
 
@@ -26,7 +26,7 @@ createQuestionRouter.post('/submit-question',authMiddleware, async (req, res) =>
         let queSearch = await QuestionModel.findOne({question:newQuestion.question})
         // console.log("🚀 ~ file: createQuestion.routes.js:51 ~ createQuestionRouter.post ~ queSearch:", queSearch)
         if (queSearch) {
-            res.send({ msg: "question already added " })
+            res.json({ msg: "question already added " })
         }
         else {
             const savedQuestion = await newQuestion.save();
@@ -35,7 +35,7 @@ createQuestionRouter.post('/submit-question',authMiddleware, async (req, res) =>
 
     } catch (error) {
         console.error(error.message);
-        res.status(500).send({error,message: 'An error occurred while saving the question' });
+        res.status(500).json({error,message: 'An error occurred while saving the question' });
     }
 });
 
@@ -46,12 +46,12 @@ createQuestionRouter.get('/get-question/:id',authMiddleware, async (req, res) =>
       const question = await QuestionModel.findById(req.params.id);
       // console.log("🚀 ~ file: createQuestion.routes.js:69 ~ createQuestionRouter.get ~ question:", question)
       if (!question) {
-        return res.status(404).send({ message: 'Question not found' });
+        return res.status(404).json({ message: 'Question not found' });
       }
       res.json({msg:"question Found",question});
     } catch (err) {
       console.log(err.message);
-      res.status(500).send('Server Error');
+      res.status(500).json('Server Error');
     }
   });
 
@@ -62,10 +62,10 @@ createQuestionRouter.get('/get-all-questions',authMiddleware, async (req, res) =
     if (!questions) {
       return res.status(404).json({ message: 'No questions found' });
     }
-    res.send({msg:"Questions Found",questions});
+    res.json({msg:"Questions Found",questions});
   } catch (err) {
     console.error(err.message);
-    res.status(500).send('Server Error');
+    res.status(500).json('Server Error');
   }
 });
 
