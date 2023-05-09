@@ -9,7 +9,6 @@ const { authMiddleware } = require("../middlewares/authMiddleware.middleware");
 // const cors =  require("cors")
 
 
-
 require("dotenv").config();
 
 userRouter = express();
