@@ -1,4 +1,4 @@
-// const getQuestionUrl = "http://localhost:8080/question/get-question"
+const getQuestionUrl = "http://localhost:8080/question/get-question"
 const renderDeploymentURl  ="https://slidoapp.onrender.com";
 const getQuestionDeployedUrl = `${renderDeploymentURl}/question/get-question`
 
@@ -15,7 +15,7 @@ searchQuestionForm.addEventListener('submit', (event) => {
   // console.log("🚀 ~ file: getQuestion.js:11 ~ searchQuestionForm.addEventListener ~ questionId:", questionId)
 
   // Make fetch request to get the question by ID
-  fetch(`${getQuestionDeployedUrl}/${questionId}`)
+  fetch(`${getQuestionUrl}/${questionId}`)
     .then(response => response.json())
     .then(question => {
       console.log(question);
