@@ -1,7 +1,9 @@
 const localUrl = "http://localhost:8080/"
-const renderDeploymentURl  ="https://slidoapp.onrender.com";
+// const renderDeploymentURl  ="https://slidoapp.onrender.com";
+// gettign var saved in sep file
+console.log("🚀 ~ file: chattingFe.js:5 ~ DEPLOYED_URL:", globals.DEPLOYED_URL)
 
-const socket = io(renderDeploymentURl, { transports: ["websocket"] });
+const socket = io(globals.DEPLOYED_URL, { transports: ["websocket"] });
 
 const newMessage = document.getElementById("newMessageRecieved")
 

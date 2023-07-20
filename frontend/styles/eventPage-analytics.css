@@ -13,7 +13,7 @@ body {
   background-color: #2a56a7;
 }
 
-#navbar { 
+#navbar {
   width: 100%;
   background-color: #2a56a7;
   margin: auto;
@@ -29,6 +29,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 #navbar>div:nth-child(2) a {
@@ -72,13 +73,13 @@ body {
 }
 
 #navbar #logo {
-  background-color: white;
-  color: #2a56a7;
+  color: white;
   font-weight: bold;
   padding: 5px;
   border-radius: 50%;
   padding: 10px;
   text-transform: capitalize;
+  font-size: 15px;
   margin: 0 30px;
 }
 
@@ -157,6 +158,20 @@ body {
   padding: 10px;
 }
 
+#buttons {
+  margin-top: 20px;
+}
+
+#createCogniBtn {
+  color: white;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 10px;
+  background-color: #39ae37;
+  text-decoration: none;
+
+}
+
 #container3 #tools {
   display: grid;
   width: 100%;
@@ -181,6 +196,8 @@ body {
 }
 
 #container4 button {
+  width: 200px;
+  height: 100px;
   padding: 10px;
   margin: 0px 10px;
   border: none;
@@ -215,9 +232,63 @@ body {
 .eventPageLinks * {
   cursor: pointer;
 }
-.leftDivNav{
+
+.leftDivNav {
   padding: 0 2%;
 }
+
+/* form for creating cogni +++++++++++++++++++++++++++ */
+#createSlidoForm {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+}
+
+#createSlidoForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+#createSlidoForm input[type="date"],
+#createSlidoForm input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#createSlidoForm button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#createSlidoForm button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#createSlidoForm button[type="submit"]:focus {
+  outline: none;
+}
+
+#createSlidoForm button[type="submit"]:active {
+  background-color: #3e8e41;
+}
+
+
+/* form for creating cogni ----------------------- */
 
 /* Media Screens */
 @media all and (max-width: 1000px) {
@@ -391,6 +462,7 @@ hr {
     width: 60%;
   }
 }
+
 @media screen and (max-width: 1200px) {
   #navbar {
     display: flex;
@@ -425,7 +497,8 @@ hr {
   #analyticsBox01>div {
     width: 100%;
   }
-  #navbar{
+
+  #navbar {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -447,12 +520,13 @@ hr {
     margin-top: 20px;
   }
 }
+
 /* For screens smaller than 600px */
 @media screen and (max-width: 600px) {
   #navbar {
     flex-direction: column;
   }
-  
+
   #navbar div:nth-child(1) {
     margin-bottom: 20px;
   }
@@ -475,4 +549,3 @@ hr {
     margin-top: 20px;
   }
 }
-

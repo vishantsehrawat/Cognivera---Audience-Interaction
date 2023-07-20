@@ -1,7 +1,8 @@
-    const renderDeploymentURl  ="https://slidoapp.onrender.com";
-    const loginDeployedUrl = `${renderDeploymentURl}/user/login`
-    // let localurl = "http://localhost:8080/user/login"
-    
+console.log("🚀 ~ file: login.js:3 ~ globals:", globals)
+// const renderDeploymentURl  ="https://slidoapp.onrender.com";
+const loginDeployedUrl = `${globals.DEPLOYED_URL}/user/login`
+// let localurl = "http://localhost:8080/user/login"
+
 
 
 let form = document.querySelector('form')

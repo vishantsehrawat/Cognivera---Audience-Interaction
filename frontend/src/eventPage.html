@@ -8,8 +8,13 @@
     <title>Event Page</title>
     <link rel="import" href="cdn.html">
     <script src="../scripts/ifUserLoggedIn.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js" defer></script>
+    <script type="text/javascript" src="../config/globals.js" defer></script>
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script> <!-- sweet alert cdn  -->
     <script src="https://kit.fontawesome.com/8609a682e1.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" href="../styles/eventPage-analytics.css">
 </head>
 
@@ -46,8 +51,24 @@
                     <h1>Welcome, <span id="username1">Username</span></h1>
                     <p>To run live polls, quizzes or Q&A sessions, create your first event. Unlimited and for free!</p>
                     <div id="buttons">
-                        <button>+ Create Slido</button>
-                        <button>Watch how it works</button>
+                        <a id="createCogniBtn" href="#createCogni" rel="modal:open">+ Create Cogni</a>
+                        <div id="createCogni" class="modal">
+                            <!-- write modal data here -->
+                            <form id="createSlidoForm">
+                                <label for="start_date">Start date</label>
+                                <input type="date" id="start_date" name="start_date" />
+                                <label for="end_date">End date</label>
+                                <input type="date" id="end_date" name="end_date" />
+                                <label for="slido_name">Cogni name</label>
+                                <input type="text" id="slido_name" name="slido_name" />
+                                <button type="submit"><a href="#" rel="modal:close">Create Cogni</a></button>
+                            </form>
+                            <!-- <a href="#" rel="modal:close">Close</a> -->
+                        </div>
+
+                        <!-- Link to open the modal -->
+                        <p></p>
+                        <!-- <button>Watch how it works</button> -->
                     </div>
                 </div>
             </div>
@@ -60,7 +81,7 @@
     </div>
 
     <!-- Conatiner 3  Tools-->
-    <div id="container3">
+    <!-- <div id="container3">
         <p>Run Slido directly from your favourite tool</p>
 
         <div id="tools">
@@ -77,12 +98,13 @@
                 <img src="../images/webex.PNG" alt="err">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Buttons -->
     <div id="container4">
         <a href="plans.html" class="eventPageLinks">
-            <button id="gotoPayment"> <i class="fa-sharp fa-light fa-money-bill fa-xl" style="color: #f2f2f2;"></i> Upgrade Plan</button>
+            <button id="gotoPayment"> <i class="fa-sharp fa-light fa-money-bill fa-xl" style="color: #f2f2f2;"></i>
+                Upgrade Plan</button>
         </a>
 
         <a href="createQuestion.html" class="eventPageLinks">

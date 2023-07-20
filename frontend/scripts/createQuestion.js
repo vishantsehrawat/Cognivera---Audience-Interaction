@@ -1,7 +1,6 @@
 
-
-const renderDeploymentURl  ="https://slidoapp.onrender.com";
-const createQuestionDeployedUrl = `${renderDeploymentURl}/question/submit-question`
+// const renderDeploymentURl  ="https://slidoapp.onrender.com";
+const createQuestionDeployedUrl = `${globals.DEPLOYED_URL}/question/submit-question`
 
 const questionPostUrl = "http://localhost:8080/question/submit-question"
 const form = document.querySelector('form');

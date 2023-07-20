@@ -71,9 +71,8 @@ const logoName = document.getElementById("logo");
 const logoName2 = document.getElementById("username2")
 const logout = document.getElementById("logoutBtn")
 
-
-const renderDeploymentURl  ="https://slidoapp.onrender.com";
-const logoutUrlDeployed = `${renderDeploymentURl}/user/logout`
+// const renderDeploymentURl  ="https://slidoapp.onrender.com";
+const logoutUrlDeployed = `${globals.DEPLOYED_URL}/user/logout`
 
 // let logoutUrlLocal = "http://localhost:8080/user/logout"
 // get username from local storage

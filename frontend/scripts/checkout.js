@@ -1,7 +1,8 @@
 //Server URL
 const baseServerURL = "http://localhost:8080"
-const renderDeploymentURl  ="https://slidoapp.onrender.com";
-const checkoutDeployedUrl = `${renderDeploymentURl}/user/update`
+// const renderDeploymentURl  ="https://slidoapp.onrender.com";
+
+const checkoutDeployedUrl = `${globals.DEPLOYED_URL}/user/update`
 
 
 //Local storage
