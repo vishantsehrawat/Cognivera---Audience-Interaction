@@ -47,16 +47,21 @@ userRouter.post("/login", async (req, res) => {
         console.log("🚀 ~ file: user.routes.js:34 ~ userRouter.post ~ myUser:", myUser)
         try {
             if (myUser) {
-                bcrypt.compare(user.password, myUser.password, function (err, result) { // eslint-disable-line no-unused-vars
-                    // temporarily using expire time *60 for usability. Ignore it if I forgot to remove the extra 60
-                    var token = jwt.sign({ userId: myUser._id }, process.env.TOKEN_SECRET, { expiresIn: "7d" });
-                    var refreshToken = jwt.sign({ userId: myUser._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: "24d" });
-                    //using redis for storing the tokens //working re
-                    redisClient.set("jwttoken", token)
-                    //using local storage npm package // ! not working
-                    // store.set('username', { name:myUser?.name })
-                    redisClient.set("refreshtoken", refreshToken)
-                    res.status(200).send({ msg: "User logged in", token, refreshToken, usernameforchat: myUser.name ,userId:myUser._id})
+                bcrypt.compare(user.password, myUser.password, function (err, result) {
+                    if(result){
+                        // temporarily using expire time *60 for usability. Ignore it if I forgot to remove the extra 60
+                        var token = jwt.sign({ userId: myUser._id }, process.env.TOKEN_SECRET, { expiresIn: "7d" });
+                        var refreshToken = jwt.sign({ userId: myUser._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: "24d" });
+                        //using redis for storing the tokens //working re
+                        redisClient.set("jwttoken", token)
+                        //using local storage npm package // ! not working
+                        // store.set('username', { name:myUser?.name })
+                        redisClient.set("refreshtoken", refreshToken)
+                        res.status(200).send({ msg: "User logged in", token, refreshToken, usernameforchat: myUser.name ,userId:myUser._id})
+                    } // eslint-disable-line no-unused-vars
+                    else{
+                        res.status(400).send({msg:"Invalid password"})
+                    }
                 });
             }
             else{
