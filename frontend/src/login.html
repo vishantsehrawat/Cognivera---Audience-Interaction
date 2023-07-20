@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,14 +14,15 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    
+
     <link rel="stylesheet" href="../styles/signup-login.css">
-    
+
 </head>
+
 <body>
     <div id="loding_container">
         <div id="loding_div">
-            <img  id="logo-img"  class="invert_effect" src="../images/Cognivera.png" />
+            <img id="logo-img" class="invert_effect" src="../images/Cognivera.png" />
             <h2>Loading...</h2>
         </div>
     </div>
@@ -39,7 +41,7 @@
         </div>
         <div id="signup-cont">
             <div id="signup-cont-content">
-                <img  id="logo-img"  class="invert_effect" src="../images/Cognivera.png" />
+                <img id="logo-img" class="invert_effect" src="../images/Cognivera.png" />
                 <h1>Login to Cognivera</h1>
 
                 <a href="https://fun-chat-ht6d.onrender.com/oauth/google">
@@ -48,12 +50,12 @@
                 <a href="https://github.com/login/oauth/authorize?client_id=10186ce7794bfc3aa1ef">
                     <button id="github"><img src="../images/GitHub-Mark (1).png" alt=""> Continue with Github</button>
                 </a>
-                
+
 
 
                 <form id="form">
-                <p id="errorDisplay"></p>
-                   
+                    <p id="errorDisplay"></p>
+
                     <p style="font-size: large;">or</p>
                     <input class="box" id="email" type="email" placeholder="Email Address"><br>
                     <input class="box" id="password" type="password" placeholder="Password"><br>
@@ -64,8 +66,10 @@
             </div>
         </div>
     </div>
-    
+
 </body>
+
 </html>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"defer ></script>
-<script src="../scripts/login.js"defer ></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
+<script type="text/javascript" src="../config/globals.js" defer></script>
+<script type="module" src="../scripts/login.js" defer></script>

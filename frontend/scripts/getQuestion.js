@@ -1,6 +1,8 @@
+
 const getQuestionUrl = "http://localhost:8080/question/get-question"
-const renderDeploymentURl  ="https://slidoapp.onrender.com";
-const getQuestionDeployedUrl = `${renderDeploymentURl}/question/get-question`
+
+// const renderDeploymentURl  ="https://slidoapp.onrender.com";
+const getQuestionDeployedUrl = `${globals.DEPLOYED_URL}/question/get-question`
 
 
 var questionDataGlobal;

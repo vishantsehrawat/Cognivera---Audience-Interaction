@@ -10,13 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
     <link rel="stylesheet" href="../styles/chatting.css">
-    <script src="../scripts/ifUserLoggedIn.js"defer ></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"defer ></script>   <!-- sweet alert cdn  -->
-    
+    <script type="text/javascript" src="../config/globals.js" defer></script>
+
+    <script src="../scripts/ifUserLoggedIn.js" defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script> <!-- sweet alert cdn  -->
+
 </head>
 
 <body>
-    
+
     <h1 class="chattingHeading">Group Chat</h1>
     <h2 id="usercountWrapper">Total users: <b id="usercount"></b></h2>
     <pre id="messages"></pre>
@@ -32,10 +34,11 @@
     <!--  <button onclick="sendMessage()">Send</button> -->
 
     <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"
-        integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
-        crossorigin="anonymous"defer ></script>
-    
-<script src="../scripts/chattingFe.js"defer ></script>
+        integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"
+        defer></script>
+
+    <script type="module" src="../scripts/chattingFe.js" defer></script>
+    <script type="module" src="../config/customVariables.js" defer></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
-const renderDeploymentURl  ="https://slidoapp.onrender.com";
-const registerationURl = `${renderDeploymentURl}/user/register`
+// const renderDeploymentURl  ="https://slidoapp.onrender.com";
+const registerationURl = `${globals.DEPLOYED_URL}/user/register`
 
 let loding_container = document.getElementById("loding_container");
 let main_div = document.getElementById("container")
@@ -57,7 +57,7 @@ function myfun(event) {
         }
 
     }
-   
+
 
 }
 

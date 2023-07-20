@@ -11,6 +11,7 @@ const {RatingRouter} =  require("./routes/rating.routes")
 const cors = require('cors');
 const { createQuestionRouter } = require('./routes/createQuestion.routes');
 const { wordPollRouter } = require('./routes/wordPoll.routes');
+const { cogniRouter } = require('./routes/cogni.routes');
 
 
 
@@ -30,6 +31,7 @@ app.use("/auth", authRoute)
 app.use("/question",createQuestionRouter); // for the quiz questions
 app.use("/rating",RatingRouter)
 app.use("/wordpoll",wordPollRouter)
+app.use("/cogni",cogniRouter)
 
 // after user have logged in , we will use the auth middleware 
 //above userRouter only contains login register and logout
