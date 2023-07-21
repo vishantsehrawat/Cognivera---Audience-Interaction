@@ -76,18 +76,18 @@ document.getElementById('submitQuiz').addEventListener('click', function (event)
     const creator = JSON.parse(localStorage.getItem("creatoremail"))
     const publicCheckbox = document.getElementById('publicCheckbox');
     const isPublic = publicCheckbox.checked;
-
-    const quiz = {
+    const allData ={}
+    const quizData = {
         creator: creator || "random@email.com",
         title: title,
         description: document.getElementById("quizDescription").value,
         questions: allQuestions,
         public: isPublic,
     }
-    console.log("🚀 ~ file: dashboard.html:113 ~ quiz:", quiz)
+    allData.quiz = quizData
     if (allQuestions.length > 0) {
-        addquizData(quiz)
-        async function addquizData(quiz) {
+        addquizData(allData)
+        async function addquizData(allData) {
             try {
                 const response = await fetch(quizsaveApi, {
                     method: "POST",
@@ -95,7 +95,7 @@ document.getElementById('submitQuiz').addEventListener('click', function (event)
                         "Content-Type": "application/json",
                         'Authorization': `${JSON.parse(localStorage.getItem('jwtToken'))}`
                     },
-                    body: JSON.stringify(quiz),
+                    body: JSON.stringify(allData),
                 });
 
                 const result = await response.json();
