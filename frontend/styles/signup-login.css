@@ -43,7 +43,7 @@
     font-weight: bold;
     padding: 3%;
     padding-top: 10%;
-
+    /* border: 2px solid red; */
 }
 
 #left-fixed-btn {
@@ -106,10 +106,11 @@
 }
 
 #signup-cont {
+    /* position: relative; */
     margin-left: 50%;
     margin-top: 5%;
   
-    
+    /* border: 2px solid red; */
 
 }
 
@@ -124,19 +125,21 @@ p {
     font-weight: 100;
 }
 
+
+
 #google {
     background-color: white;
     border-radius: 5px;
     border: 1p solid gray;
     padding: 5px;
-    width: 65%;
-   margin-bottom: 10px;
-    margin-left: 18%;
+    width: 200px;
+   /* margin-bottom: 10px; */
+    /* margin-left: 18%; */
     
 }
 
-#google img {
-    width: 7%;
+#google > img {
+    width: 10%;
     margin: auto;
 }
 #github {
@@ -145,15 +148,15 @@ p {
     border-radius: 5px;
     border: 1p solid gray;
     padding: 5px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
    
-    width: 65%;
-    margin: auto;
-    margin-left: 18%;
+    width: 200px;
+    /* margin: auto; */
+    /* margin-left: 18%; */
 }
 
 #github img {
-    width: 7%;
+    width: 10%;
     /* margin: auto; */
 }
 
@@ -165,6 +168,19 @@ p {
     text-align: center;
   
 }
+
+
+
+#oauthContainer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
 form input {
     width: 80%;
     height: 40px;
@@ -207,11 +223,11 @@ form #sub-btn:hover {
         margin: 0px;
        }
     #google {
-        width: 80%;
+        /* width: 80%; */
         margin: auto;
     }
     #github{
-        width: 80%;
+        /* width: 80%; */
         margin: auto;
     }
     
@@ -235,11 +251,11 @@ form #sub-btn:hover {
         padding: 5%;
     }
     #google {
-        width: 80%;
+        /* width: 80%; */
         margin: auto;
     }
     #github {
-        width: 80%;
+        /* width: 80%; */
         margin: auto;
     }
     #container{
