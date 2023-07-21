@@ -11,8 +11,7 @@ const { authMiddleware } = require("../middlewares/authMiddleware.middleware");
 
 require("dotenv").config();
 
-userRouter = express();
-
+userRouter = express.Router();
 userRouter.use(express.json());
 
 //register route
