@@ -1,11 +1,12 @@
 const express = require("express");
 const { ratingModel } = require("../models/rating.model");
+const { authMiddleware } = require("../middlewares/authMiddleware.middleware");
 
 const RatingRouter = express();
 RatingRouter.use(express.json())
 
 
-RatingRouter.post("/add-rating", async(req,res) => {
+RatingRouter.post("/add-rating",authMiddleware, async(req,res) => {
 
     try {
         const {ratingvalue}=  req.body;
@@ -18,7 +19,7 @@ RatingRouter.post("/add-rating", async(req,res) => {
     }
 })
 
-RatingRouter.get("/get-rating",async(req,res) => {
+RatingRouter.get("/get-rating",authMiddleware,async(req,res) => {
     try {
         const rating = await ratingModel.findById(req.params.id);
         

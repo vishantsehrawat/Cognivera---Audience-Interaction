@@ -33,6 +33,7 @@ function myfun(event) {
                 console.log(res)
                 if (res.token) {
                     localStorage.setItem("userObject", JSON.stringify(res))
+                    localStorage.setItem("jwtToken", JSON.stringify(res.token))
                     setTimeout(() => {
                         swal("Yeah!", "User has been logged in!", "success");
                     }, 200);

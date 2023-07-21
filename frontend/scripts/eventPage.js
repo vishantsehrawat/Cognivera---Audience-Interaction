@@ -7,6 +7,7 @@ const cogniSubmitForm = document.getElementById("createSlidoForm");
 // catching the create cogni modal 
 const createCogniModal = document.getElementById('createCogni');
 
+
 let logoutUrlLocal = "http://localhost:8080/user/logout"
 // const renderDeploymentURl  ="https://slidoapp.onrender.com";
 const logoutUrlDeployed = `${globals.DEPLOYED_URL}/user/logout`
@@ -21,11 +22,13 @@ logoName2.innerHTML = username;
 
 // logut button clicked 
 logout.addEventListener("click", () => {
+  localStorage.removeItem("userObject")
 
   fetch(logoutUrlDeployed, {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+
     },
     body: JSON.stringify({})
   })
@@ -44,7 +47,6 @@ logout.addEventListener("click", () => {
       console.log(error)
     })
 
-  localStorage.removeItem("userObject")
 
   setTimeout(() => {
     window.location.reload();
@@ -70,25 +72,30 @@ cogniSubmitForm.addEventListener("submit", (event) => {
   if (start_date && end_date && name) {
     saveCogni(newCogni)
     async function saveCogni(newCogni) {
-      await fetch(`${globals.DEPLOYED_URL}/cogni/add`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newCogni),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Cogni saved successfully:", data);
+      try {
+        const response = await fetch(`${globals.DEPLOYED_URL}/cogni/add`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            'Authorization': `${JSON.parse(localStorage.getItem('jwtToken'))  }`
+          },
+          body: JSON.stringify(newCogni),
+        });
+        const data = await response.json();
+        if (response.ok) {
+          console.log("🚀 ~ file: eventPage.js:82 ~ saveCogni ~ data:", data)
           createCogniModal.style.display = "none";//for closing modal
           document.body.style.overflow = 'visible'// for removing foreground
           swal("Cogni created");
           $('#createCogniModal').remove();
           $('.blocker').remove();
-        })
-        .catch((error) => {
-          console.error("Error saving Cogni:", error);
-        });
+        } else {
+          swal("Oops!", "Something went wrong!", "error");
+        }
+
+      } catch (error) {
+        console.error("Error saving Cogni:", error);
+      }
     }
   } else {
     swal("Enter all the details");

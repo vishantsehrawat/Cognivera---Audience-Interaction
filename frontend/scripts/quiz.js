@@ -1,11 +1,11 @@
 
 
 // console.log("🚀 ~ file: dashboard.html:56 ~ creator:", creator)
-const quizsaveApi = ""
+const quizsaveApi = `${globals.DEPLOYED_URL}/quiz/add`
 const allQuestions = [];
 let questionCount = 0;
 
-const getAllQuizApi = "http://localhost:8080/quiz/get"
+const getAllQuizApi = `${globals.DEPLOYED_URL}/quiz/get`
 
 
 window.addEventListener("load", (event) => {
@@ -74,12 +74,15 @@ document.getElementById('submitQuiz').addEventListener('click', function (event)
     event.preventDefault();
     const title = document.getElementById("quizTitle").value
     const creator = JSON.parse(localStorage.getItem("creatoremail"))
+    const publicCheckbox = document.getElementById('publicCheckbox');
+    const isPublic = publicCheckbox.checked;
 
     const quiz = {
-        creator: creator,
+        creator: creator || "random@email.com",
         title: title,
         description: document.getElementById("quizDescription").value,
-        questions: allQuestions
+        questions: allQuestions,
+        public: isPublic,
     }
     console.log("🚀 ~ file: dashboard.html:113 ~ quiz:", quiz)
     if (allQuestions.length > 0) {
@@ -90,6 +93,7 @@ document.getElementById('submitQuiz').addEventListener('click', function (event)
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
+                        'Authorization': `${JSON.parse(localStorage.getItem('jwtToken'))}`
                     },
                     body: JSON.stringify(quiz),
                 });
@@ -113,7 +117,14 @@ document.getElementById('submitQuiz').addEventListener('click', function (event)
 
 async function getAllQuizData() {
     try {
-        const response = await fetch(getAllQuizApi,);
+        const response = await fetch(getAllQuizApi, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `${JSON.parse(localStorage.getItem('jwtToken'))}`
+
+            }
+        });
 
         const result = await response.json();
         console.log("Success:", result);

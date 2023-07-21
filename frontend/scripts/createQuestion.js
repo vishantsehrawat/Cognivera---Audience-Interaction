@@ -21,7 +21,8 @@ form.addEventListener('submit', (event) => {
         method: 'POST',
         body: JSON.stringify(question),
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${JSON.parse(localStorage.getItem('jwtToken'))}`,
         }
     })
         .then(response => response.json())

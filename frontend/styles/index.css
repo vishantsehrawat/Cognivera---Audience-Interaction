@@ -31,7 +31,7 @@
   height: 15%;
   margin: auto;
   margin-top: 50px;
-  background-color:rgb(35, 79, 149);
+  background-color: rgb(35, 79, 149);
   font-family: SlidoSansFont, SlidoSansFont-fallback, verdana, arial, sans-serif;
   /* border: 2px solid red; */
 }
@@ -215,7 +215,26 @@
   padding-bottom: 20px;
 }
 
+/* intro css ++++++++++++++++++++++++ */
+.glassy-tooltip {
+  background-color: rgba(57, 174, 55, 0.8);
+  color: #fff;
+  border: 2px solid rgba(57, 174, 55, 0.8);
+  border-radius: 8px;
+  padding: 10px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 4px rgba(57, 174, 55, 0.5);
+}
 
+.glassy-highlight {
+  background-color: rgba(57, 174, 55, 0.5);
+  border: 2px solid rgba(57, 174, 55, 0.8);
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+}
+
+
+/* intro css ---------------------- */
 @media (max-width:801px) {
 
   .code-enter {
@@ -769,13 +788,6 @@
     margin: auto;
   }
 
-  .nav-log {
-    margin-left: 8%;
-  }
-
-  .nav-log>button {
-    margin: 0 5px;
-  }
 
   .fdiv {
     padding: 50px;
@@ -783,11 +795,6 @@
 
   .cards {
     width: 90%;
-  }
-
-  #Login,
-  #contact {
-    padding: 0;
   }
 
   .cards>article>h3 {

@@ -1,7 +1,14 @@
 const mongoose = require('mongoose');
-
+const { v4: uuidv4 } = require('uuid');
 const quizSchema = new mongoose.Schema({
-
+  userId: {
+    type: String,
+    required: true
+  },
+  uniqueQuizId: {
+    type: String,
+    default: uuidv4,
+  },
   quiz: {
     creator: {
       type: String,
@@ -33,14 +40,19 @@ const quizSchema = new mongoose.Schema({
           required: true
         }
       }
-    ]
+    ],
+    public: {
+      type: Boolean,
+      default: false,
+    }
   },
   leaderboard: [
     {
       email: String,
       score: Number
     }
-  ]
+  ],
+
 });
 
 const QuizModel = mongoose.model('quiz', quizSchema);
