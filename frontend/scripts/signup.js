@@ -1,4 +1,6 @@
 // const renderDeploymentURl  ="https://slidoapp.onrender.com";
+console.log("🚀 ~ file: login.js:3 ~ globals:", globals)
+
 const registerationURl = `${globals.DEPLOYED_URL}/user/register`
 
 let loding_container = document.getElementById("loding_container");
