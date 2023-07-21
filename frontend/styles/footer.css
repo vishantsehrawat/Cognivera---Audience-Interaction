@@ -4,16 +4,27 @@
 
 /* _______footer starts______ */
 
+#brand {
+    width: 200px;
+    margin-left: 4%;
+    margin-top: 3%;
+    /* border: 2px solid red; */
+}
+#brand img {
+    width: 100%;
+}
+
 .fdiv {
     font-size: larger;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 50px;
-    padding: 50px 300px;
+    gap: 30px;
+    /* padding: 10px 10px; */
+    /* border: 2px solid red; */
 }
 
 .fdiv ul {
-    margin-top: 40px;
+    /* margin-top: 20px; */
     list-style: none;
     font-weight: 600;
 }
@@ -43,13 +54,7 @@
     color: black;
 }
 
-#brand {
-    width: 20%;
-    
-}
-#brand img {
-    width: 100%;
-}
+
 .invert_effect {
     filter: invert(100%);
 }
@@ -115,7 +120,7 @@
 }
 @media all and (max-width:599px) {
     .fdiv{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
         grid-template-rows: auto;
     }
 

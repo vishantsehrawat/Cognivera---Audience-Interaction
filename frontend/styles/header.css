@@ -1,47 +1,87 @@
 *{
     box-sizing: border-box;
   }
-  .nvabar{
+
+  #nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+    /* border: 2px solid red; */
+  }
+
+/* Navbar element  */
+  .navbar{
+    /* position: absolute; */
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    box-shadow: 0px 15px 10px -23px #111; 
   }
-  .nvabar a{
+  a{
+    font-size: 50%;
     text-decoration: none;
     color: black;
   }
-  .nvabar .logo{
+  .navbar .logo{
     color: #217720;
   }
-  nav{
-    width: 100%;
-    /* border: 1px solid brown; */
-    margin-left: -90px;
-    padding: 0 2%;
+
+
+  /*Left element - Logo */
+  .logo {
+    width: 20%;
+    /* border: 2px solid green; */
     display: flex;
-    
-    align-items:center;
-    position: fixed;
-    transform: translate3d(0px, 0px, 0px);
-    top: 0px;
-    background-color: #fff;
-    box-shadow: 0 0.125rem 0.125rem rgba(0,0,0,.1);
+    justify-content: end;
   }
+  .logo > h1 {
+    font-size: 30px;
+    margin-right: 12%;
+  }
+
+  .logo > h1:hover {
+    cursor: pointer;
+  }
+ 
   
+
+  /*Right element - Menu Options */
+
+  #menu-options {
+    width: 80%;
+    display: flex;
+    /* justify-content: space-between; */
+    /* width: fit-content; */
+    /* gap: 30px; */
+    align-items: center;
+    /* font-size: larger; */
+    font-weight: bold;
+
+    /* border: 2px solid red; */
+  }
+
+
+  /* Nav Options - left box  */
   .nav-options{
-    width: 50%;
-    margin-left: 50px;
+    width: 65%;
+    /* margin-left: 50px; */
     /* margin-right: 50px; */
     display: flex;
-   
+    align-items: center;
+    justify-content: start;
+   /* border: 2px solid purple; */
     /* flex-wrap: wrap; */
   }
   
   .nav-options a{
     text-decoration: none;
-    margin: 0 15px;
-    font-size: larger;
+    margin: 0 2%;
+    font-size: 100%;
+    font-weight: 200;
     cursor: pointer;
   }
   .nav-options a:hover{
@@ -49,14 +89,16 @@
     text-decoration: underline;
   }
   
+   /* Nav Log - right box  */
   .nav-log{
     width: 35%;
     display: flex;
-    justify-content: space-between;
-    width: fit-content;
+    justify-content: start;
+    /* width: fit-content; */
     align-items: center;
     font-size: larger;
-   
+    /* font-weight: 1000; */
+    /* border: 2px solid black; */
   }
   .nav-log a{
     font-size: 15px;
@@ -71,35 +113,14 @@
     text-decoration: underline;
   }
   
-  #Login, #contact{
+
+  #Login{
+    /* width: 40%; */
     border: none;
     background-color: #FFFF;
   }
-  nav a{
-    text-decoration: none;
-    font-size: larger;
-    color: black;
-  }
-  /* #Signup{
-    border: 0.0625rem solid #39ac37;
-    border-radius: 0.25rem;
-    height: 50px;
-    background: #39ac37;
-    text-align: center;
-    padding-right: 10px;
-    
-  }
-  
-  #Signup > a{
-    font-weight:200;
-    color: white;
-    padding: 20px 35px;
-  }
-  #Signup > a{
-   text-decoration: none;
-  } */
   #Signup {
-    width: 100px;
+    width: 40%;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -113,6 +134,7 @@
   #Signup > a {
     text-decoration: none;
     color: white;
+    font-weight: 700;
   }
   #Signup:hover{
     background-color: black;
@@ -125,32 +147,79 @@
   /*_______nav-end_______*/
 
   #hamburger {
+    width: 40px;
+    height: 30px;
+    background-color: whitesmoke;
     color: black;
     font-weight: bold;
     display: none;
-  }
-  #menu-options {
-    width: 80%;
-    display: flex;
-    /* justify-content: space-between; */
-    /* width: fit-content; */
-    gap: 30px;
-    align-items: center;
-    font-size: larger;
-    font-weight: bold;
-  
+    border-radius: 5px;
+    /* border: 2px solid mediumvioletred; */
   }
 
-  @media all and (max-width:599px) {
+  #hamburger:hover {
+ 
+    background-color: black;
+    color: white;
+
+  }
+
+  #expand{
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 200px;
+    background-color: whitesmoke;
+    z-index: 1;
+  }
+
+  #expand > ul > li {
+    list-style: none;
+    font-size: 30px;
+    /* inline-size: 10px; */
+  }
+
+  #expand > ul > li:hover {
+    text-decoration: underline;
+    /* inline-size: 10px; */
+  }
+
+
+  @media (max-width:801px) {
+
     #hamburger {
-      display: block;
-      margin-left: 50%;
+      display: flex;
+      /* margin-left: 50%; */
+      justify-content: center;
+      align-items: center;
       margin-right: 5%;
 
+    }
+    #hamburger:hover {
+ 
+      background-color: black;
+      color: white;
+  
     }
     #menu-options {
       display: none;
     }
+
+    .logo {
+      justify-content: center;
+      width: 30%;
+    }
+
+    .logo > h1 {
+      font-size: 20px;
+    }
+  
+  }
+  
+
+  @media all and (max-width:599px) {
+    
     /* #menu-options {
       margin-left: 10%;
       display: flex;

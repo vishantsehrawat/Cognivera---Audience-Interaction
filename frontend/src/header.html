@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,46 +9,78 @@
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <div class="nvabar">
-        <div class="logo">
-            <h1>Cognivera</h1>
-        </div>
 
-        <div id="menu-options">
-            <div class="nav-options" >
-                <a href="#">Product</a>
-                <a href="#">Solutions</a>
-                <a href="./src/plans.html">Pricing</a>
-                <a href="#">Resources</a>
-                <a href="#">Enterprise</a>
-            </div>
-            <div class="nav-log">
-                <button id="contact"><a href="#">Contact sales</a></button>
-                <button id="Login"><a href="./src/login.html">Log In</a></button>
-                <button id="Signup"><a href="./src/signup.html">SignUp</a></button>
-        
+    <nav id="nav">
+
+        <div class="navbar">
+            <div class="logo">
+                <h1>Cognivera</h1>
+                <!-- <img width="200px" colour="green" src="../images/Cognivera.png" alt=""> -->
             </div>
 
+            <div id="menu-options">
+                <div class="nav-options">
+                    <!-- <a href="#">Product</a> -->
+                    <!-- <a href="#">Solutions</a> -->
+                    <a href="./src/plans.html">Pricing</a>
+                    <a href="#">Resources</a>
+                    <a href="#">Enterprise</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="nav-log">
+                    <!-- <button id="contact"><a href="#">Contact sales</a></button> -->
+                    <button class="logbtn" id="Login"><a href="./src/login.html">Log In</a></button>
+                    <button class="logbtn" id="Signup"><a href="./src/signup.html">SignUp</a></button>
 
+                </div>
+            </div>
 
+            <a id="hamburger" href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
-       
-        <a id="hamburger" href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-    <script src="../scripts/header.js"defer ></script>
+
+        <div id="expand">
+            <ul>
+                <li><a href="./src/plans.html">Pricing</a></li>
+                <li><a href="">Resources</a></li>
+                <li><a href="">Enterprise</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="./src/login.html">Log In</a></li>
+                <li><a href="./src/signup.html">SignUp</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <script src="../scripts/header.js" defer></script>
 </body>
+
 </html>
 <!-- <script src="../scripts/heder.js"></script> -->
 <script>
-   function myFunction() {
-  var x = document.getElementById("menu-options");
-  if (x.style.display == "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
+    function myFunction() {
+        var expand = document.getElementById("expand");
+        var hamburger = document.getElementById("hamburger")
+        if (expand.style.display == "block") {
+            expand.style.display = "none";
+            hamburger.style.backgroundColor = "whitesmoke"
+            hamburger.style.color = "black"
+        } else {
+            expand.style.display = "block";
+            hamburger.style.backgroundColor = "black"
+            hamburger.style.color = "white"
+        }
+    }
+
+    window.addEventListener("resize", function (event) {
+        if (document.body.clientWidth >= 801) {
+            expand.style.display = "none"
+            hamburger.style.backgroundColor = "whitesmoke"
+            hamburger.style.color = "black"
+        }
+    })
+
 </script>
