@@ -8,13 +8,16 @@
     <link rel="icon" type="image/png" href="../images/Cognivera.png">
 
     <title>Signup page</title>
-    <link rel="stylesheet" href="../styles/signup-login.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- for website tour  -->
+    <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
+
+    <link rel="stylesheet" href="../styles/signup-login.css">
 
 
 </head>
@@ -47,10 +50,12 @@
 
                 <div id="oauthContainer">
                     <a href="https://fun-chat-ht6d.onrender.com/oauth/google">
-                        <button id="google"><img class="icon" src="../images/googel.png" alt="google">Continue With Google</button>
+                        <button id="google"><img class="icon" src="../images/googel.png" alt="google">Continue With
+                            Google</button>
                     </a>
                     <a href="https://github.com/login/oauth/authorize?client_id=10186ce7794bfc3aa1ef">
-                        <button id="github"><img class="icon" src="../images/GitHub-Mark (1).png" alt=""> Continue with Github</button>
+                        <button id="github"><img class="icon" src="../images/GitHub-Mark (1).png" alt=""> Continue with
+                            Github</button>
                     </a>
                 </div>
 
@@ -76,5 +81,7 @@
 </body>
 
 </html>
-<script type="module" src="../scripts/signup.js" ></script>
-<script type="text/javascript" src="../config/globals.js" ></script>
+<script type="text/javascript" src="../config/globals.js"></script>
+<!-- website tour  -->
+<script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+<script type="module" src="../scripts/signup.js"></script>

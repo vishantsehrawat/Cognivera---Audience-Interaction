@@ -55,4 +55,25 @@ function myfun(event) {
 
 }
 
+// for website intro +++++++++++++
+document.addEventListener("DOMContentLoaded", function () {
+    var intro = introJs();
+    intro.setOptions({
+        steps: [
+            {
+                title: 'login',
+                intro: 'Login for Audience Interaction',
+                element: '#email',
+                position: 'bottom',
+                exitOnOverlayClick: true,
+            },
+
+            // Add more steps as needed
+        ],
+        tooltipClass: 'glassy-tooltip',
+        highlightClass: 'glassy-highlight'
+    });
+
+    intro.start();
+});
 

@@ -4,6 +4,8 @@ const logoName1 = document.getElementById("username1")
 const logoName2 = document.getElementById("username2")
 const logout = document.getElementById("logoutBtn")
 const cogniSubmitForm = document.getElementById("createSlidoForm");
+// catching the create cogni modal 
+const createCogniModal = document.getElementById('createCogni');
 
 let logoutUrlLocal = "http://localhost:8080/user/logout"
 // const renderDeploymentURl  ="https://slidoapp.onrender.com";
@@ -64,6 +66,7 @@ cogniSubmitForm.addEventListener("submit", (event) => {
     end_date,
     name,
   };
+  // console.log("🚀 ~ file: eventPage.js:67 ~ cogniSubmitForm.addEventListener ~ newCogni:", newCogni)
   if (start_date && end_date && name) {
     saveCogni(newCogni)
     async function saveCogni(newCogni) {
@@ -77,14 +80,19 @@ cogniSubmitForm.addEventListener("submit", (event) => {
         .then((response) => response.json())
         .then((data) => {
           console.log("Cogni saved successfully:", data);
-          // Optionally, perform any actions after the Cogni is saved (e.g., show a success message, redirect to another page, etc.)
+          createCogniModal.style.display = "none";//for closing modal
+          document.body.style.overflow = 'visible'// for removing foreground
+          swal("Cogni created");
+          $('#createCogniModal').remove();
+          $('.blocker').remove();
         })
         .catch((error) => {
           console.error("Error saving Cogni:", error);
         });
     }
   } else {
-    alert("Enter all the details")
+    swal("Enter all the details");
+
   }
 });
 
