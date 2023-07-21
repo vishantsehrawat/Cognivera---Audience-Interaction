@@ -1,0 +1,145 @@
+
+form {
+    max-width: 80vw;
+    margin: 0 auto;
+    display: none;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input[type="text"],
+textarea {
+    width: 90%;
+    padding: 8px;
+    margin: 5px;
+}
+
+input[type="radio"] {
+    padding: 8px;
+    margin: 5px;
+}
+
+
+#questionsContainer {
+    padding: 5px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.option {
+    display: flex;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: skyblue;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    /* background-color: lightgreen; */
+}
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+#cards {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+#cards>.quizCard {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 30px;
+    /* border-radius: 10px; */
+    width: 30%;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.quizCard {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* padding: 15px; */
+    box-sizing: border-box;
+    /* border: 2px solid #ccc; */
+}
+
+/* .quizCard > *{
+    padding: 15px;
+} */
+.quizCard h3 {
+    margin-top: 0;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 1px solid rgb(102, 213, 148);
+    padding: 10px;
+}
+
+.quizCard p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.takeQuizBtn,
+.leaderboardBtn {
+    background-color: rgba(37, 160, 80, 0.8);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    /* border-radius: 5px; */
+    width: 100%;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
+}
+
+.takeQuizBtn:hover,
+.leaderboardBtn:hover {
+    background-color: rgba(0, 123, 255, 1);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.6);
+}
+
+.quizCard:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .quizCard {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .quizCard {
+        width: 100%;
+    }
+}

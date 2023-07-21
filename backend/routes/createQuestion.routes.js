@@ -1,5 +1,5 @@
 const express = require("express");
-const { QuestionModel } = require("../models/question.model");
+const { QuestionModel } = require("../models/quiz.model");
 const { authMiddleware } = require("../middlewares/authMiddleware.middleware");
 
 const createQuestionRouter = express();
