@@ -7,10 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="../styles/plans.css">
     <link href="../styles/notyf.min.css" rel="stylesheet">
-    <script src="../scripts/ifUserLoggedIn.js" ></script>
-    <script src="../scripts/quiz.js" ></script>
-
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script> <!-- sweet alert cdn  -->
     <link rel="stylesheet" href="../styles/quiz.css">
 </head>
 
@@ -52,7 +48,10 @@
             </div>
         </div>
         <button type="button" id="addQuestion">Add Question</button><br><br>
-
+        <div>
+            <input type="checkbox" id="publicCheckbox" name="public" value="true">
+            <label for="publicCheckbox">Make quiz public</label>
+        </div>
         <button type="submit" id="submitQuiz">Submit Quiz</button>
     </form>
 
@@ -64,7 +63,12 @@
 
 </body>
 
+<script src="../scripts/ifUserLoggedIn.js"></script>
 
-</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!-- sweet alert cdn  -->
+<script type="text/javascript" src="../config/globals.js"></script>
+
+<script src="../scripts/quiz.js"></script>
+
 
 </html>

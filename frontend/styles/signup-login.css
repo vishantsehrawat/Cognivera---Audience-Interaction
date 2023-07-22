@@ -17,7 +17,7 @@
 
 #loding_div>img {
     width: 100px;
-    margin-right:40%;
+    margin-right: 40%;
 }
 
 #loding_div>h2 {
@@ -67,7 +67,8 @@
     border: none;
 
 }
-#left-fixed-btn input:focus{
+
+#left-fixed-btn input:focus {
     outline: none;
 }
 
@@ -81,18 +82,22 @@
     display: flex;
     align-items: center;
 }
+
 #left-fixed p {
     text-align: left;
     font-weight: 100;
 }
-.fa-solid{
+
+.fa-solid {
     font-size: x-large;
-   
+
 }
-.fa-hashtag{
+
+.fa-hashtag {
     font-size: xx-large;
     margin-left: 20px;
 }
+
 .invert_effect {
     filter: invert(100%);
 }
@@ -109,7 +114,7 @@
     /* position: relative; */
     margin-left: 50%;
     margin-top: 5%;
-  
+
     /* border: 2px solid red; */
 
 }
@@ -119,8 +124,9 @@ p {
     text-align: center;
     font-weight: bold;
     margin-bottom: 30px;
-  
+
 }
+
 #signup-cont p {
     font-weight: 100;
 }
@@ -133,15 +139,16 @@ p {
     border: 1p solid gray;
     padding: 5px;
     width: 200px;
-   /* margin-bottom: 10px; */
+    /* margin-bottom: 10px; */
     /* margin-left: 18%; */
-    
+
 }
 
-#google > img {
+#google>img {
     width: 10%;
     margin: auto;
 }
+
 #github {
 
     background-color: white;
@@ -149,7 +156,7 @@ p {
     border: 1p solid gray;
     padding: 5px;
     /* margin-top: 10px; */
-   
+
     width: 200px;
     /* margin: auto; */
     /* margin-left: 18%; */
@@ -166,7 +173,7 @@ p {
     margin: auto;
     border-radius: 5px;
     text-align: center;
-  
+
 }
 
 
@@ -208,75 +215,103 @@ form #sub-btn:hover {
 
 }
 
+/* intro css ++++++++++++++++++++++++ */
+.glassy-tooltip {
+    background-color: rgba(57, 174, 55, 0.8);
+    color: #fff;
+    border: 2px solid rgba(57, 174, 55, 0.8);
+    border-radius: 8px;
+    padding: 10px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 4px rgba(57, 174, 55, 0.5);
+}
+
+.glassy-highlight {
+    background-color: rgba(57, 174, 55, 0.5);
+    border: 2px solid rgba(57, 174, 55, 0.8);
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+}
+
+
+/* intro css ---------------------- */
+
+
 @media all and (max-width:1200px) {
+
     /* tablet */
-    #signup-cont{
+    #signup-cont {
         margin: auto;
         width: 100%;
     }
-    
+
     #container {
         flex-direction: column-reverse;
     }
-    #container{
+
+    #container {
         width: 100%;
         margin: 0px;
-       }
+    }
+
     #google {
         /* width: 80%; */
         margin: auto;
     }
-    #github{
+
+    #github {
         /* width: 80%; */
         margin: auto;
     }
-    
+
     #left-fixed {
         width: 100%;
         position: relative;
         height: auto;
-        
+
     }
 }
- 
+
 
 
 @media all and (max-width:599px) {
 
     /* mobile */
-   
-    #signup-cont{
+
+    #signup-cont {
         width: 100%;
         margin: auto;
         padding: 5%;
     }
+
     #google {
         /* width: 80%; */
         margin: auto;
     }
+
     #github {
         /* width: 80%; */
         margin: auto;
     }
-    #container{
+
+    #container {
         padding-top: 0px;
         flex-direction: column-reverse;
     }
-    #container{
-         width: 100%;
-         margin: 0px;
-        }
+
+    #container {
+        width: 100%;
+        margin: 0px;
+    }
+
     #container {
         flex-direction: column-reverse;
     }
+
     #left-fixed {
         width: 100%;
         position: relative;
         height: auto;
-        
+
     }
 }
-
-
-
-

@@ -1,21 +1,16 @@
 const express = require("express");
 const { QuizModel } = require("../models/quiz.model");
+const { authMiddleware } = require("../middlewares/authMiddleware.middleware");
 const quizRouter = express.Router();
 
 quizRouter.use(express.json())
 
-quizRouter.post('/add', async (req, res) => {
+quizRouter.post('/add', authMiddleware, async (req, res) => {
+    const quizData = req.body
+    console.log("🚀 ~ file: quiz.routes.js:10 ~ quizRouter.post ~ quizData:", quizData)
     try {
-        const { creator, title, description, questions } = req.body;
 
-        const newQuiz = new QuizModel({
-            quiz: {
-                creator,
-                title,
-                description,
-                questions
-            }
-        });
+        const newQuiz = new QuizModel(quizData);
 
         await newQuiz.save();
 
@@ -28,7 +23,7 @@ quizRouter.post('/add', async (req, res) => {
 
 // to get all quizzes 
 
-quizRouter.get('/get', async (req, res) => {
+quizRouter.get('/get', authMiddleware, async (req, res) => {
     try {
         const quiz = await QuizModel.find();
         if (!quiz) {
@@ -43,7 +38,7 @@ quizRouter.get('/get', async (req, res) => {
 
 // to get quiz by id 
 
-quizRouter.get('/get/:id', async (req, res) => {
+quizRouter.get('/get/:id', authMiddleware, async (req, res) => {
     const { id } = req.params;
     try {
         const quiz = await QuizModel.findById({ _id: id });
@@ -58,7 +53,7 @@ quizRouter.get('/get/:id', async (req, res) => {
 
 //delete quiz by id 
 
-quizRouter.get('/delete/:id', async (req, res) => {
+quizRouter.get('/delete/:id', authMiddleware, async (req, res) => {
     const { id } = req.params;
     try {
         const quiz = await QuizModel.findByIdAndDelete({ _id: id });

@@ -33,6 +33,7 @@ function myfun(event) {
                 console.log(res)
                 if (res.token) {
                     localStorage.setItem("userObject", JSON.stringify(res))
+                    localStorage.setItem("jwtToken", JSON.stringify(res.token))
                     setTimeout(() => {
                         swal("Yeah!", "User has been logged in!", "success");
                     }, 200);
@@ -55,4 +56,25 @@ function myfun(event) {
 
 }
 
+// for website intro +++++++++++++
+document.addEventListener("DOMContentLoaded", function () {
+    var intro = introJs();
+    intro.setOptions({
+        steps: [
+            {
+                title: 'login',
+                intro: 'Login for Audience Interaction',
+                element: '#email',
+                position: 'bottom',
+                exitOnOverlayClick: true,
+            },
+
+            // Add more steps as needed
+        ],
+        tooltipClass: 'glassy-tooltip',
+        highlightClass: 'glassy-highlight'
+    });
+
+    intro.start();
+});
 

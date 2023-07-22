@@ -79,7 +79,7 @@ userRouter.post("/login", async (req, res) => {
 
 
 // logout 
-userRouter.post("/logout",authMiddleware,async (req, res) => {
+userRouter.post("/logout",async (req, res) => {
     const token = await redisClient.get("jwttoken")
     // console.log("🚀 ~ file: user.routes.js:66 ~ userRouter.post ~ token:", token)
     // token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ2aXNoYW50QGdtYWlsLmNvbSIsImlhdCI6MTY4MzAyMTkxMH0._0qh7J3lvLuhBDckqEyW5sRtLaOSdWa2rm0rELhc12E"

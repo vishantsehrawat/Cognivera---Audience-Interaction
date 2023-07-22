@@ -208,7 +208,10 @@ function backend() {
         method: "PATCH",
         body: JSON.stringify(userObj),
         headers: {
-            'Content-type': 'application/json'
+            'Content-type': 'application/json',
+            Authorization: `Bearer ${JSON.parse(localStorage.getItem('jwtToken'))}`,
+
+
         }
     })
         .then(res => res.json())

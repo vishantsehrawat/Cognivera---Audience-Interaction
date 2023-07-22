@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
+const { QuizModel } = require('./quiz.model');
+
 
 const cogniSchema = new mongoose.Schema({
+  userId: {
+    type: String,
+    required: true
+  },
   start_date: {
     type: Date,
     required: true
@@ -13,13 +19,21 @@ const cogniSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  unique_id: {
+  cogniUniqueId: {
     type: String,
     unique: true,
-    required: true
+    required: true,
   },
+  quizzes: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'quiz'
+    }
+  ]
+}, {
+  // expires: 'end_date'
 });
-
+cogniSchema.index({ end_date: 1 }, { expires: 'end_date' });
 // Cogni Model
 const CogniModel = mongoose.model('cogni', cogniSchema);
 

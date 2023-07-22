@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/header.css">
+    <!-- <link rel="stylesheet" href="../styles/header.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -24,10 +24,11 @@
                 <div class="nav-options">
                     <!-- <a href="#">Product</a> -->
                     <!-- <a href="#">Solutions</a> -->
+                    <!-- importing header inside index file so will use single dot in path -->
                     <a href="./src/plans.html">Pricing</a>
-                    <a href="#">Resources</a>
-                    <a href="#">Enterprise</a>
-                    <a href="#">Contact</a>
+                    <a href="./src/quiz.html">Quizzes</a>
+                    <a href="./src/chattingFe.html">Group Chat</a>
+                    <!-- <a href="#">Contact</a> -->
                 </div>
                 <div class="nav-log">
                     <!-- <button id="contact"><a href="#">Contact sales</a></button> -->
@@ -55,32 +56,8 @@
 
     </nav>
 
-    <script src="../scripts/header.js"></script>
 </body>
+<!-- header script commented bcz we are using it inside index page  -->
+<!-- <script src="../scripts/header.js"></script> -->
 
 </html>
-<!-- <script src="../scripts/heder.js"></script> -->
-<script>
-    function myFunction() {
-        var expand = document.getElementById("expand");
-        var hamburger = document.getElementById("hamburger")
-        if (expand.style.display == "block") {
-            expand.style.display = "none";
-            hamburger.style.backgroundColor = "whitesmoke"
-            hamburger.style.color = "black"
-        } else {
-            expand.style.display = "block";
-            hamburger.style.backgroundColor = "black"
-            hamburger.style.color = "white"
-        }
-    }
-
-    window.addEventListener("resize", function (event) {
-        if (document.body.clientWidth >= 801) {
-            expand.style.display = "none"
-            hamburger.style.backgroundColor = "whitesmoke"
-            hamburger.style.color = "black"
-        }
-    })
-
-</script>

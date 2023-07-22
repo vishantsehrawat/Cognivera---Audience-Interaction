@@ -1,6 +1,10 @@
 const mongoose = require("mongoose")
 
 const wordCloudSchema = new mongoose.Schema({
+    userId: {
+        type: String,
+        required: true
+    },
     question: {
         type: String,
         required: true,
