@@ -8,21 +8,16 @@ cogniRouter.use(express.json())
 
 // save congni
 cogniRouter.post('/add', authMiddleware, async (req, res) => {
+    const newCogni = req.body;
     try {
-        // Extract data from the request body
-        req.body.cogniUniqueId = uuidv4();
-        console.log(req.body)
-
-        // Create a new Cogni document
-        const newCogni = new CogniModel(req.body);
-
-        // Save the Cogni document to the database
-        await newCogni.save();
-
+        newCogni.cogniUniqueId = uuidv4();
+        console.log("🚀 ~ file: cogni.routes.js:14 ~ cogniRouter.post ~ newCogni:", newCogni)
+        const Cogni = new CogniModel(req.body);
+        await Cogni.save();
         res.status(201).json(newCogni);
     } catch (error) {
         console.error('Error saving Cogni:', error);
-        res.status(500).json({ error: 'Failed to save Cogni' });
+        res.status(500).json(error.message);
     }
 });
 
@@ -41,10 +36,11 @@ cogniRouter.get('/get', authMiddleware, async (req, res) => {
 cogniRouter.get('/getPublicCogni/:id', authMiddleware, async (req, res) => {
     const { id } = req.params;
     try {
-        const cogni = await CogniModel.findOne({ unique_id: id }).populate({
+        const cogni = await CogniModel.findOne({ cogniUniqueId: id }).populate({
             path: 'quizzes',
             match: { public: true }
         });
+        console.log("🚀 ~ file: cogni.routes.js:48 ~ cogni ~ cogni:", cogni)
         res.status(200).json(cogni);
     } catch (error) {
         console.error('Error getting Cogni:', error);

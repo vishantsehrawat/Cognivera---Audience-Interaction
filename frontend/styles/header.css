@@ -57,12 +57,13 @@ a {
 #menu-options {
   width: 80%;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   /* width: fit-content; */
   /* gap: 30px; */
   align-items: center;
   /* font-size: larger; */
   font-weight: bold;
+  margin-right: 2%;
 
   /* border: 2px solid red; */
 }
@@ -96,7 +97,7 @@ a {
 
 /* Nav Log - right box  */
 .nav-log {
-  width: 35%;
+  /* width: 35%; */
   display: flex;
   justify-content: start;
   /* width: fit-content; */
@@ -122,7 +123,8 @@ a {
 
 
 #Signup,
-#Login {
+#Login,
+#logout {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -135,14 +137,16 @@ a {
 }
 
 #Signup>a,
-#Login>a {
+#Login>a,
+#logout>a {
   text-decoration: none;
   color: white;
   font-weight: 700;
 }
 
 #Signup:hover,
-#Login:hover {
+#Login:hover,
+#logout:hover {
   background-color: black;
   text-decoration: none;
   border: black;
@@ -193,7 +197,9 @@ a {
   /* inline-size: 10px; */
 }
 
-
+#logout{
+  display: none;
+}
 @media (max-width:801px) {
 
   #hamburger {

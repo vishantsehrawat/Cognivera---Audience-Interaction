@@ -23,6 +23,8 @@ logoName2.innerHTML = username;
 // logut button clicked 
 logout.addEventListener("click", () => {
   localStorage.removeItem("userObject")
+  localStorage.removeItem("jwtToken")
+
 
   fetch(logoutUrlDeployed, {
     method: 'POST',

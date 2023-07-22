@@ -46,7 +46,7 @@ input.addEventListener('keyup', async (event) => {
 
             });
             const cogni = await response.json();
-            console.log(cogni);
+            console.log("🚀 ~ file: index.js:49 ~ input.addEventListener ~ cogni:", cogni)
             
         } catch (error) {
             console.error('Error getting Cogni:', error);
