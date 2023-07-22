@@ -9,6 +9,8 @@ body {
   background-color: #fafafa;
 }
 
+
+/* Navbar  */
 #container1 {
   background-color: #2a56a7;
 }
@@ -20,7 +22,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 0px;
+  padding: 8px 30px;
   color: white;
   line-height: 24px;
 }
@@ -47,41 +49,87 @@ body {
   font-size: small;
 }
 
-#navbar>div:nth-child(1) button {
+.leftDivLogo {
+  display: flex;
+  align-items: center;
+  box-sizing: content-box;
+  width: 200px;
+  height: 50px;
+  /* border: 2px solid red; */
+}
+
+.rightDivNav {
+  /* border: 2px solid red; */
+}
+
+/* #navbar>div:nth-child(1) button {
   background-color: #4c71b5;
   border: none;
   padding: 5px;
   border-radius: 5px;
   color: white;
   font-size: small;
-}
+} */
 
-#navbar .fa-search {
+/* #navbar .fa-search {
   background: #2a56a7;
   border: none;
   color: white;
   padding: 5px;
   border-radius: 50%;
   cursor: pointer;
-}
+} */
 
-#navbar #search {
+/* #navbar #search {
   border: none;
   outline: none;
   padding: 5px;
   border-radius: 2px;
-}
+} */
 
 #navbar #logo {
   color: white;
   font-weight: bold;
   padding: 5px;
-  border-radius: 50%;
+  border-radius: 20%;
   padding: 10px;
   text-transform: capitalize;
   font-size: 15px;
   margin: 0 30px;
 }
+
+#logo {
+  background-color: royalblue;
+  /* border: 2px solid red; */
+}
+
+.logoutBtn {
+  padding: 10px;
+  margin: 0px 10px;
+  border: none;
+  background-color: #39ae37;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* #searchForm {
+  width: fit-content;
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+} */
+
+.eventPageLinks * {
+  cursor: pointer;
+}
+
+.leftDivNav {
+  padding: 0 2%;
+}
+
 
 /* Container 2 */
 #container2 {
@@ -210,32 +258,7 @@ body {
   text-transform: uppercase;
 }
 
-.logoutBtn {
-  padding: 10px;
-  margin: 0px 10px;
-  border: none;
-  background-color: #39ae37;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
-#searchForm {
-  width: fit-content;
-  margin: 0 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.eventPageLinks * {
-  cursor: pointer;
-}
-
-.leftDivNav {
-  padding: 0 2%;
-}
 
 /* form for creating cogni +++++++++++++++++++++++++++ */
 #createSlidoForm {
@@ -498,10 +521,10 @@ hr {
     width: 100%;
   }
 
-  #navbar {
+  /* #navbar {
     flex-wrap: wrap;
     justify-content: center;
-  }
+  } */
 }
 
 
@@ -524,28 +547,28 @@ hr {
 /* For screens smaller than 600px */
 @media screen and (max-width: 600px) {
   #navbar {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 
   #navbar div:nth-child(1) {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
 
-  #navbar div:nth-child(2) {
+  /* #navbar div:nth-child(2) {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+  } */
 
-  #navbar form {
+  /* #navbar form {
     margin-bottom: 20px;
-  }
+  } */
 
   #navbar #logo {
     display: none;
   }
 
-  .logoutContainer {
+  /* .logoutContainer {
     margin-top: 20px;
-  }
+  } */
 }

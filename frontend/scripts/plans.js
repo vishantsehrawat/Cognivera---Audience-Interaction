@@ -81,7 +81,7 @@ let username = JSON.parse(localStorage.getItem("userObject"))?.usernameforchat |
 
 logoName.innerHTML = username;
 // logoName1.innerHTML = username;
-logoName2.innerHTML = username;
+// logoName2.innerHTML = username;
 
 
 // logut button clicked 
