@@ -198,6 +198,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 40px;
   padding: 20px;
 }
@@ -329,7 +330,7 @@ body {
   #container4 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    width: 60%;
+    /* width: 60%; */
     gap: 10px;
     margin-bottom: 30px;
   }
