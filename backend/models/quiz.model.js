@@ -5,6 +5,10 @@ const quizSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  creatorId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'cogni'
+  },
   uniqueQuizId: {
     type: String,
     default: uuidv4,
