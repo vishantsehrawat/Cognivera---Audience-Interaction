@@ -96,7 +96,7 @@ cogniSubmitForm.addEventListener("submit", (event) => {
         }
 
       } catch (error) {
-        console.error("Error saving Cogni:", error);
+        console.log("Error saving Cogni:", error);
       }
     }
   } else {
