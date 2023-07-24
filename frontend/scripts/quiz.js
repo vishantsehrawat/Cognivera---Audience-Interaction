@@ -101,6 +101,7 @@ document.getElementById('submitQuiz').addEventListener('click', function (event)
                 });
 
                 const result = await response.json();
+                console.log("🚀 ~ file: quiz.js:103 ~ addquizData ~ result:", result)
                 quizForm.style.display = 'none';
 
                 console.log("Success:", result);
