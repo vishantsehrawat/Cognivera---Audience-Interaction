@@ -7,6 +7,7 @@ let questionCount = 0;
 
 const getAllQuizApi = `${globals.DEPLOYED_URL}/quiz/getall`
 
+
 console.log("🚀 ~ file: quiz.js:10 ~ getAllQuizApi:", getAllQuizApi)
 
 window.addEventListener("load", (event) => {
