@@ -145,7 +145,7 @@ Interactive Fulll Stack clone of slido.com with Group Chatting, Quizzes and Word
 - Sweet alerts for when "User can only access routes when logged in"
 
 ***Abhimanyu***
-- [@abhimanyulp](https://github.com/abhimanyulp)
+[@abhimanyulp](https://github.com/abhimanyulp)
 
 *Index Page*
 - Added responsiveness to the index page
@@ -162,19 +162,23 @@ Interactive Fulll Stack clone of slido.com with Group Chatting, Quizzes and Word
 
 
 ***Harshal***
-- [@8309h](https://github.com/8309h)
+[@8309h](https://github.com/8309h)
+
 *Signup Page*
 - Signup
 - Signup with github
-*login Page*
+
+*Login Page*
 - login 
 - login with github
 - responsiveness
-*index page*
+
+*Index page*
 - Index page update
 
 ***Kirti***
-- [@kirti136](https://github.com/kirti136)
+[@kirti136](https://github.com/kirti136)
+
 *Event Page*
 - HTML & CSS
 
