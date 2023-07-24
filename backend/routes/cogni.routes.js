@@ -12,12 +12,12 @@ cogniRouter.post('/add', authMiddleware, async (req, res) => {
     try {
         newCogni.cogniUniqueId = uuidv4();
         console.log("🚀 ~ file: cogni.routes.js:14 ~ cogniRouter.post ~ newCogni:", newCogni)
-        const Cogni = new CogniModel(req.body);
+        const Cogni = new CogniModel(newCogni);
         await Cogni.save();
         res.status(201).json(newCogni);
     } catch (error) {
         console.error('Error saving Cogni:', error);
-        res.status(500).json(error.message);
+        res.status(500).send(error);
     }
 });
 

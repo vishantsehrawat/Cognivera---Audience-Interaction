@@ -70,7 +70,7 @@ cogniSubmitForm.addEventListener("submit", (event) => {
     end_date,
     name,
   };
-  // console.log("🚀 ~ file: eventPage.js:67 ~ cogniSubmitForm.addEventListener ~ newCogni:", newCogni)
+  console.log("🚀 ~ file: eventPage.js:67 ~ cogniSubmitForm.addEventListener ~ newCogni:", newCogni)
   if (start_date && end_date && name) {
     saveCogni(newCogni)
     async function saveCogni(newCogni) {
@@ -91,6 +91,7 @@ cogniSubmitForm.addEventListener("submit", (event) => {
           swal("Cogni created");
           $('#createCogniModal').remove();
           $('.blocker').remove();
+          swal("Successfully saved cogni!", "success");
         } else {
           swal("Oops!", "Something went wrong!", "error");
         }
