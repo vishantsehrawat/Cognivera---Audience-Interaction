@@ -21,9 +21,10 @@ quizRouter.post('/add', authMiddleware, async (req, res) => {
 });
 
 
+
 // to get all quizzes 
 
-quizRouter.get('/get', authMiddleware, async (req, res) => {
+quizRouter.get('/getall', authMiddleware, async (req, res) => {
     try {
         const quiz = await QuizModel.find();
         if (!quiz) {
