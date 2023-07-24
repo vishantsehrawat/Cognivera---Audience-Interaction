@@ -103,7 +103,7 @@ document.getElementById('submitQuiz').addEventListener('click', function (event)
 
                 console.log("Success:", result);
             } catch (error) {
-                console.error("Error:", error);
+                console.log("Error:", error);
             }
         }
     } else {
@@ -130,7 +130,7 @@ async function getAllQuizData() {
         console.log("Success:", result);
         showAllQuiz(result)
     } catch (error) {
-        console.error("Error:", error.message);
+        console.log("Error:", error.message);
     }
 }
 function showAllQuiz(quizzes) {
