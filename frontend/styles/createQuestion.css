@@ -10,7 +10,6 @@ ul {
 
 body {
     font-family: Arial, sans-serif;
-    /* background-color: #020008; */
 }
 
 form {
@@ -94,7 +93,6 @@ input[type="radio"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    /* border: none; */
     border-radius: 3px;
     font-size: 16px;
     color: #333;
@@ -181,9 +179,11 @@ label[for^="option"] {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-.featureHeading{
+
+.featureHeading {
     color: green;
 }
+
 .features>ul>li {
     padding: 5px;
     color: black;

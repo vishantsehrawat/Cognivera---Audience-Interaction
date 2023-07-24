@@ -5,7 +5,6 @@
 }
 
 #messages {
-    /* scroll-behavior: auto; */
     overflow: auto;
     height: 70vh;
     width: auto;
@@ -15,8 +14,6 @@
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    /* Firefox */
-
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -48,7 +45,6 @@
     display: flex;
     flex-direction: column;
     justify-content: baseline;
-    /* border: 2px solid grey; */
     border-radius: 10px;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     background-color: darkgreen;
@@ -134,7 +130,8 @@
     margin: 0 4%;
     margin-top: 20px;
 }
-#newMessageRecieved{
+
+#newMessageRecieved {
     text-align: left;
     margin-left: 5%;
     font-size: 25px;

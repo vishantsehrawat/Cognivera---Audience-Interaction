@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #nav {
@@ -8,17 +9,14 @@
   top: 0;
   z-index: 1;
   background-color: white;
-  /* border: 2px solid red; */
 }
 
 /* Navbar element  */
 .navbar {
-  /* position: absolute; */
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* border: 2px solid red; */
   box-shadow: 0px 15px 10px -23px #111;
 }
 
@@ -36,7 +34,6 @@ a {
 /*Left element - Logo */
 .logo {
   width: 20%;
-  /* border: 2px solid green; */
   display: flex;
   justify-content: end;
 }
@@ -58,27 +55,18 @@ a {
   width: 80%;
   display: flex;
   justify-content: space-between;
-  /* width: fit-content; */
-  /* gap: 30px; */
   align-items: center;
-  /* font-size: larger; */
   font-weight: bold;
   margin-right: 2%;
-
-  /* border: 2px solid red; */
 }
 
 
 /* Nav Options - left box  */
 .nav-options {
   width: 65%;
-  /* margin-left: 50px; */
-  /* margin-right: 50px; */
   display: flex;
   align-items: center;
   justify-content: start;
-  /* border: 2px solid purple; */
-  /* flex-wrap: wrap; */
 }
 
 .nav-options a {
@@ -97,14 +85,10 @@ a {
 
 /* Nav Log - right box  */
 .nav-log {
-  /* width: 35%; */
   display: flex;
   justify-content: start;
-  /* width: fit-content; */
   align-items: center;
   font-size: larger;
-  /* font-weight: 1000; */
-  /* border: 2px solid black; */
 }
 
 .nav-log a {
@@ -112,7 +96,6 @@ a {
 }
 
 .nav-log>button {
-  /* padding: 15px 25px; */
   margin: 0 10px;
 }
 
@@ -166,7 +149,6 @@ a {
   font-weight: bold;
   display: none;
   border-radius: 5px;
-  /* border: 2px solid mediumvioletred; */
 }
 
 #hamburger:hover {
@@ -179,8 +161,8 @@ a {
 #expand {
   display: none;
   position: absolute;
-  top: 80px;
-  right: 20px;
+  top: 60px;
+  right: 10px;
   width: 200px;
   background-color: whitesmoke;
   z-index: 1;
@@ -189,22 +171,25 @@ a {
 #expand>ul>li {
   list-style: none;
   font-size: 30px;
-  /* inline-size: 10px; */
 }
 
 #expand>ul>li:hover {
   text-decoration: underline;
-  /* inline-size: 10px; */
 }
 
-#logout{
+#logout {
   display: none;
 }
+
+#LogoutExpand {
+  display: none;
+}
+
+
 @media (max-width:801px) {
 
   #hamburger {
     display: flex;
-    /* margin-left: 50%; */
     justify-content: center;
     align-items: center;
     margin-right: 5%;
@@ -234,12 +219,4 @@ a {
 }
 
 
-@media all and (max-width:599px) {
-
-  /* #menu-options {
-      margin-left: 10%;
-      display: flex;
-      flex-direction: row;
-      
-    } */
-}
+@media all and (max-width:599px) {}
