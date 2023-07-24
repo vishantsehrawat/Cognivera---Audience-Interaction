@@ -29,7 +29,6 @@
 
 #container {
     display: flex;
-    /* flex-direction: row; */
     justify-content: space-between;
 }
 
@@ -43,13 +42,11 @@
     font-weight: bold;
     padding: 3%;
     padding-top: 10%;
-    /* border: 2px solid red; */
 }
 
 #left-fixed-btn {
     height: 60px;
     width: 80%;
-    /* margin: auto; */
     background-color: white;
     color: black;
     border-radius: 30px;
@@ -57,9 +54,6 @@
     justify-content: space-around;
     align-items: center;
     font-size: 20px;
-
-
-
 }
 
 #left-fixed-btn input {
@@ -111,12 +105,8 @@
 }
 
 #signup-cont {
-    /* position: relative; */
     margin-left: 50%;
     margin-top: 5%;
-
-    /* border: 2px solid red; */
-
 }
 
 #signup-cont h1,
@@ -139,9 +129,6 @@ p {
     border: 1p solid gray;
     padding: 5px;
     width: 200px;
-    /* margin-bottom: 10px; */
-    /* margin-left: 18%; */
-
 }
 
 #google>img {
@@ -155,16 +142,11 @@ p {
     border-radius: 5px;
     border: 1p solid gray;
     padding: 5px;
-    /* margin-top: 10px; */
-
     width: 200px;
-    /* margin: auto; */
-    /* margin-left: 18%; */
 }
 
 #github img {
     width: 10%;
-    /* margin: auto; */
 }
 
 #signup-cont form {
@@ -185,7 +167,6 @@ p {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    /* border: 2px solid red; */
 }
 
 form input {

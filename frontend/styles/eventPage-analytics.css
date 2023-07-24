@@ -55,37 +55,7 @@ body {
   box-sizing: content-box;
   width: 200px;
   height: 50px;
-  /* border: 2px solid red; */
 }
-
-.rightDivNav {
-  /* border: 2px solid red; */
-}
-
-/* #navbar>div:nth-child(1) button {
-  background-color: #4c71b5;
-  border: none;
-  padding: 5px;
-  border-radius: 5px;
-  color: white;
-  font-size: small;
-} */
-
-/* #navbar .fa-search {
-  background: #2a56a7;
-  border: none;
-  color: white;
-  padding: 5px;
-  border-radius: 50%;
-  cursor: pointer;
-} */
-
-/* #navbar #search {
-  border: none;
-  outline: none;
-  padding: 5px;
-  border-radius: 2px;
-} */
 
 #navbar #logo {
   color: white;
@@ -100,7 +70,6 @@ body {
 
 #logo {
   background-color: royalblue;
-  /* border: 2px solid red; */
 }
 
 .logoutBtn {
@@ -112,15 +81,6 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-
-/* #searchForm {
-  width: fit-content;
-  margin: 0 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-} */
 
 .eventPageLinks * {
   cursor: pointer;
@@ -194,7 +154,6 @@ body {
 /* Container 3 */
 
 #container3 {
-  /* border: 1px solid red; */
   width: 75%;
   margin: auto;
   margin-top: 30px;
@@ -265,7 +224,6 @@ body {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  /* border: 1px solid #ccc; */
   border-radius: 5px;
 }
 
@@ -315,9 +273,6 @@ body {
 
 /* Media Screens */
 @media all and (max-width: 1000px) {
-  #navbar {
-    /* width: 90%; */
-  }
 
   #container2 #box {
     grid-template-columns: repeat(1, 1fr);
@@ -363,8 +318,6 @@ body {
   #container3 {
     display: none;
   }
-
-  #container4 {}
 
   #container4 button {
     padding: 10px;
@@ -438,7 +391,6 @@ body {
 
 /* Analytics Box */
 #analyticsBox01 {
-  /* border: 1px solid red; */
   width: 75%;
   margin: auto;
   margin-top: 30px;
@@ -446,7 +398,6 @@ body {
 
 #analyticsBox01>div {
   padding: 20px;
-  /* border: 1px solid blue; */
   width: 40%;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
@@ -521,10 +472,6 @@ hr {
     width: 100%;
   }
 
-  /* #navbar {
-    flex-wrap: wrap;
-    justify-content: center;
-  } */
 }
 
 
@@ -546,29 +493,9 @@ hr {
 
 /* For screens smaller than 600px */
 @media screen and (max-width: 600px) {
-  #navbar {
-    /* flex-direction: column; */
-  }
-
-  #navbar div:nth-child(1) {
-    /* margin-bottom: 20px; */
-  }
-
-  /* #navbar div:nth-child(2) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  } */
-
-  /* #navbar form {
-    margin-bottom: 20px;
-  } */
 
   #navbar #logo {
     display: none;
   }
 
-  /* .logoutContainer {
-    margin-top: 20px;
-  } */
 }

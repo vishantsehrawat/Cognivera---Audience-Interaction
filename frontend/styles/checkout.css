@@ -8,6 +8,24 @@
   margin: auto;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #2a56a7
+}
+header > a > img {
+  height: 70px;
+}
+
 
 
 
@@ -150,7 +168,6 @@
 .wrapper {
   min-height: 100vh;
   display: flex;
-  /* padding: 50px 15px; */
 }
 
 @media screen and (max-width: 700px),
@@ -166,7 +183,6 @@
   margin: auto;
   left: 15%;
   top: 1%;
-  /* position: absolute; */
   width: 100%;
 }
 

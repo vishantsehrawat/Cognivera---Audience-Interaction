@@ -7,10 +7,18 @@ window.addEventListener("load", (event) => {
     const token = JSON.parse(localStorage.getItem("jwtToken"));
     const logoutUrlDeployed = `${globals.DEPLOYED_URL}/user/logout`
 
-    // logout button js 
-    logoutBtn.addEventListener("click", async () => {
+    //Expand menu elemets
+    const signupBtnExpand = document.getElementById("SignupExpand");
+    const loginBtnExpand = document.getElementById("LoginExpand");
+    const logoutBtnExpand = document.getElementById("LogoutExpand")
+
+    
+
+    const logoutFunc = async () => {
         localStorage.removeItem("userObject")
         localStorage.removeItem("jwtToken")
+
+        console.log("Logout Function ")
 
         try {
             const response = await fetch(logoutUrlDeployed, {
@@ -24,6 +32,9 @@ window.addEventListener("load", (event) => {
                 setTimeout(() => {
                     swal("Great!", "Your have been successfully logged out!", "success");
                 }, 100);
+                setTimeout(() => {
+                    location.reload()
+                }, 1000);
             }
             const data = await response.json();
             console.log("🚀 ~ file: eventPage.js:29 ~ .then ~ data:", data);
@@ -31,15 +42,23 @@ window.addEventListener("load", (event) => {
         } catch (error) {
             console.log(error);
         }
+    }
 
+    // logout button js 
+    logoutBtn.addEventListener("click", logoutFunc)
+    logoutBtnExpand.addEventListener("click", logoutFunc)
 
-    })
     // show logout button when user is logged in
     setTimeout(() => {
         if (token) {
             signupBtn.style.display = "none"
             loginBtn.style.display = "none"
-            logout.style.display = "block"
+            logoutBtn.style.display = "block"
+
+            //Expand Elements
+            signupBtnExpand.style.display = "none"
+            loginBtnExpand.style.display = "none"
+            logoutBtnExpand.style.display = "inline"
         }
     }, 1000);
 

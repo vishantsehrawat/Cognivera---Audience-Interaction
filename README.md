@@ -3,25 +3,76 @@
 
 Interactive Fulll Stack clone of slido.com with Group Chatting, Quizzes and Word Cloud like features.
 
-[https://cognivera.netlify.app/](https://cognivera.netlify.app/)  **(Netlify)** \
-[https://cognivera.up.railway.app/](https://cognivera.up.railway.app/) **(Railway)** 
+## Deployed Links
+[https://cognivera.netlify.app](https://cognivera.netlify.app/)  **(Netlify)** \
+[https://slidoapp.onrender.com](https://slidoapp.onrender.com/) **(Render)** 
 
-## Routes/ Endpoints 
-+ https://slidoapp.onrender.com/user/register  For user Registration
-+ https://slidoapp.onrender.com/user/login  For user Login
-+ https://slidoapp.onrender.com/user/logout  For user Logout
-+ https://slidoapp.onrender.com/user/newtoken  For new token
-+ https://slidoapp.onrender.com/user/update/:id  For plan update
-+ https://slidoapp.onrender.com/question/submit-question  For submitting question
-+ https://slidoapp.onrender.com/question/get-question/:id  For getting a question
-+ https://slidoapp.onrender.com/question/get-all-questions  For getting all questions
-+ https://slidoapp.onrender.com/rating/add-rating  For adding rating
-+ https://slidoapp.onrender.com/rating/get-rating  For get rating
+## API Reference
+
+#### User Registration
+
+```http
+  POST /user/register
+```
+
+#### User Login
+
+```http
+  POST /user/login
+```
+
+#### User Logout
+
+```http
+  POST /user/logout
+```
+
+#### New Token
+
+```http
+  GET /user/newtoken
+```
+
+#### Plan Update
+
+```http
+  PATCH /user/update/:id
+```
+
+#### Submitting Question
+
+```http
+  POST /question/submit-question
+```
+
+#### Getting a Question
+
+```http
+  GET /question/get-question/:id
+```
+
+#### Getting All Question
+
+```http
+  GET /question/get-all-questions
+```
+
+#### Add Rating
+
+```http
+  POST /rating/add-rating
+```
+
+#### Get Rating
+
+```http
+  GET /rating/get-rating
+```
 
 
 ## Tech Stack
 
-**Client:** 
+**Client:** <br>
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)&nbsp;
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)&nbsp;
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)&nbsp;
@@ -30,7 +81,7 @@ Interactive Fulll Stack clone of slido.com with Group Chatting, Quizzes and Word
 
 
 
-**Server:** 
+**Server:** <br>
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)&nbsp;
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)&nbsp;
 ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)&nbsp;
@@ -42,8 +93,8 @@ Interactive Fulll Stack clone of slido.com with Group Chatting, Quizzes and Word
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)&nbsp;
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)&nbsp;
 &nbsp;
-## NPM Packages
 
+## NPM Packages
 [![Security: bcrypt](https://img.shields.io/badge/Security-bcrypt-blueviolet.svg?style=for-the-badge&logo=cryptography&logoColor=white)](https://en.wikipedia.org/wiki/Bcrypt)
 [![SweetAlert](https://img.shields.io/badge/SweetAlert-FF3E3E.svg?style=for-the-badge&logo=javascript&logoColor=white)](https://sweetalert.js.org/)
 [![Notyf](https://img.shields.io/badge/Notyf-2F80ED.svg?style=for-the-badge&logo=javascript&logoColor=white)](https://carlosroso.com/notyf/)
@@ -77,8 +128,8 @@ Interactive Fulll Stack clone of slido.com with Group Chatting, Quizzes and Word
 ## Contributions and Responsibilities
 
 ***Vishant Sehrawat (TL)***
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vishantsehrawat/&nbsp) 
-
+<br>
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vishantsehrawat/&nbsp)
 [![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139)](https://vishantsehrawat.github.io/&nbsp)
 
 - Deployment
@@ -93,34 +144,41 @@ Interactive Fulll Stack clone of slido.com with Group Chatting, Quizzes and Word
 - Quiz and Group chat Pages whole Frontend
 - Sweet alerts for when "User can only access routes when logged in"
 
-### Tracking my Construct Week
+***Abhimanyu***
+- [@abhimanyulp](https://github.com/abhimanyulp)
+
+*Index Page*
+- Added responsiveness to the index page
+
+*Plans Page*
+- Created whole page
+
+*Checkout Page*
+- Created whole page
+
+*Responsivness*
+- Added responsiveness to whole frontend
+- Created Hamburger menu for the navbar
+
+
+***Harshal***
+- [@8309h](https://github.com/8309h)
+*Signup Page*
+- Signup
+- Signup with github
+*login Page*
+- login 
+- login with github
+- responsiveness
+*index page*
+- Index page update
+
+***Kirti***
+- [@kirti136](https://github.com/kirti136)
+*Event Page*
+- HTML & CSS
+
+### Tracking Our Construct Week
 ![image](https://user-images.githubusercontent.com/51756111/236906516-c9785b1e-e863-4ea5-bcb7-2195da4b2e14.png)
 ![image](https://user-images.githubusercontent.com/51756111/236910362-85b709cb-47b0-4d28-97d2-5e2187a148db.png)
 ![image](https://user-images.githubusercontent.com/51756111/236910775-b09b20d6-45a2-4f8a-8fb0-e94ba6fcf545.png)
-
-
-***Abhimanyu***
-
-***Harshal***
-Signup page
-1 Signup
-2 Signup with github
-login page
-1 login 
-2 login with github
-3 responsiveness
-index page
-1 Working on index page
-
-Signup page
-- 1 Signup
-- 2 Signup with github
-- login page
-- 1 login 
-- 2 login with github
-- 3 responsiveness
-- index page
-- 1 Working on index page
-
-***Kirti***
-
