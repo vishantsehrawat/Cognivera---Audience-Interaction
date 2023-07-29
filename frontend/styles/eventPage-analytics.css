@@ -272,6 +272,90 @@ body {
 
 /* form for creating cogni ----------------------- */
 
+/* cogni cards +++++++++++++++++++ */
+/* Card styles */
+.cogni-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.cogni-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cogni-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Media Queries */
+/* Small devices (phones, 576px and up) */
+@media (min-width: 576px) {
+  .cogni-card {
+    padding: 30px;
+  }
+
+  .cogni-card h2 {
+    font-size: 28px;
+  }
+
+  .cogni-card p {
+    font-size: 18px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .cogni-card {
+    padding: 40px;
+  }
+
+  .cogni-card h2 {
+    font-size: 32px;
+  }
+
+  .cogni-card p {
+    font-size: 20px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .cogni-card {
+    padding: 50px;
+  }
+
+  .cogni-card h2 {
+    font-size: 36px;
+  }
+
+  .cogni-card p {
+    font-size: 22px;
+  }
+}
+
+/* Extra-large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .cogni-card {
+    padding: 60px;
+  }
+
+  .cogni-card h2 {
+    font-size: 40px;
+  }
+
+  .cogni-card p {
+    font-size: 24px;
+  }
+}
+
+/* cogni cards ------------------- */
+
+
 /* Media Screens */
 @media all and (max-width: 1000px) {
 

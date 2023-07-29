@@ -33,9 +33,9 @@ const cogniSchema = new mongoose.Schema({
 }, {
   // expires: 'end_date'
 });
-cogniSchema.index({ end_date: 1 }, { expires: 'end_date' });
+// cogniSchema.index({ end_date: 1 }, { expires: 'end_date' });
 // Cogni Model
-const CogniModel = mongoose.model('cogni', cogniSchema);
+const CogniModel = mongoose.model('mycogni', cogniSchema);
 
 module.exports = {
   CogniModel
