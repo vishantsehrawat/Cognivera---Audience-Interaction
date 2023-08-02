@@ -25,8 +25,9 @@ quizRouter.post('/add', authMiddleware, async (req, res) => {
 // to get all quizzes 
 
 quizRouter.get('/getall', authMiddleware, async (req, res) => {
+    const { userId } = req.body;
     try {
-        const quiz = await QuizModel.find();
+        const quiz = await QuizModel.find({ userId:userId});
         if (!quiz) {
             return res.status(404).send({ msg: 'Quiz not found' });
         }

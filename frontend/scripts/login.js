@@ -10,14 +10,14 @@ let form = document.querySelector('form')
 form.addEventListener('submit', myfun)
 function myfun(event) {
     event.preventDefault()
-    swal("login can take some time due to free servers");
     loader.style.display = "block";
     let email = document.getElementById("email").value
     let password = document.getElementById("password").value
-
+    
     if (!email || !password) {
-        alert("Please enter your email and password")
+        swal("Please enter your email and password");
     } else {
+        swal("login can take some time due to free servers");
 
         const payload = { email, password }
         // console.log("🚀 ~ file: login.js:15 ~ myfun ~ payload:", payload)

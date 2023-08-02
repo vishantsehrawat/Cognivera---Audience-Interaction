@@ -22,6 +22,8 @@ logoName1.innerHTML = username;
 
 // logut button clicked 
 logout.addEventListener("click", () => {
+  swal("logout might take long time during initial use because of free servers")
+
   localStorage.removeItem("userObject")
   localStorage.removeItem("jwtToken")
 
@@ -91,7 +93,7 @@ cogniSubmitForm.addEventListener("submit", async (event) => {
         swal("Cogni created");
         $('#createCogniModal').remove();
         $('.blocker').remove();
-        swal("Successfully saved cogni!", "success");
+        swal("Successfully saved cogni!");
       } else {
         swal("Oops!", "Something went wrong!", "error");
       }

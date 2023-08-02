@@ -24,7 +24,8 @@ cogniRouter.post('/add', authMiddleware, async (req, res) => {
 //get congni
 cogniRouter.get('/getall', authMiddleware, async (req, res) => {
     try {
-        const allCogni = await CogniModel.find({ userId : req.body.userId }).populate('quizzes');
+        const allCogni = await CogniModel.find({ userId: req.body.userId });
+        console.log("🚀 ~ file: cogni.routes.js:28 ~ cogniRouter.get ~ allCogni:", allCogni)
         res.status(200).json(allCogni);
     } catch (error) {
         console.error('Error getting Cogni:', error);

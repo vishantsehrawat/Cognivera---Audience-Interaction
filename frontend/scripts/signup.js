@@ -32,7 +32,7 @@ function myfun(event) {
         main_div.style.display = "none"
 
         if (password === cpassword) {
-
+            swal("Signup might take long time during initial use because of free servers")
             fetch(registerationURl, {
                 method: "POST",
                 headers: {
