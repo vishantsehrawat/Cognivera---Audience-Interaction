@@ -16,13 +16,15 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- for website tour  -->
     <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
-
+    <link rel="stylesheet" href="../styles/loader.css">
     <link rel="stylesheet" href="../styles/signup-login.css">
 
 
 </head>
 
 <body>
+    <!-- import its css file to use it  -->
+    <div id="loader" class="loader"></div>
     <div id="loding_container">
         <div id="loding_div">
             <img id="logo-img" class="invert_effect" src="../images/Cognivera.png" />
@@ -80,8 +82,11 @@
 
 </body>
 
-</html>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 <script type="text/javascript" src="../config/globals.js"></script>
 <!-- website tour  -->
 <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
 <script type="module" src="../scripts/signup.js"></script>
+
+</html>

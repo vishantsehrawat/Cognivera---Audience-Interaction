@@ -94,7 +94,7 @@ userRouter.post("/logout",async (req, res) => {
     }
 })
 
-// route to get new token using refresh token 
+// route to ww new token using refresh token 
 // we will hit this route from the frontend 
 userRouter.get("/newtoken",authMiddleware,(req, res) => {
     // console.log("new route hit ")

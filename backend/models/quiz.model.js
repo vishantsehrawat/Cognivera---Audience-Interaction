@@ -1,66 +1,66 @@
-const mongoose = require('mongoose');
-const { v4: uuidv4 } = require('uuid');
-const quizSchema = new mongoose.Schema({
-  userId: {
-    type: String,
-    required: true
-  },
-  creatorId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'cogni'
-  },
-  uniqueQuizId: {
-    type: String,
-    default: uuidv4,
-  },
-  quiz: {
-    creator: {
+  const mongoose = require('mongoose');
+  const { v4: uuidv4 } = require('uuid');
+  const quizSchema = new mongoose.Schema({
+    userId: {
       type: String,
       required: true
     },
-    title: {
-      type: String,
-      required: true
+    creatorId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'cogni'
     },
-    description: {
+    uniqueQuizId: {
       type: String,
-      required: true
+      default: uuidv4,
     },
-    questions: [
-      {
-        title: {
-          type: String,
-          required: true
-        },
-        options: {
-          //used array for multiple options 
-          type: [String],
-          required: true
-        },
-        correctOption: {
-          // storing only single answer type quiz
+    quiz: {
+      creator: {
+        type: String,
+        required: true
+      },
+      title: {
+        type: String,
+        required: true
+      },
+      description: {
+        type: String,
+        required: true
+      },
+      questions: [
+        {
+          title: {
+            type: String,
+            required: true
+          },
+          options: {
+            //used array for multiple options 
+            type: [String],
+            required: true
+          },
+          correctOption: {
+            // storing only single answer type quiz
 
-          type: Number,
-          required: true
+            type: Number,
+            required: true
+          }
         }
+      ],
+      public: {
+        type: Boolean,
+        default: false,
+      }
+    },
+    leaderboard: [
+      {
+        email: String,
+        score: Number
       }
     ],
-    public: {
-      type: Boolean,
-      default: false,
-    }
-  },
-  leaderboard: [
-    {
-      email: String,
-      score: Number
-    }
-  ],
 
-});
+  });
 
-const QuizModel = mongoose.model('quiz', quizSchema);
+  const QuizModel = mongoose.model('quiz', quizSchema);
 
-module.exports = {
-  QuizModel
-};
+  module.exports = {
+    QuizModel
+  };

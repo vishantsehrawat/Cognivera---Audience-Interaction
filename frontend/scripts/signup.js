@@ -8,10 +8,14 @@ let main_div = document.getElementById("container")
 
 let form = document.querySelector('form')
 form.addEventListener('submit', myfun)
+loader.style.display = "none";
+
 function myfun(event) {
 
     event.preventDefault()
 
+    loader.style.display = "block";
+    swal("signup can take some time due to free servers");
     let name = document.getElementById("name").value
     let email = document.getElementById("email").value
     let password = document.getElementById("password").value
@@ -28,7 +32,7 @@ function myfun(event) {
         main_div.style.display = "none"
 
         if (password === cpassword) {
-
+            swal("Signup might take long time during initial use because of free servers")
             fetch(registerationURl, {
                 method: "POST",
                 headers: {
@@ -42,7 +46,7 @@ function myfun(event) {
                     console.log(data)
                     loding_container.style.display = "block";
                     form.reset()
-
+                    loader.style.display = "none";
                     setTimeout(() => {
                         window.location.href = "./login.html";
                     }, 2000);

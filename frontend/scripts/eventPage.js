@@ -22,6 +22,8 @@ logoName1.innerHTML = username;
 
 // logut button clicked 
 logout.addEventListener("click", () => {
+  swal("logout might take long time during initial use because of free servers")
+
   localStorage.removeItem("userObject")
   localStorage.removeItem("jwtToken")
 
@@ -58,7 +60,7 @@ logout.addEventListener("click", () => {
 
 // save congn in in database 
 
-cogniSubmitForm.addEventListener("submit", (event) => {
+cogniSubmitForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const start_date = document.getElementById("start_date").value;
@@ -71,39 +73,80 @@ cogniSubmitForm.addEventListener("submit", (event) => {
     name,
   };
   console.log("🚀 ~ file: eventPage.js:67 ~ cogniSubmitForm.addEventListener ~ newCogni:", newCogni)
-  if (start_date && end_date && name) {
-    saveCogni(newCogni)
-    async function saveCogni(newCogni) {
-      try {
-        const response = await fetch(`${globals.DEPLOYED_URL}/cogni/add`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            'Authorization': `${JSON.parse(localStorage.getItem('jwtToken'))  }`
-          },
-          body: JSON.stringify(newCogni),
-        });
-        const data = await response.json();
-        if (response.ok) {
-          console.log("🚀 ~ file: eventPage.js:82 ~ saveCogni ~ data:", data)
-          createCogniModal.style.display = "none";//for closing modal
-          document.body.style.overflow = 'visible'// for removing foreground
-          swal("Cogni created");
-          $('#createCogniModal').remove();
-          $('.blocker').remove();
-          swal("Successfully saved cogni!", "success");
-        } else {
-          swal("Oops!", "Something went wrong!", "error");
-        }
-
-      } catch (error) {
-        console.log("Error saving Cogni:", error);
+  if (start_date && end_date && name && start_date < end_date) {
+    // saveCogni(newCogni)
+    // async function saveCogni(newCogni) {
+    try {
+      const response = await fetch(`${globals.DEPLOYED_URL}/cogni/add`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          'Authorization': `${JSON.parse(localStorage.getItem('jwtToken'))}`
+        },
+        body: JSON.stringify(newCogni),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        console.log("🚀 ~ file: eventPage.js:82 ~ saveCogni ~ data:", data)
+        createCogniModal.style.display = "none";//for closing modal
+        document.body.style.overflow = 'visible'// for removing foreground
+        swal("Cogni created");
+        $('#createCogniModal').remove();
+        $('.blocker').remove();
+        swal("Successfully saved cogni!");
+      } else {
+        swal("Oops!", "Something went wrong!", "error");
       }
+
+    } catch (error) {
+      console.log("Error saving Cogni:", error);
     }
-  } else {
-    swal("Enter all the details");
+    // }
+  } else if (start_date > end_date) {
+    swal("Oops!", "Start date should be less than end date", "error");
+
+  }
+  else {
+    swal("Oops!", "Enter all the details ", "error");
 
   }
 });
 
 
+// rendering all the cognis on event page 
+
+
+fetchAndRenderCognis();
+async function fetchAndRenderCognis() {
+  try {
+    const response = await fetch(`${globals.DEPLOYED_URL}/cogni/getall`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        'Authorization': `${JSON.parse(localStorage.getItem('jwtToken'))}`
+      },
+    });
+    const cognis = await response.json();
+    console.log("🚀 ~ file: eventPage.js:128 ~ fetchAndRenderCognis ~ cognis:", cognis)
+
+    const cogniContainer = document.getElementById('cogniContainer');
+
+    cogniContainer.innerHTML = '';
+
+    cognis.forEach(cogni => {
+      const cogniCard = document.createElement('div');
+      cogniCard.classList.add('cogni-card');
+
+      cogniCard.innerHTML = `
+        <h2>${cogni.name}</h2>
+        <p>Start Date: ${cogni.start_date}</p>
+        <p>End Date: ${cogni.end_date}</p>
+        <a href="./quiz.html">Create Quiz</a>
+      `;
+
+      cogniContainer.appendChild(cogniCard);
+    });
+  } catch (error) {
+    console.error('Error fetching Cogni:', error);
+  }
+}

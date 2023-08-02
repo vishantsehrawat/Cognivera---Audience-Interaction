@@ -4,6 +4,8 @@
 const quizsaveApi = `${globals.DEPLOYED_URL}/quiz/add`
 const allQuestions = [];
 let questionCount = 0;
+const cardsContainer = document.getElementById("cards");
+
 
 const getAllQuizApi = `${globals.DEPLOYED_URL}/quiz/getall`
 
@@ -75,10 +77,10 @@ document.getElementById('addQuestion').addEventListener('click', function (event
 document.getElementById('submitQuiz').addEventListener('click', function (event) {
     event.preventDefault();
     const title = document.getElementById("quizTitle").value
-    const creator = JSON.parse(localStorage.getItem("creatoremail"))
+    const creator = JSON.parse(localStorage.getItem("userObject")).usernameforchat
     const publicCheckbox = document.getElementById('publicCheckbox');
     const isPublic = publicCheckbox.checked;
-    const allData ={}
+    const allData = {}
     const quizData = {
         creator: creator || "random@email.com",
         title: title,
@@ -101,10 +103,17 @@ document.getElementById('submitQuiz').addEventListener('click', function (event)
                 });
 
                 const result = await response.json();
+                if (result.msg == "quiz saved") {
+                    swal("Quiz saved successfully")
+                }
+                else {
+                    swal({ title: "Oops!", text: `${result.msg}`, icon: 'warning' })
+                }
                 console.log("🚀 ~ file: quiz.js:103 ~ addquizData ~ result:", result)
                 quizForm.style.display = 'none';
 
                 console.log("Success:", result);
+                getAllQuizData();
             } catch (error) {
                 console.log("Error:", error);
             }
@@ -137,6 +146,8 @@ async function getAllQuizData() {
     }
 }
 function showAllQuiz(quizzes) {
+    cardsContainer.innerHTML = ""
+
     for (const quiz of quizzes) {
         // console.log(quiz.quiz)
         showSingleQuiz(quiz);
@@ -144,6 +155,7 @@ function showAllQuiz(quizzes) {
 }
 
 function showSingleQuiz(quiz) {
+
     const cardsContainer = document.getElementById("cards");
     const card = document.createElement("div");
     card.classList.add("quizCard");

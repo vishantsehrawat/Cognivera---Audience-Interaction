@@ -2,19 +2,22 @@ console.log("🚀 ~ file: login.js:3 ~ globals:", globals)
 // const renderDeploymentURl  ="https://slidoapp.onrender.com";
 const loginDeployedUrl = `${globals.DEPLOYED_URL}/user/login`
 // let localurl = "http://localhost:8080/user/login"
-
+const loader = document.getElementById("loader");
+loader.style.display = "none";
 
 
 let form = document.querySelector('form')
 form.addEventListener('submit', myfun)
 function myfun(event) {
     event.preventDefault()
+    loader.style.display = "block";
     let email = document.getElementById("email").value
     let password = document.getElementById("password").value
-
+    
     if (!email || !password) {
-        alert("Please enter your email and password")
+        swal("Please enter your email and password");
     } else {
+        swal("login can take some time due to free servers");
 
         const payload = { email, password }
         // console.log("🚀 ~ file: login.js:15 ~ myfun ~ payload:", payload)
@@ -28,6 +31,7 @@ function myfun(event) {
 
         }).then((res) => {
             return res.json()
+            loader.style.display = "none";
         })
             .then((res) => {
                 console.log(res)
